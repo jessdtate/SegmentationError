@@ -1,0 +1,1 @@
+This repo is a set of code to run segmentation error experiments.
