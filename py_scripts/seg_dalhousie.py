@@ -7,7 +7,7 @@ outputpath = "/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/"
 
 exec(open("/Users/jess/FP/segmentation_error/seg_error/py_scripts/upsample_segs.py").read())
 
-#upsample_heart(filename, outputpath, "vent_staple_hires")
+upsample_heart(filename, outputpath, "vent_staple_hires")
 
 filename  = "/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/torso_staple.nrrd"
 
