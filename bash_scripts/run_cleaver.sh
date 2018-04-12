@@ -22,8 +22,8 @@ fname=${f##*/}
 froot=${fname%%.*}
 ft=${f%/*}
 
-$cleaver_call -S -i $f -o $ft -n $froot -f matlab -B 3 -c 1 -j -g 0.1 -v
-echo $cleaver_call -S -i $f -o $ft -n $froot -f matlab -B 3 -c 1 -j -g 0.1 -v
+$cleaver_call -S -i $f -o $ft../meshes/ -n $froot -f matlab -B 1 -c 1 -j -g 0.1 -v
+echo $cleaver_call -S -i $f -o $ft../meshes/ -n $froot -f matlab -B 3 -c 1 -j -g 0.1 -v
 
 done
 

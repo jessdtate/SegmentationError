@@ -4,7 +4,7 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>95</count>
+			<count>96</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
 				<first>AlignMeshBoundingBoxes:0</first>
@@ -945,7 +945,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>38359</value>
+										<value>138934</value>
 									</value>
 								</second>
 							</item>
@@ -957,7 +957,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>10406</value>
+										<value>69368</value>
 									</value>
 								</second>
 							</item>
@@ -1105,7 +1105,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>38883</value>
+										<value>115311</value>
 									</value>
 								</second>
 							</item>
@@ -1117,7 +1117,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>31765</value>
+										<value>64620</value>
 									</value>
 								</second>
 							</item>
@@ -1265,7 +1265,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>73287</value>
+										<value>40201</value>
 									</value>
 								</second>
 							</item>
@@ -1277,7 +1277,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>26418</value>
+										<value>49108</value>
 									</value>
 								</second>
 							</item>
@@ -1425,7 +1425,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>33324</value>
+										<value>87467</value>
 									</value>
 								</second>
 							</item>
@@ -1437,7 +1437,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>21309</value>
+										<value>73365</value>
 									</value>
 								</second>
 							</item>
@@ -1585,7 +1585,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>50988</value>
+										<value>42245</value>
 									</value>
 								</second>
 							</item>
@@ -1597,7 +1597,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>33786</value>
+										<value>51378</value>
 									</value>
 								</second>
 							</item>
@@ -15518,9 +15518,61 @@ fieldOutput1 = ff[0]</value>
 					</state>
 				</second>
 			</item>
+			<item>
+				<first>WriteField:2</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>DataIO</category_name_>
+						<module_name_>WriteField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>3</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FileTypeList</name>
+								</first>
+								<second>
+									<name>FileTypeList</name>
+									<value>
+										<which>2</which>
+										<value>SCIRun Field Binary (*.fld);;SCIRun Field ASCII (*.fld);;CARPFiber (*.lon);;CARPMesh (*.elem *.pts *.lon);;CVRTI_FacPtsFileToTriSurf (*.fac *.tri *.pts *.pos);;CurveField (*.pts *.pos *.edge);;Matlab Field (*.mat);;NrrdFile (*.nhdr *.nrrd);;ObjToField (*.obj);;PointCloudField (*.pts *.pos *.txt);;TetVolField (*.elem *.tet *.pts *.pos);;TetVolFieldToVtk (*.vtk);;TetVolField[BaseIndex 1] (*.tet *.pts);;TriSurfField (*.fac *.tri *.pts *.pos);;TriSurfFieldSTL[ASCII] (*.stl);;TriSurfFieldSTL[Binary] (*.stl);;TriSurfFieldToExotxt (*.ex2);;TriSurfFieldToExotxt[BaseIndex 1] (*.ex2);;TriSurfFieldToM (*.m);;TriSurfFieldToVtk (*.vtk);;TriSurfField[BaseIndex 1] (*.fac *.pts)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FileTypeName</name>
+								</first>
+								<second>
+									<name>FileTypeName</name>
+									<value>
+										<which>2</which>
+										<value>TriSurfFieldSTL[Binary]</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Filename</name>
+								</first>
+								<second>
+									<name>Filename</name>
+									<value>
+										<which>2</which>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/OHSU_vent_hires_surface_seg.stl</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>159</count>
+			<count>160</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
 				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
@@ -15913,6 +15965,18 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>WriteField:0</moduleId2_>
+				<port2_>
+					<name>FieldToWrite</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CalculateFieldData:4</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>WriteField:2</moduleId2_>
 				<port2_>
 					<name>FieldToWrite</name>
 					<id>0</id>
@@ -17433,7 +17497,7 @@ fieldOutput1 = ff[0]</value>
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>95</count>
+		<count>96</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
@@ -17529,8 +17593,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>CreateFieldData:2</first>
 			<second>
-				<first>3.19000000000000000e+02</first>
-				<second>-2.89000000000000000e+02</second>
+				<first>3.71000000000000000e+02</first>
+				<second>-2.92000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18061,8 +18125,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>TransformMeshWithTransform:0</first>
 			<second>
-				<first>-1.90000000000000000e+02</first>
-				<second>-2.80000000000000000e+02</second>
+				<first>-9.20000000000000000e+01</first>
+				<second>-2.86000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18089,8 +18153,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>WriteField:0</first>
 			<second>
-				<first>8.72000000000000000e+02</first>
-				<second>1.40800000000000000e+03</second>
+				<first>8.56000000000000000e+02</first>
+				<second>1.47800000000000000e+03</second>
 			</second>
 		</item>
 		<item>
@@ -18098,6 +18162,13 @@ fieldOutput1 = ff[0]</value>
 			<second>
 				<first>-2.40000000000000000e+02</first>
 				<second>3.25000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>WriteField:2</first>
+			<second>
+				<first>1.02400000000000000e+03</first>
+				<second>1.46400000000000000e+03</second>
 			</second>
 		</item>
 	</modulePositions>
@@ -18110,7 +18181,7 @@ fieldOutput1 = ff[0]</value>
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="20" tracking_level="0" version="0">
-		<count>95</count>
+		<count>96</count>
 		<item_version>0</item_version>
 		<item class_id="21" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
@@ -18490,6 +18561,10 @@ fieldOutput1 = ff[0]</value>
 		</item>
 		<item>
 			<first>WriteField:1</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>WriteField:2</first>
 			<second>-1</second>
 		</item>
 	</moduleTags>
