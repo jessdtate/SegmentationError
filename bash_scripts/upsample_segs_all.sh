@@ -10,7 +10,7 @@ fi
 
 echo $1
 
-files=($(ls -1 $1/*vent*nrrd | grep -v 'hires'))
+files=($(ls -1 $1/*vent*nrrd | grep -v 'hires' | grep -v '_DT'))
 
 for f in ${files[@]}
 do
