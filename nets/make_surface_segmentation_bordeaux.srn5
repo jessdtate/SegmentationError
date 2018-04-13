@@ -4,34 +4,18 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>96</count>
+			<count>83</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
-				<first>AlignMeshBoundingBoxes:0</first>
+				<first>CalculateFieldData:0</first>
 				<second class_id="4" tracking_level="0" version="0">
 					<module class_id="5" tracking_level="0" version="0">
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeMesh</category_name_>
-						<module_name_>AlignMeshBoundingBoxes</module_name_>
-					</module>
-					<state class_id="6" tracking_level="0" version="0">
-						<stateMap class_id="7" tracking_level="0" version="0">
-							<count>0</count>
-							<item_version>0</item_version>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>CalculateFieldData:0</first>
-				<second>
-					<module>
 						<package_name_>SCIRun</package_name_>
 						<category_name_>ChangeFieldData</category_name_>
 						<module_name_>CalculateFieldData</module_name_>
 					</module>
-					<state>
-						<stateMap>
+					<state class_id="6" tracking_level="0" version="0">
+						<stateMap class_id="7" tracking_level="0" version="0">
 							<count>2</count>
 							<item_version>0</item_version>
 							<item class_id="8" tracking_level="0" version="0">
@@ -54,7 +38,7 @@
 									<name>FunctionString</name>
 									<value>
 										<which>2</which>
-										<value>RESULT = DATA1+DATA2+DATA3;</value>
+										<value>RESULT = DATA1+DATA2;</value>
 									</value>
 								</second>
 							</item>
@@ -279,38 +263,26 @@
 				</second>
 			</item>
 			<item>
-				<first>ClipFieldByFunction:0</first>
+				<first>ChooseInput:2</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>ClipFieldByFunction</module_name_>
+						<category_name_>Flow Control</category_name_>
+						<module_name_>ChooseInput</module_name_>
 					</module>
 					<state>
 						<stateMap>
-							<count>2</count>
+							<count>1</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>ClipMethod</name>
+									<name>PortIndex</name>
 								</first>
 								<second>
-									<name>ClipMethod</name>
+									<name>PortIndex</name>
 									<value>
-										<which>2</which>
-										<value>Element Center</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FunctionString</name>
-								</first>
-								<second>
-									<name>FunctionString</name>
-									<value>
-										<which>2</which>
-										<value>DATA1 &gt; 0 &amp;&amp; DATA1&lt;2;</value>
+										<which>0</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -378,7 +350,7 @@
 									<name>InputFieldName</name>
 									<value>
 										<which>2</which>
-										<value>tetmesh</value>
+										<value>--- no name ---</value>
 									</value>
 								</second>
 							</item>
@@ -390,7 +362,7 @@
 									<name>InputType</name>
 									<value>
 										<which>2</which>
-										<value>ConstantData</value>
+										<value>NoData</value>
 									</value>
 								</second>
 							</item>
@@ -412,58 +384,6 @@
 			</item>
 			<item>
 				<first>CreateFieldData:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeFieldData</category_name_>
-						<module_name_>CreateFieldData</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>BasisString</name>
-								</first>
-								<second>
-									<name>BasisString</name>
-									<value>
-										<which>2</which>
-										<value>Linear</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FormatString</name>
-								</first>
-								<second>
-									<name>FormatString</name>
-									<value>
-										<which>2</which>
-										<value>Scalar</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FunctionString</name>
-								</first>
-								<second>
-									<name>FunctionString</name>
-									<value>
-										<which>2</which>
-										<value>RESULT = INDEX;</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>CreateFieldData:1</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
@@ -671,58 +591,6 @@
 				</second>
 			</item>
 			<item>
-				<first>CreateFieldData:5</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeFieldData</category_name_>
-						<module_name_>CreateFieldData</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>BasisString</name>
-								</first>
-								<second>
-									<name>BasisString</name>
-									<value>
-										<which>2</which>
-										<value>Linear</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FormatString</name>
-								</first>
-								<second>
-									<name>FormatString</name>
-									<value>
-										<which>2</which>
-										<value>Scalar</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FunctionString</name>
-								</first>
-								<second>
-									<name>FunctionString</name>
-									<value>
-										<which>2</which>
-										<value>RESULT = 3;</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>CreateFieldData:6</first>
 				<second>
 					<module>
@@ -886,46 +754,6 @@
 				</second>
 			</item>
 			<item>
-				<first>GeneratePointSamplesFromField:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>GeneratePointSamplesFromField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>NumSeeds</name>
-								</first>
-								<second>
-									<name>NumSeeds</name>
-									<value>
-										<which>0</which>
-										<value>15</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProbeScale</name>
-								</first>
-								<second>
-									<name>ProbeScale</name>
-									<value>
-										<which>1</which>
-										<value>7.50000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>GenerateSinglePointProbeFromField:0</first>
 				<second>
 					<module>
@@ -945,7 +773,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>78213</value>
+										<value>72214</value>
 									</value>
 								</second>
 							</item>
@@ -957,7 +785,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>52987</value>
+										<value>9138</value>
 									</value>
 								</second>
 							</item>
@@ -969,7 +797,7 @@
 									<name>FieldValue</name>
 									<value>
 										<which>2</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1017,7 +845,7 @@
 									<name>ProbeSize</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>3.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1053,7 +881,7 @@
 									<name>XLocation</name>
 									<value>
 										<which>1</which>
-										<value>1.14319806094348806e+01</value>
+										<value>1.28110964123022839e+01</value>
 									</value>
 								</second>
 							</item>
@@ -1065,7 +893,7 @@
 									<name>YLocation</name>
 									<value>
 										<which>1</which>
-										<value>-1.71288445946865721e+02</value>
+										<value>-1.72531290099940804e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1077,7 +905,7 @@
 									<name>ZLocation</name>
 									<value>
 										<which>1</which>
-										<value>-2.27239494721685446e+02</value>
+										<value>-2.27436773497532357e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1105,7 +933,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>118039</value>
+										<value>58797</value>
 									</value>
 								</second>
 							</item>
@@ -1117,7 +945,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>86663</value>
+										<value>3596</value>
 									</value>
 								</second>
 							</item>
@@ -1129,7 +957,7 @@
 									<name>FieldValue</name>
 									<value>
 										<which>2</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1177,7 +1005,7 @@
 									<name>ProbeSize</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>3.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1213,7 +1041,7 @@
 									<name>XLocation</name>
 									<value>
 										<which>1</which>
-										<value>-7.30438434267706072e+00</value>
+										<value>-6.89321076918090458e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1225,7 +1053,7 @@
 									<name>YLocation</name>
 									<value>
 										<which>1</which>
-										<value>-1.54847835849361104e+02</value>
+										<value>-1.54799454252450232e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1237,7 +1065,7 @@
 									<name>ZLocation</name>
 									<value>
 										<which>1</which>
-										<value>-2.25437695305682723e+02</value>
+										<value>-2.24344071199579531e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1265,7 +1093,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>136371</value>
+										<value>37397</value>
 									</value>
 								</second>
 							</item>
@@ -1277,7 +1105,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>64666</value>
+										<value>24416</value>
 									</value>
 								</second>
 							</item>
@@ -1289,7 +1117,7 @@
 									<name>FieldValue</name>
 									<value>
 										<which>2</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1337,7 +1165,7 @@
 									<name>ProbeSize</name>
 									<value>
 										<which>1</which>
-										<value>5.00000000000000000e+00</value>
+										<value>3.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1425,7 +1253,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>179038</value>
+										<value>52051</value>
 									</value>
 								</second>
 							</item>
@@ -1437,7 +1265,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>77158</value>
+										<value>20496</value>
 									</value>
 								</second>
 							</item>
@@ -1449,7 +1277,7 @@
 									<name>FieldValue</name>
 									<value>
 										<which>2</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1533,7 +1361,7 @@
 									<name>XLocation</name>
 									<value>
 										<which>1</which>
-										<value>5.06749693757064108e+01</value>
+										<value>3.50309642317470065e+01</value>
 									</value>
 								</second>
 							</item>
@@ -1545,7 +1373,7 @@
 									<name>YLocation</name>
 									<value>
 										<which>1</which>
-										<value>-1.82491245316814400e+02</value>
+										<value>-1.89935834626611324e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1557,7 +1385,7 @@
 									<name>ZLocation</name>
 									<value>
 										<which>1</which>
-										<value>-2.26513184389687552e+02</value>
+										<value>-2.29488590459400484e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1585,7 +1413,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>165455</value>
+										<value>63763</value>
 									</value>
 								</second>
 							</item>
@@ -1597,7 +1425,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>68020</value>
+										<value>25610</value>
 									</value>
 								</second>
 							</item>
@@ -1609,7 +1437,7 @@
 									<name>FieldValue</name>
 									<value>
 										<which>2</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1718,230 +1546,6 @@
 									<value>
 										<which>1</which>
 										<value>-2.31169039954511476e+02</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>GetDomainBoundary:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>GetDomainBoundary</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>8</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>AddOuterBoundary</name>
-								</first>
-								<second>
-									<name>AddOuterBoundary</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DisconnectBoundaries</name>
-								</first>
-								<second>
-									<name>DisconnectBoundaries</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Domain</name>
-								</first>
-								<second>
-									<name>Domain</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InnerBoundaryOnly</name>
-								</first>
-								<second>
-									<name>InnerBoundaryOnly</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MaxRange</name>
-								</first>
-								<second>
-									<name>MaxRange</name>
-									<value>
-										<which>0</which>
-										<value>255</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MinRange</name>
-								</first>
-								<second>
-									<name>MinRange</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NoInnerBoundary</name>
-								</first>
-								<second>
-									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseRange</name>
-								</first>
-								<second>
-									<name>UseRange</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>GetDomainBoundary:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>GetDomainBoundary</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>8</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>AddOuterBoundary</name>
-								</first>
-								<second>
-									<name>AddOuterBoundary</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DisconnectBoundaries</name>
-								</first>
-								<second>
-									<name>DisconnectBoundaries</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Domain</name>
-								</first>
-								<second>
-									<name>Domain</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InnerBoundaryOnly</name>
-								</first>
-								<second>
-									<name>InnerBoundaryOnly</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MaxRange</name>
-								</first>
-								<second>
-									<name>MaxRange</name>
-									<value>
-										<which>0</which>
-										<value>255</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MinRange</name>
-								</first>
-								<second>
-									<name>MinRange</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NoInnerBoundary</name>
-								</first>
-								<second>
-									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseRange</name>
-								</first>
-								<second>
-									<name>UseRange</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2082,7 +1686,7 @@ c = np.dot(n,np.array([0,0,1]));
 vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [ - v[1], v[0], 0]]) 
 R = np.identity(3) + vx + np.dot(vx,vx) * (1/(1+c))
 
-t_pts_ = np.dot(pts_,R)
+t_pts_ = np.dot(R,pts_.T).T
 
 #print(t_pts_)
 
@@ -2770,7 +2374,7 @@ c = np.dot(n,np.array([0,0,1]));
 vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [ - v[1], v[0], 0]]) 
 R = np.identity(3) + vx + np.dot(vx,vx) * (1/(1+c))
 
-t_pts_ = np.dot(pts_,R)
+t_pts_ = np.dot(R,pts_.T).T
 
 #print(t_pts_)
 
@@ -2811,293 +2415,6 @@ y=pts[:,1]
 z=pts[:,2]
 
 i = np.arange(0, len(pts))
-
-interp_i = np.linspace(pad, i.max() - pad + 1, 5 * (i.size - 2*pad))
-#interp_i = np.linspace(0, i.max(), 5 * i.max())
-
-xi = interp1d(i, x, kind=&apos;cubic&apos;)(interp_i)
-yi = interp1d(i, y, kind=&apos;cubic&apos;)(interp_i)
-zi = interp1d(i, z, kind=&apos;cubic&apos;)(interp_i)
-
-pts_new = (np.column_stack((xi,yi,zi))).tolist()
-
-idx = list(range(len(xi)))
-
-idx2 = idx[1:len(idx)]
-idx2.append(idx[0])
-
-edge = (np.array([idx,idx2]).T).tolist()
-
-field2={&apos;node&apos; : pts_new, &apos;edge&apos;:edge}
-
-
-fieldOutput1 = field2
-
-temp_output = t_pts_[index,:].tolist()
-
-matrixOutput1 = temp_output
-
-field3 = {&apos;node&apos;:temp_output}
-field4 = {&apos;node&apos;:pts.tolist()}
-fieldOutput2 = field4
-
-
-</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField1Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField2Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField3Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix1Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix2Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix3Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString1Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString2Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString3Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput3</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>InterfaceWithPython:3</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Python</category_name_>
-						<module_name_>InterfaceWithPython</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>14</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>InputField:0</name>
-								</first>
-								<second>
-									<name>InputField:0</name>
-									<value>
-										<which>2</which>
-										<value>fieldInput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InputField:1</name>
-								</first>
-								<second>
-									<name>InputField:1</name>
-									<value>
-										<which>2</which>
-										<value>fieldInput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NumberOfRetries</name>
-								</first>
-								<second>
-									<name>NumberOfRetries</name>
-									<value>
-										<which>0</which>
-										<value>50</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PollingIntervalMilliseconds</name>
-								</first>
-								<second>
-									<name>PollingIntervalMilliseconds</name>
-									<value>
-										<which>0</which>
-										<value>200</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonCode</name>
-								</first>
-								<second>
-									<name>PythonCode</name>
-									<value>
-										<which>2</which>
-										<value>
-
-field = fieldInput1
-
-import math
-import numpy as np
-#from scipy.interpolate import interp1d
-  
-print(&apos;modules loaded&apos;)
-
-pts = np.array(field[&apos;node&apos;])
-
-
-#print(pts)
-
-
-m_p=np.mean(pts,0)
-pts_ = pts-m_p
-A = np.concatenate((pts_[:,0:2],-np.ones((pts_.shape[0],1))),1)
-b = pts_[:,2]
-t_n = np.dot(np.linalg.pinv(A),b)
-n_o = np.concatenate((t_n[0:2],np.array([-1])),0)
-norm_no = np.linalg.norm(n_o,2)
-n = n_o/norm_no
-
-v = np.cross(n,np.array([0,0,1]));
-c = np.dot(n,np.array([0,0,1]));
-vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [ - v[1], v[0], 0]]) 
-R = np.identity(3) + vx + np.dot(vx,vx) * (1/(1+c))
-
-t_pts_ = np.dot(pts_,R)
-
-#print(t_pts_)
-
-t_ = (t_pts_[:,1]/t_pts_[:,0]).tolist()
-
-theta  = np.array([math.atan(t) for t in t_])
-
-q4 = [t1[0]&gt;=0 and t1[1]&lt;0  for t1 in t_pts_]
-q3 = [t1[0]&lt;0 and t1[1]&lt;0  for t1 in t_pts_]
-q2 = [t1[0]&lt;0 and t1[1]&gt;=0  for t1 in t_pts_]
-ax1 = [t1[0]==0 and t1[1]&gt;=0  for t1 in t_pts_]
-ax2 = [t1[0]==0 and t1[1]&lt;0  for t1 in t_pts_]
-
-for k in range(len(theta)):
-  if q4[k]:
-    theta[k] = theta[k]+2*math.pi
-  elif q3[k]:
-    theta[k] = theta[k]+math.pi
-  elif q2[k]:
-    theta[k] = theta[k]+math.pi
-  elif ax1[k]:
-    theta[k] = math.pi/2
-  elif ax2[k]:
-    theta[k] = 3*math.pi/2
-
-#print(theta)
-
-index=np.argsort(theta)
-
-pts = pts[index,:]
-
-pad = 3
-pts = np.pad(pts, [(pad,pad), (0,0)], mode=&apos;wrap&apos;)
-
-  #print(pts)
-x=pts[:,0]
-y=pts[:,1]
-z=pts[:,2]
-
-i = np.arange(0, len(pts))
-
 
 interp_i = np.linspace(pad, i.max() - pad + 1, 5 * (i.size - 2*pad))
 #interp_i = np.linspace(0, i.max(), 5 * i.max())
@@ -3307,8 +2624,8 @@ sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
 from dilate_erode import *
 
 # filter parameters
-rad_dilate = 6   # dilation radius
-rad_erode  = 6   # erosion radius
+rad_dilate = 5  # dilation radius
+rad_erode  = 5   # erosion radius
 value = 1        # label value to operate on
 
 # get input field
@@ -3512,8 +2829,8 @@ sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
 from dilate_erode import *
 
 # filter parameters
-rad_dilate = 6	   # dilation radius
-rad_erode  = 6   # erosion radius
+rad_dilate = 5   # dilation radius
+rad_erode  = 5   # erosion radius
 value = 2        # label value to operate on
 
 # get input field
@@ -3656,211 +2973,6 @@ fieldOutput1 = final
 				</second>
 			</item>
 			<item>
-				<first>InterfaceWithPython:6</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Python</category_name_>
-						<module_name_>InterfaceWithPython</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>13</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>InputField:0</name>
-								</first>
-								<second>
-									<name>InputField:0</name>
-									<value>
-										<which>2</which>
-										<value>fieldInput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NumberOfRetries</name>
-								</first>
-								<second>
-									<name>NumberOfRetries</name>
-									<value>
-										<which>0</which>
-										<value>50</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PollingIntervalMilliseconds</name>
-								</first>
-								<second>
-									<name>PollingIntervalMilliseconds</name>
-									<value>
-										<which>0</which>
-										<value>200</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonCode</name>
-								</first>
-								<second>
-									<name>PythonCode</name>
-									<value>
-										<which>2</which>
-										<value>import copy
-
-sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
-from dilate_erode import *
-
-# filter parameters
-rad_dilate = 6   # dilation radius
-rad_erode  = 6   # erosion radius
-value = 3        # label value to operate on
-
-# get input field
-orig = fieldInput1
-
-# run code
-#tmp=dilate_erode(orig,rad_dilate,rad_erode,0)
-neigh  = find_neighbors(orig,&apos;tight&apos;)
-
-tmp = copy.deepcopy(orig)
-tmp=dilate(tmp,rad_dilate,value,neigh)
-print(&apos;dilation done&apos;)
-final=erode(tmp,rad_erode,value,neigh)
-print(&apos;erosion done&apos;)
-
-#ff = copy.deepcopy(final)
-
-#ff_out = floodfill(ff, [1], 1)
-#ff=ff_out[0]
-
-#print(&apos;floodfill done&apos;)
-
-
-# send output
-fieldOutput1 = final
-#fieldOutput2 = ff</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField1Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField2Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField3Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix1Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix2Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix3Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString1Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString2Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString3Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput3</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>InterfaceWithPython:7</first>
 				<second>
 					<module>
@@ -3870,7 +2982,7 @@ fieldOutput1 = final
 					</module>
 					<state>
 						<stateMap>
-							<count>15</count>
+							<count>18</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -3902,6 +3014,42 @@ fieldOutput1 = final
 								</first>
 								<second>
 									<name>InputField:2</name>
+									<value>
+										<which>2</which>
+										<value>fieldInput3</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>InputField:3</name>
+								</first>
+								<second>
+									<name>InputField:3</name>
+									<value>
+										<which>2</which>
+										<value>fieldInput1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>InputField:4</name>
+								</first>
+								<second>
+									<name>InputField:4</name>
+									<value>
+										<which>2</which>
+										<value>fieldInput2</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>InputField:5</name>
+								</first>
+								<second>
+									<name>InputField:5</name>
 									<value>
 										<which>2</which>
 										<value>fieldInput3</value>
@@ -5219,6 +4367,146 @@ fieldOutput1 = ff[0]</value>
 				</second>
 			</item>
 			<item>
+				<first>PrintStringIntoString:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s%s_cleaver_vol.mat</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintStringIntoString:1</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s%s_surface.stl</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintStringIntoString:2</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s%s_mitral_valve_pts.pts</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintStringIntoString:3</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s%s_tricusp_valve_pts.pts</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintStringIntoString:5</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s%s_surface_seg.mat</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
 				<first>ProjectPointsOntoMesh:0</first>
 				<second>
 					<module>
@@ -5238,7 +4526,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ProjectMethod</name>
 									<value>
 										<which>2</which>
-										<value>nodes</value>
+										<value>elements</value>
 									</value>
 								</second>
 							</item>
@@ -5294,63 +4582,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ProjectMethod</name>
 									<value>
 										<which>2</which>
-										<value>nodes</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ProjectPointsOntoMesh:3</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeMesh</category_name_>
-						<module_name_>ProjectPointsOntoMesh</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>ProjectMethod</name>
-								</first>
-								<second>
-									<name>ProjectMethod</name>
-									<value>
-										<which>2</which>
-										<value>nodes</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ProjectPointsOntoMesh:5</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeMesh</category_name_>
-						<module_name_>ProjectPointsOntoMesh</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>ProjectMethod</name>
-								</first>
-								<second>
-									<name>ProjectMethod</name>
-									<value>
-										<which>2</which>
-										<value>nodes</value>
+										<value>elements</value>
 									</value>
 								</second>
 							</item>
@@ -5418,59 +4650,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/OHSU_ventricles_masked_hires.mat</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScriptEnvironmentVariable</name>
-								</first>
-								<second>
-									<name>ScriptEnvironmentVariable</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ReadField:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>ReadField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/OHSU_ventricles_masked_hires.nrrd</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires.mat</value>
 									</value>
 								</second>
 							</item>
@@ -5522,7 +4702,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_mitral_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires_mitral_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5574,7 +4754,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_tricuspid_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires_tricusp_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5595,7 +4775,7 @@ fieldOutput1 = ff[0]</value>
 				</second>
 			</item>
 			<item>
-				<first>ReadField:4</first>
+				<first>ReadField:5</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
@@ -5614,7 +4794,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>PointCloudField</value>
+										<value>Matlab Field</value>
 									</value>
 								</second>
 							</item>
@@ -5626,7 +4806,59 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_pulm_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires_cleaver_vol.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ScriptEnvironmentVariable</name>
+								</first>
+								<second>
+									<name>ScriptEnvironmentVariable</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>ReadField:6</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>DataIO</category_name_>
+						<module_name_>ReadField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>3</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FileTypeName</name>
+								</first>
+								<second>
+									<name>FileTypeName</name>
+									<value>
+										<which>2</which>
+										<value>TriSurfFieldSTL[Binary]</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Filename</name>
+								</first>
+								<second>
+									<name>Filename</name>
+									<value>
+										<which>2</which>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires_surface.stl</value>
 									</value>
 								</second>
 							</item>
@@ -5958,7 +5190,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>4.40000000000000000e+01</value>
+										<value>1.70000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -6022,71 +5254,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>4.20000000000000000e+01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FixedMin</name>
-								</first>
-								<second>
-									<name>FixedMin</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Symmetric</name>
-								</first>
-								<second>
-									<name>Symmetric</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>RescaleColorMap:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>RescaleColorMap</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>4</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>AutoScale</name>
-								</first>
-								<second>
-									<name>AutoScale</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FixedMax</name>
-								</first>
-								<second>
-									<name>FixedMax</name>
-									<value>
-										<which>1</which>
-										<value>3.00000000000000000e+01</value>
+										<value>2.00000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -6150,7 +5318,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>3.00000000000000000e+00</value>
+										<value>2.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -6638,7 +5806,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FaceTransparency</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -8375,478 +7543,6 @@ fieldOutput1 = ff[0]</value>
 				</second>
 			</item>
 			<item>
-				<first>ShowField:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>38</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.5,0.5,0.5)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>ShowField:28</first>
 				<second>
 					<module>
@@ -9639,478 +8335,6 @@ fieldOutput1 = ff[0]</value>
 									<value>
 										<which>3</which>
 										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:3</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>38</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.5,0.5,0.5)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -11679,951 +9903,7 @@ fieldOutput1 = ff[0]</value>
 				</second>
 			</item>
 			<item>
-				<first>ShowField:6</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>38</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.176043,0.313771,0.494118)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>ShowField:7</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>38</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.498039,0.00471504,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>10</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>5.00000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:8</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
@@ -13947,12 +11227,12 @@ fieldOutput1 = ff[0]</value>
 				</second>
 			</item>
 			<item>
-				<first>TransformMeshWithTransform:0</first>
+				<first>SplitFileName:0</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeMesh</category_name_>
-						<module_name_>TransformMeshWithTransform</module_name_>
+						<category_name_>String</category_name_>
+						<module_name_>SplitFileName</module_name_>
 					</module>
 					<state>
 						<stateMap>
@@ -14294,490 +11574,6 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarMultiplier</name>
 									<value>
 										<which>1</which>
-										<value>9.99899999999999949e+01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarNumTicks</name>
-								</first>
-								<second>
-									<name>ScaleBarNumTicks</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarUnitValue</name>
-								</first>
-								<second>
-									<name>ScaleBarUnitValue</name>
-									<value>
-										<which>2</which>
-										<value>mm</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Shine</name>
-								</first>
-								<second>
-									<name>Shine</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowBBox</name>
-								</first>
-								<second>
-									<name>ShowBBox</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowScaleBar</name>
-								</first>
-								<second>
-									<name>ShowScaleBar</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowViewer</name>
-								</first>
-								<second>
-									<name>ShowViewer</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Specular</name>
-								</first>
-								<second>
-									<name>Specular</name>
-									<value>
-										<which>1</which>
-										<value>4.00000000000000022e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Stereo</name>
-								</first>
-								<second>
-									<name>Stereo</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>StereoFusion</name>
-								</first>
-								<second>
-									<name>StereoFusion</name>
-									<value>
-										<which>1</which>
-										<value>4.00000000000000022e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextOffset</name>
-								</first>
-								<second>
-									<name>TextOffset</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseBGColor</name>
-								</first>
-								<second>
-									<name>UseBGColor</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseClip</name>
-								</first>
-								<second>
-									<name>UseClip</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ViewScene:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Render</category_name_>
-						<module_name_>ViewScene</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>39</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>Ambient</name>
-								</first>
-								<second>
-									<name>Ambient</name>
-									<value>
-										<which>1</which>
-										<value>2.00000000000000011e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>BackCull</name>
-								</first>
-								<second>
-									<name>BackCull</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>BackgroundColor</name>
-								</first>
-								<second>
-									<name>BackgroundColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Diffuse</name>
-								</first>
-								<second>
-									<name>Diffuse</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DisplayList</name>
-								</first>
-								<second>
-									<name>DisplayList</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Emission</name>
-								</first>
-								<second>
-									<name>Emission</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldOfView</name>
-								</first>
-								<second>
-									<name>FieldOfView</name>
-									<value>
-										<which>0</which>
-										<value>20</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FogColor</name>
-								</first>
-								<second>
-									<name>FogColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FogEnd</name>
-								</first>
-								<second>
-									<name>FogEnd</name>
-									<value>
-										<which>1</which>
-										<value>7.09999999999999964e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FogOn</name>
-								</first>
-								<second>
-									<name>FogOn</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FogStart</name>
-								</first>
-								<second>
-									<name>FogStart</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>HeadLightColor</name>
-								</first>
-								<second>
-									<name>HeadLightColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>HeadLightOn</name>
-								</first>
-								<second>
-									<name>HeadLightOn</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1Color</name>
-								</first>
-								<second>
-									<name>Light1Color</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1On</name>
-								</first>
-								<second>
-									<name>Light1On</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light2Color</name>
-								</first>
-								<second>
-									<name>Light2Color</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light2On</name>
-								</first>
-								<second>
-									<name>Light2On</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light3Color</name>
-								</first>
-								<second>
-									<name>Light3Color</name>
-									<value>
-										<which>2</which>
-										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light3On</name>
-								</first>
-								<second>
-									<name>Light3On</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Lighting</name>
-								</first>
-								<second>
-									<name>Lighting</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ObjectsOnly</name>
-								</first>
-								<second>
-									<name>ObjectsOnly</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PolygonOffset</name>
-								</first>
-								<second>
-									<name>PolygonOffset</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarFontSize</name>
-								</first>
-								<second>
-									<name>ScaleBarFontSize</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarHeight</name>
-								</first>
-								<second>
-									<name>ScaleBarHeight</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarLength</name>
-								</first>
-								<second>
-									<name>ScaleBarLength</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarLineWidth</name>
-								</first>
-								<second>
-									<name>ScaleBarLineWidth</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScaleBarMultiplier</name>
-								</first>
-								<second>
-									<name>ScaleBarMultiplier</name>
-									<value>
-										<which>1</which>
 										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
@@ -14850,7 +11646,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ShowViewer</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -15458,111 +12254,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/OHSU_vent_hires_surface_seg.mat</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>WriteField:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>WriteField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeList</name>
-								</first>
-								<second>
-									<name>FileTypeList</name>
-									<value>
-										<which>2</which>
-										<value>SCIRun Field Binary (*.fld);;SCIRun Field ASCII (*.fld);;CARPFiber (*.lon);;CARPMesh (*.elem *.pts *.lon);;CVRTI_FacPtsFileToTriSurf (*.fac *.tri *.pts *.pos);;CurveField (*.pts *.pos *.edge);;Matlab Field (*.mat);;NrrdFile (*.nhdr *.nrrd);;ObjToField (*.obj);;PointCloudField (*.pts *.pos *.txt);;TetVolField (*.elem *.tet *.pts *.pos);;TetVolFieldToVtk (*.vtk);;TetVolField[BaseIndex 1] (*.tet *.pts);;TriSurfField (*.fac *.tri *.pts *.pos);;TriSurfFieldSTL[ASCII] (*.stl);;TriSurfFieldSTL[Binary] (*.stl);;TriSurfFieldToExotxt (*.ex2);;TriSurfFieldToExotxt[BaseIndex 1] (*.ex2);;TriSurfFieldToM (*.m);;TriSurfFieldToVtk (*.vtk);;TriSurfField[BaseIndex 1] (*.fac *.pts)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>Matlab Field</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/OHSU_vent_vol.mat</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>WriteField:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>WriteField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeList</name>
-								</first>
-								<second>
-									<name>FileTypeList</name>
-									<value>
-										<which>2</which>
-										<value>SCIRun Field Binary (*.fld);;SCIRun Field ASCII (*.fld);;CARPFiber (*.lon);;CARPMesh (*.elem *.pts *.lon);;CVRTI_FacPtsFileToTriSurf (*.fac *.tri *.pts *.pos);;CurveField (*.pts *.pos *.edge);;Matlab Field (*.mat);;NrrdFile (*.nhdr *.nrrd);;ObjToField (*.obj);;PointCloudField (*.pts *.pos *.txt);;TetVolField (*.elem *.tet *.pts *.pos);;TetVolFieldToVtk (*.vtk);;TetVolField[BaseIndex 1] (*.tet *.pts);;TriSurfField (*.fac *.tri *.pts *.pos);;TriSurfFieldSTL[ASCII] (*.stl);;TriSurfFieldSTL[Binary] (*.stl);;TriSurfFieldToExotxt (*.ex2);;TriSurfFieldToExotxt[BaseIndex 1] (*.ex2);;TriSurfFieldToM (*.m);;TriSurfFieldToVtk (*.vtk);;TriSurfField[BaseIndex 1] (*.fac *.pts)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>TriSurfFieldSTL[Binary]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/OHSU_vent_hires_surface_seg.stl</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/bordeaux_ventricles_hires_surface_seg.mat</value>
 									</value>
 								</second>
 							</item>
@@ -15572,227 +12264,11 @@ fieldOutput1 = ff[0]</value>
 			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>160</count>
+			<count>143</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_ class_id="15" tracking_level="0" version="0">
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ConvertFieldBasis:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CreateFieldData:6</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GeneratePointSamplesFromField:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GenerateSinglePointProbeFromField:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GenerateSinglePointProbeFromField:1</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GenerateSinglePointProbeFromField:2</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GenerateSinglePointProbeFromField:3</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GenerateSinglePointProbeFromField:4</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:7</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:0</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:1</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:2</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:3</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:5</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:6</moduleId2_>
-				<port2_>
-					<name>ObjectField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ReportFieldGeometryMeasures:1</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:0</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>TransformMatrix</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>TransformMeshWithTransform:0</moduleId2_>
-				<port2_>
-					<name>TransformMatrix</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>CalculateFieldData:0</moduleId1_>
-				<port1_>
+				<port1_ class_id="15" tracking_level="0" version="0">
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
@@ -15907,7 +12383,7 @@ fieldOutput1 = ff[0]</value>
 				<moduleId2_>InterfaceWithPython:7</moduleId2_>
 				<port2_>
 					<name>InputField</name>
-					<id>2</id>
+					<id>5</id>
 				</port2_>
 			</item>
 			<item>
@@ -15971,18 +12447,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>CalculateFieldData:4</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>WriteField:2</moduleId2_>
-				<port2_>
-					<name>FieldToWrite</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>ChooseInput:0</moduleId1_>
 				<port1_>
 					<name>Output</name>
@@ -16031,38 +12495,26 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ClipFieldByFunction:0</moduleId1_>
+				<moduleId1_>ChooseInput:2</moduleId1_>
 				<port1_>
-					<name>OutputField</name>
+					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ReportFieldGeometryMeasures:0</moduleId2_>
+				<moduleId2_>SelectSubMatrix:0</moduleId2_>
 				<port2_>
-					<name>InputField</name>
+					<name>InputMatrix</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ClipFieldByFunction:0</moduleId1_>
+				<moduleId1_>ChooseInput:2</moduleId1_>
 				<port1_>
-					<name>OutputField</name>
+					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:2</moduleId2_>
+				<moduleId2_>SelectSubMatrix:1</moduleId2_>
 				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ClipFieldByFunction:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>WriteField:1</moduleId2_>
-				<port2_>
-					<name>FieldToWrite</name>
+					<name>InputMatrix</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -16096,6 +12548,30 @@ fieldOutput1 = ff[0]</value>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
+				<moduleId2_>CreateFieldData:6</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ConvertFieldBasis:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>InterfaceWithPython:7</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>3</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ConvertFieldBasis:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
 				<moduleId2_>MapFieldDataFromSourceToDestination:0</moduleId2_>
 				<port2_>
 					<name>Destination</name>
@@ -16121,30 +12597,6 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:4</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>CreateFieldData:1</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>RescaleColorMap:2</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>CreateFieldData:1</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:8</moduleId2_>
 				<port2_>
 					<name>Field</name>
 					<id>0</id>
@@ -16196,18 +12648,6 @@ fieldOutput1 = ff[0]</value>
 				<port2_>
 					<name>InputFields</name>
 					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>CreateFieldData:5</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>JoinFields:0</moduleId2_>
-				<port2_>
-					<name>InputFields</name>
-					<id>2</id>
 				</port2_>
 			</item>
 			<item>
@@ -16288,18 +12728,6 @@ fieldOutput1 = ff[0]</value>
 					<name>ColorMapObject</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>RescaleColorMap:2</moduleId2_>
-				<port2_>
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>CreateStandardColorMap:0</moduleId1_>
-				<port1_>
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>RescaleColorMap:3</moduleId2_>
 				<port2_>
 					<name>ColorMapObject</name>
@@ -16328,18 +12756,6 @@ fieldOutput1 = ff[0]</value>
 				<port2_>
 					<name>ColorMapObject</name>
 					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>GeneratePointSamplesFromField:0</moduleId1_>
-				<port1_>
-					<name>GeneratedWidget</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>3</id>
 				</port2_>
 			</item>
 			<item>
@@ -16463,54 +12879,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GetDomainBoundary:0</moduleId1_>
-				<port1_>
-					<name>BoundaryField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AlignMeshBoundingBoxes:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>GetDomainBoundary:1</moduleId1_>
-				<port1_>
-					<name>BoundaryField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AlignMeshBoundingBoxes:0</moduleId2_>
-				<port2_>
-					<name>AlignmentField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>GetDomainBoundary:1</moduleId1_>
-				<port1_>
-					<name>BoundaryField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:3</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:0</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CreateFieldData:3</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>InterfaceWithPython:0</moduleId1_>
 				<port1_>
 					<name>PythonField1</name>
@@ -16540,21 +12908,9 @@ fieldOutput1 = ff[0]</value>
 					<name>PythonMatrix1</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>SelectSubMatrix:0</moduleId2_>
+				<moduleId2_>ChooseInput:2</moduleId2_>
 				<port2_>
-					<name>InputMatrix</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:0</moduleId1_>
-				<port1_>
-					<name>PythonMatrix1</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>SelectSubMatrix:1</moduleId2_>
-				<port2_>
-					<name>InputMatrix</name>
+					<name>Input</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -16612,18 +12968,6 @@ fieldOutput1 = ff[0]</value>
 					<name>PythonField1</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>CreateFieldData:4</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:2</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>ProjectPointsOntoMesh:2</moduleId2_>
 				<port2_>
 					<name>InputField</name>
@@ -16643,39 +12987,15 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>InterfaceWithPython:3</moduleId1_>
+				<moduleId1_>InterfaceWithPython:2</moduleId1_>
 				<port1_>
-					<name>PythonField1</name>
+					<name>PythonMatrix1</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>CreateFieldData:5</moduleId2_>
+				<moduleId2_>ChooseInput:2</moduleId2_>
 				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:3</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:3</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:3</moduleId1_>
-				<port1_>
-					<name>PythonField2</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CreateFieldData:1</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
+					<name>Input</name>
+					<id>1</id>
 				</port2_>
 			</item>
 			<item>
@@ -16700,18 +13020,6 @@ fieldOutput1 = ff[0]</value>
 				<port2_>
 					<name>InputFields</name>
 					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:6</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CalculateFieldData:0</moduleId2_>
-				<port2_>
-					<name>InputFields</name>
-					<id>2</id>
 				</port2_>
 			</item>
 			<item>
@@ -16807,7 +13115,7 @@ fieldOutput1 = ff[0]</value>
 				<moduleId2_>InterfaceWithPython:7</moduleId2_>
 				<port2_>
 					<name>InputField</name>
-					<id>1</id>
+					<id>4</id>
 				</port2_>
 			</item>
 			<item>
@@ -16829,18 +13137,6 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>InterfaceWithPython:5</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>MapFieldDataFromSourceToDestination:0</moduleId1_>
-				<port1_>
-					<name>Remapped_Destination</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:6</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
@@ -16919,6 +13215,78 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
+				<moduleId1_>PrintStringIntoString:0</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ReadField:5</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintStringIntoString:1</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ReadField:6</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintStringIntoString:2</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ReadField:2</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintStringIntoString:3</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ReadField:3</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintStringIntoString:5</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>WriteField:0</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ProjectPointsOntoMesh:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>CreateFieldData:3</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
 				<moduleId1_>ProjectPointsOntoMesh:0</moduleId1_>
 				<port1_>
 					<name>OutputField</name>
@@ -16948,34 +13316,22 @@ fieldOutput1 = ff[0]</value>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
+				<moduleId2_>CreateFieldData:4</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ProjectPointsOntoMesh:2</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
 				<moduleId2_>ShowField:5</moduleId2_>
 				<port2_>
 					<name>Field</name>
 					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ProjectPointsOntoMesh:3</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:6</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ProjectPointsOntoMesh:5</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:3</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>1</id>
 				</port2_>
 			</item>
 			<item>
@@ -16993,36 +13349,12 @@ fieldOutput1 = ff[0]</value>
 			<item>
 				<moduleId1_>ReadField:0</moduleId1_>
 				<port1_>
-					<name>Field</name>
+					<name>FileLoaded</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>GetDomainBoundary:0</moduleId2_>
+				<moduleId2_>SplitFileName:0</moduleId2_>
 				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:0</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>TransformMeshWithTransform:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:1</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GetDomainBoundary:1</moduleId2_>
-				<port2_>
-					<name>InputField</name>
+					<name>Full_Filename</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -17075,14 +13407,122 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ReadField:4</moduleId1_>
+				<moduleId1_>ReadField:5</moduleId1_>
 				<port1_>
 					<name>Field</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ProjectPointsOntoMesh:5</moduleId2_>
+				<moduleId2_>ReportFieldGeometryMeasures:1</moduleId2_>
 				<port2_>
 					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ConvertFieldBasis:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GenerateSinglePointProbeFromField:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GenerateSinglePointProbeFromField:1</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ProjectPointsOntoMesh:0</moduleId2_>
+				<port2_>
+					<name>ObjectField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ProjectPointsOntoMesh:1</moduleId2_>
+				<port2_>
+					<name>ObjectField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ProjectPointsOntoMesh:2</moduleId2_>
+				<port2_>
+					<name>ObjectField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ProjectPointsOntoMesh:6</moduleId2_>
+				<port2_>
+					<name>ObjectField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ReportFieldGeometryMeasures:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:6</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ShowField:0</moduleId2_>
+				<port2_>
+					<name>Field</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -17153,18 +13593,6 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:7</moduleId2_>
-				<port2_>
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>RescaleColorMap:2</moduleId1_>
-				<port1_>
-					<name>ColorMapOutput</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:8</moduleId2_>
 				<port2_>
 					<name>ColorMapObject</name>
 					<id>0</id>
@@ -17339,18 +13767,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ShowField:2</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:1</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>ShowField:30</moduleId1_>
 				<port1_>
 					<name>SceneGraph</name>
@@ -17360,18 +13776,6 @@ fieldOutput1 = ff[0]</value>
 				<port2_>
 					<name>GeneralGeom</name>
 					<id>11</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:3</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:1</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>1</id>
 				</port2_>
 			</item>
 			<item>
@@ -17399,18 +13803,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ShowField:6</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>5</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>ShowField:7</moduleId1_>
 				<port1_>
 					<name>SceneGraph</name>
@@ -17420,18 +13812,6 @@ fieldOutput1 = ff[0]</value>
 				<port2_>
 					<name>GeneralGeom</name>
 					<id>7</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:8</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>6</id>
 				</port2_>
 			</item>
 			<item>
@@ -17483,32 +13863,133 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>TransformMeshWithTransform:0</moduleId1_>
+				<moduleId1_>SplitFileName:0</moduleId1_>
 				<port1_>
-					<name>Transformed_Field</name>
+					<name>Base</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ClipFieldByFunction:0</moduleId2_>
+				<moduleId2_>PrintStringIntoString:0</moduleId2_>
 				<port2_>
-					<name>InputFields</name>
+					<name>Input</name>
 					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Base</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Base</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:2</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Base</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:3</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Base</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:5</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:0</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:2</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:3</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:5</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
 				</port2_>
 			</item>
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>96</count>
+		<count>83</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
-			<first>AlignMeshBoundingBoxes:0</first>
-			<second class_id="18" tracking_level="0" version="0">
-				<first>-2.24000000000000000e+02</first>
-				<second>-3.60000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>CalculateFieldData:0</first>
-			<second>
+			<second class_id="18" tracking_level="0" version="0">
 				<first>2.75000000000000000e+02</first>
 				<second>4.95000000000000000e+02</second>
 			</second>
@@ -17516,8 +13997,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>CalculateFieldData:1</first>
 			<second>
-				<first>7.19000000000000000e+02</first>
-				<second>1.80000000000000000e+02</second>
+				<first>6.88000000000000000e+02</first>
+				<second>2.01000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17544,8 +14025,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ChooseInput:0</first>
 			<second>
-				<first>8.61000000000000000e+02</first>
-				<second>1.46000000000000000e+02</second>
+				<first>8.05000000000000000e+02</first>
+				<second>7.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
@@ -17556,10 +14037,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>ClipFieldByFunction:0</first>
+			<first>ChooseInput:2</first>
 			<second>
-				<first>-9.10000000000000000e+01</first>
-				<second>-1.73000000000000000e+02</second>
+				<first>5.70000000000000000e+01</first>
+				<second>-4.20000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
@@ -17572,57 +14053,43 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ConvertFieldBasis:0</first>
 			<second>
-				<first>4.13000000000000000e+02</first>
-				<second>-4.00000000000000000e+01</second>
+				<first>2.12000000000000000e+02</first>
+				<second>-2.97000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:0</first>
 			<second>
-				<first>1.53000000000000000e+02</first>
-				<second>-2.88000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>CreateFieldData:1</first>
-			<second>
-				<first>5.03000000000000000e+02</first>
-				<second>-2.83000000000000000e+02</second>
+				<first>6.30000000000000000e+01</first>
+				<second>-2.96000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:2</first>
 			<second>
-				<first>3.71000000000000000e+02</first>
-				<second>-2.92000000000000000e+02</second>
+				<first>3.19000000000000000e+02</first>
+				<second>-2.89000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:3</first>
 			<second>
-				<first>6.33000000000000000e+02</first>
-				<second>7.90000000000000000e+01</second>
+				<first>2.10000000000000000e+02</first>
+				<second>1.10000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:4</first>
 			<second>
-				<first>3.78000000000000000e+02</first>
-				<second>1.08000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>CreateFieldData:5</first>
-			<second>
-				<first>5.49000000000000000e+02</first>
-				<second>1.11000000000000000e+02</second>
+				<first>3.29000000000000000e+02</first>
+				<second>9.80000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:6</first>
 			<second>
-				<first>1.09400000000000000e+03</first>
-				<second>8.20000000000000000e+01</second>
+				<first>1.03300000000000000e+03</first>
+				<second>8.00000000000000000e+00</second>
 			</second>
 		</item>
 		<item>
@@ -17635,8 +14102,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>DisplayHistogram:0</first>
 			<second>
-				<first>-2.62000000000000000e+02</first>
-				<second>2.08000000000000000e+02</second>
+				<first>-2.74000000000000000e+02</first>
+				<second>2.25000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17644,13 +14111,6 @@ fieldOutput1 = ff[0]</value>
 			<second>
 				<first>-5.47000000000000000e+02</first>
 				<second>2.16000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>GeneratePointSamplesFromField:0</first>
-			<second>
-				<first>9.50000000000000000e+01</first>
-				<second>-5.45000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17670,8 +14130,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>GenerateSinglePointProbeFromField:2</first>
 			<second>
-				<first>1.04600000000000000e+03</first>
-				<second>1.67000000000000000e+02</second>
+				<first>1.00300000000000000e+03</first>
+				<second>1.36000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17689,24 +14149,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>GetDomainBoundary:0</first>
-			<second>
-				<first>-2.71000000000000000e+02</first>
-				<second>-4.46000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>GetDomainBoundary:1</first>
-			<second>
-				<first>-9.00000000000000000e+01</first>
-				<second>-4.39000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>InterfaceWithPython:0</first>
 			<second>
-				<first>7.90000000000000000e+02</first>
-				<second>-4.56000000000000000e+02</second>
+				<first>1.13000000000000000e+02</first>
+				<second>-4.00000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17731,17 +14177,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:3</first>
-			<second>
-				<first>4.82000000000000000e+02</first>
-				<second>-3.83000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>InterfaceWithPython:4</first>
 			<second>
-				<first>2.57000000000000000e+02</first>
-				<second>3.96000000000000000e+02</second>
+				<first>2.38000000000000000e+02</first>
+				<second>4.02000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17752,17 +14191,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:6</first>
-			<second>
-				<first>6.08000000000000000e+02</first>
-				<second>4.03000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>InterfaceWithPython:7</first>
 			<second>
-				<first>6.36000000000000000e+02</first>
-				<second>-1.90000000000000000e+01</second>
+				<first>7.46000000000000000e+02</first>
+				<second>-1.70000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
@@ -17789,15 +14221,15 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>JoinFields:1</first>
 			<second>
-				<first>6.91000000000000000e+02</first>
-				<second>-5.25000000000000000e+02</second>
+				<first>6.82000000000000000e+02</first>
+				<second>-3.24000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>LinePlotter:0</first>
 			<second>
-				<first>3.70000000000000000e+02</first>
-				<second>2.90000000000000000e+01</second>
+				<first>-6.00000000000000000e+00</first>
+				<second>2.08000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17843,66 +14275,80 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
+			<first>PrintStringIntoString:0</first>
+			<second>
+				<first>-5.13000000000000000e+02</first>
+				<second>-7.22000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:1</first>
+			<second>
+				<first>-3.38000000000000000e+02</first>
+				<second>-7.19000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:2</first>
+			<second>
+				<first>1.20000000000000000e+02</first>
+				<second>-7.17000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:3</first>
+			<second>
+				<first>3.29000000000000000e+02</first>
+				<second>-7.39000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:5</first>
+			<second>
+				<first>7.41000000000000000e+02</first>
+				<second>1.22100000000000000e+03</second>
+			</second>
+		</item>
+		<item>
 			<first>ProjectPointsOntoMesh:0</first>
 			<second>
-				<first>-2.55000000000000000e+02</first>
-				<second>-2.60000000000000000e+02</second>
+				<first>-3.26000000000000000e+02</first>
+				<second>-2.56000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ProjectPointsOntoMesh:1</first>
 			<second>
-				<first>4.32000000000000000e+02</first>
-				<second>-5.40000000000000000e+02</second>
+				<first>1.37000000000000000e+02</first>
+				<second>-4.75000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ProjectPointsOntoMesh:2</first>
 			<second>
-				<first>-5.51000000000000000e+02</first>
-				<second>-2.87000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ProjectPointsOntoMesh:3</first>
-			<second>
-				<first>-7.47000000000000000e+02</first>
-				<second>-2.65000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ProjectPointsOntoMesh:5</first>
-			<second>
-				<first>4.96000000000000000e+02</first>
-				<second>-4.70000000000000000e+02</second>
+				<first>-5.07000000000000000e+02</first>
+				<second>-2.72000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ProjectPointsOntoMesh:6</first>
 			<second>
-				<first>3.26000000000000000e+02</first>
-				<second>-4.78000000000000000e+02</second>
+				<first>3.32000000000000000e+02</first>
+				<second>-4.74000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
 			<second>
-				<first>-2.52000000000000000e+02</first>
-				<second>-5.43000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ReadField:1</first>
-			<second>
-				<first>-7.10000000000000000e+01</first>
-				<second>-5.46000000000000000e+02</second>
+				<first>-4.19000000000000000e+02</first>
+				<second>-9.22000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:2</first>
 			<second>
-				<first>1.66000000000000000e+02</first>
-				<second>-6.30000000000000000e+02</second>
+				<first>1.39000000000000000e+02</first>
+				<second>-5.88000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17913,38 +14359,45 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>ReadField:4</first>
+			<first>ReadField:5</first>
 			<second>
-				<first>4.83000000000000000e+02</first>
-				<second>-6.27000000000000000e+02</second>
+				<first>-5.18000000000000000e+02</first>
+				<second>-6.47000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>ReadField:6</first>
+			<second>
+				<first>-3.43000000000000000e+02</first>
+				<second>-6.46000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReportFieldGeometryMeasures:0</first>
 			<second>
-				<first>-1.02000000000000000e+02</first>
-				<second>-6.40000000000000000e+01</second>
+				<first>-2.88000000000000000e+02</first>
+				<second>2.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ReportFieldGeometryMeasures:1</first>
 			<second>
-				<first>-5.45000000000000000e+02</first>
-				<second>3.80000000000000000e+01</second>
+				<first>-5.66000000000000000e+02</first>
+				<second>2.30000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ReportMatrixSliceMeasure:0</first>
 			<second>
-				<first>-2.94000000000000000e+02</first>
-				<second>1.05000000000000000e+02</second>
+				<first>-3.05000000000000000e+02</first>
+				<second>1.20000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReportMatrixSliceMeasure:1</first>
 			<second>
-				<first>-5.21000000000000000e+02</first>
-				<second>1.15000000000000000e+02</second>
+				<first>-5.47000000000000000e+02</first>
+				<second>1.18000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17962,13 +14415,6 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>RescaleColorMap:2</first>
-			<second>
-				<first>4.80000000000000000e+02</first>
-				<second>-2.03000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>RescaleColorMap:3</first>
 			<second>
 				<first>4.32000000000000000e+02</first>
@@ -17978,8 +14424,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>RescaleColorMap:4</first>
 			<second>
-				<first>6.33000000000000000e+02</first>
-				<second>2.57000000000000000e+02</second>
+				<first>6.37000000000000000e+02</first>
+				<second>3.10000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17992,22 +14438,22 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>SelectSubMatrix:0</first>
 			<second>
-				<first>2.86000000000000000e+02</first>
-				<second>-9.90000000000000000e+01</second>
+				<first>-1.00000000000000000e+01</first>
+				<second>3.90000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>SelectSubMatrix:1</first>
 			<second>
-				<first>4.88000000000000000e+02</first>
-				<second>-1.00000000000000000e+02</second>
+				<first>5.60000000000000000e+01</first>
+				<second>1.09000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:0</first>
 			<second>
-				<first>-3.53000000000000000e+02</first>
-				<second>-1.55000000000000000e+02</second>
+				<first>-3.97000000000000000e+02</first>
+				<second>-1.88000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18032,13 +14478,6 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>ShowField:2</first>
-			<second>
-				<first>4.80000000000000000e+01</first>
-				<second>7.50000000000000000e+01</second>
-			</second>
-		</item>
-		<item>
 			<first>ShowField:28</first>
 			<second>
 				<first>5.05000000000000000e+02</first>
@@ -18050,13 +14489,6 @@ fieldOutput1 = ff[0]</value>
 			<second>
 				<first>8.71000000000000000e+02</first>
 				<second>1.32300000000000000e+03</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:3</first>
-			<second>
-				<first>1.57000000000000000e+02</first>
-				<second>-3.00000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
@@ -18081,24 +14513,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>ShowField:6</first>
-			<second>
-				<first>-7.11000000000000000e+02</first>
-				<second>-1.81000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>ShowField:7</first>
 			<second>
 				<first>2.63000000000000000e+02</first>
 				<second>-1.34000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:8</first>
-			<second>
-				<first>4.71000000000000000e+02</first>
-				<second>-1.28000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18111,8 +14529,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ShowFieldGlyphs:0</first>
 			<second>
-				<first>8.70000000000000000e+02</first>
-				<second>1.61000000000000000e+02</second>
+				<first>8.54000000000000000e+02</first>
+				<second>2.05000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18123,10 +14541,10 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>TransformMeshWithTransform:0</first>
+			<first>SplitFileName:0</first>
 			<second>
-				<first>-9.20000000000000000e+01</first>
-				<second>-2.86000000000000000e+02</second>
+				<first>-4.03000000000000000e+02</first>
+				<second>-8.22000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18137,54 +14555,85 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>ViewScene:1</first>
-			<second>
-				<first>2.50000000000000000e+01</first>
-				<second>2.22000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>ViewScene:2</first>
 			<second>
-				<first>2.53000000000000000e+02</first>
-				<second>1.37900000000000000e+03</second>
+				<first>2.95000000000000000e+02</first>
+				<second>1.40300000000000000e+03</second>
 			</second>
 		</item>
 		<item>
 			<first>WriteField:0</first>
 			<second>
-				<first>8.56000000000000000e+02</first>
-				<second>1.47800000000000000e+03</second>
-			</second>
-		</item>
-		<item>
-			<first>WriteField:1</first>
-			<second>
-				<first>-2.40000000000000000e+02</first>
-				<second>3.25000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>WriteField:2</first>
-			<second>
-				<first>1.02400000000000000e+03</first>
-				<second>1.46400000000000000e+03</second>
+				<first>8.72000000000000000e+02</first>
+				<second>1.40800000000000000e+03</second>
 			</second>
 		</item>
 	</modulePositions>
 	<moduleNotes class_id="19" tracking_level="0" version="0">
-		<count>1</count>
+		<count>5</count>
 		<item_version>0</item_version>
 		<item class_id="20" tracking_level="0" version="0">
-			<first>GenerateSinglePointProbeFromField:2</first>
+			<first>DisplayHistogram:0</first>
 			<second class_id="21" tracking_level="0" version="0">
 				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Vector Base point&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>Vector Base point</noteText>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;surface histogram&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>surface histogram</noteText>
+				<position>6</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>DisplayHistogram:1</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;volume histogram&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>volume histogram</noteText>
+				<position>6</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ReportMatrixSliceMeasure:0</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;surface metrics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>surface metrics</noteText>
+				<position>6</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ReportMatrixSliceMeasure:1</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;volume metrics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>volume metrics</noteText>
 				<position>3</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ViewScene:0</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;MODULE FATAL ERROR, DO NOT USE THIS INSTANCE. Click &amp;quot;Refresh&amp;quot; button to replace module for proper execution.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>MODULE FATAL ERROR, DO NOT USE THIS INSTANCE. Click &quot;Refresh&quot; button to replace module for proper execution.</noteText>
+				<position>0</position>
 				<fontSize>13</fontSize>
 			</second>
 		</item>
@@ -18194,13 +14643,9 @@ p, li { white-space: pre-wrap; }
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="22" tracking_level="0" version="0">
-		<count>96</count>
+		<count>83</count>
 		<item_version>0</item_version>
 		<item class_id="23" tracking_level="0" version="0">
-			<first>AlignMeshBoundingBoxes:0</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>CalculateFieldData:0</first>
 			<second>-1</second>
 		</item>
@@ -18229,7 +14674,7 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ClipFieldByFunction:0</first>
+			<first>ChooseInput:2</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18245,10 +14690,6 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>CreateFieldData:1</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>CreateFieldData:2</first>
 			<second>-1</second>
 		</item>
@@ -18258,10 +14699,6 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>CreateFieldData:4</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>CreateFieldData:5</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18278,10 +14715,6 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>DisplayHistogram:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>GeneratePointSamplesFromField:0</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18305,14 +14738,6 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>GetDomainBoundary:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>GetDomainBoundary:1</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>InterfaceWithPython:0</first>
 			<second>-1</second>
 		</item>
@@ -18329,19 +14754,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:3</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>InterfaceWithPython:4</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>InterfaceWithPython:5</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>InterfaceWithPython:6</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18393,6 +14810,26 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
+			<first>PrintStringIntoString:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:1</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:2</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:3</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:5</first>
+			<second>-1</second>
+		</item>
+		<item>
 			<first>ProjectPointsOntoMesh:0</first>
 			<second>-1</second>
 		</item>
@@ -18405,23 +14842,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ProjectPointsOntoMesh:3</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ProjectPointsOntoMesh:5</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>ProjectPointsOntoMesh:6</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ReadField:1</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18433,7 +14858,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ReadField:4</first>
+			<first>ReadField:5</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>ReadField:6</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18458,10 +14887,6 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>RescaleColorMap:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>RescaleColorMap:2</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18501,19 +14926,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ShowField:2</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>ShowField:28</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>ShowField:29</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ShowField:3</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18529,15 +14946,7 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ShowField:6</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>ShowField:7</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ShowField:8</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18553,15 +14962,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>TransformMeshWithTransform:0</first>
+			<first>SplitFileName:0</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>ViewScene:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ViewScene:1</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18570,14 +14975,6 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>WriteField:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>WriteField:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>WriteField:2</first>
 			<second>-1</second>
 		</item>
 	</moduleTags>

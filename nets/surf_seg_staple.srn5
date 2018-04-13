@@ -4,7 +4,7 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>96</count>
+			<count>94</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
 				<first>AlignMeshBoundingBoxes:0</first>
@@ -886,46 +886,6 @@
 				</second>
 			</item>
 			<item>
-				<first>GeneratePointSamplesFromField:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>GeneratePointSamplesFromField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>NumSeeds</name>
-								</first>
-								<second>
-									<name>NumSeeds</name>
-									<value>
-										<which>0</which>
-										<value>15</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProbeScale</name>
-								</first>
-								<second>
-									<name>ProbeScale</name>
-									<value>
-										<which>1</which>
-										<value>7.50000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>GenerateSinglePointProbeFromField:0</first>
 				<second>
 					<module>
@@ -945,7 +905,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>25180</value>
+										<value>22495</value>
 									</value>
 								</second>
 							</item>
@@ -957,7 +917,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>13924</value>
+										<value>8137</value>
 									</value>
 								</second>
 							</item>
@@ -1017,7 +977,7 @@
 									<name>ProbeSize</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>3.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1105,7 +1065,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>11440</value>
+										<value>37022</value>
 									</value>
 								</second>
 							</item>
@@ -1117,7 +1077,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>14137</value>
+										<value>7906</value>
 									</value>
 								</second>
 							</item>
@@ -1177,7 +1137,7 @@
 									<name>ProbeSize</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>3.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1265,7 +1225,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>36201</value>
+										<value>37397</value>
 									</value>
 								</second>
 							</item>
@@ -1277,7 +1237,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>18526</value>
+										<value>24416</value>
 									</value>
 								</second>
 							</item>
@@ -1425,7 +1385,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>33637</value>
+										<value>52051</value>
 									</value>
 								</second>
 							</item>
@@ -1437,7 +1397,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>19412</value>
+										<value>20496</value>
 									</value>
 								</second>
 							</item>
@@ -1533,7 +1493,7 @@
 									<name>XLocation</name>
 									<value>
 										<which>1</which>
-										<value>5.06749693757064108e+01</value>
+										<value>3.50309642317470065e+01</value>
 									</value>
 								</second>
 							</item>
@@ -1545,7 +1505,7 @@
 									<name>YLocation</name>
 									<value>
 										<which>1</which>
-										<value>-1.82491245316814400e+02</value>
+										<value>-1.89935834626611324e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1557,7 +1517,7 @@
 									<name>ZLocation</name>
 									<value>
 										<which>1</which>
-										<value>-2.26513184389687552e+02</value>
+										<value>-2.29488590459400484e+02</value>
 									</value>
 								</second>
 							</item>
@@ -1585,7 +1545,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>52126</value>
+										<value>63763</value>
 									</value>
 								</second>
 							</item>
@@ -1597,7 +1557,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>19835</value>
+										<value>25610</value>
 									</value>
 								</second>
 							</item>
@@ -3307,8 +3267,8 @@ sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
 from dilate_erode import *
 
 # filter parameters
-rad_dilate = 6   # dilation radius
-rad_erode  = 6   # erosion radius
+rad_dilate = 4  # dilation radius
+rad_erode  = 4   # erosion radius
 value = 1        # label value to operate on
 
 # get input field
@@ -3512,8 +3472,8 @@ sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
 from dilate_erode import *
 
 # filter parameters
-rad_dilate = 6	   # dilation radius
-rad_erode  = 6   # erosion radius
+rad_dilate = 4   # dilation radius
+rad_erode  = 4   # erosion radius
 value = 2        # label value to operate on
 
 # get input field
@@ -3717,8 +3677,8 @@ sys.path.append(&apos;/Users/jess/software/python_scripts/&apos;)
 from dilate_erode import *
 
 # filter parameters
-rad_dilate = 6   # dilation radius
-rad_erode  = 6   # erosion radius
+rad_dilate = 4  # dilation radius
+rad_erode  = 4   # erosion radius
 value = 3        # label value to operate on
 
 # get input field
@@ -5522,7 +5482,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_mitral_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_mitral_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5574,7 +5534,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_tricuspid_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_tricusp_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5626,7 +5586,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_pulm_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_pulm_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5958,7 +5918,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>4.40000000000000000e+01</value>
+										<value>2.10000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -6022,7 +5982,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>4.20000000000000000e+01</value>
+										<value>2.50000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -6086,7 +6046,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>3.00000000000000000e+01</value>
+										<value>1.90000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -6638,7 +6598,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FaceTransparency</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -14366,7 +14326,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ShowViewer</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -14730,7 +14690,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarFontSize</name>
 									<value>
 										<which>0</which>
-										<value>99</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -14754,7 +14714,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarLength</name>
 									<value>
 										<which>1</which>
-										<value>9.99899999999999949e+01</value>
+										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -15274,7 +15234,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarNumTicks</name>
 									<value>
 										<which>0</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -15518,61 +15478,9 @@ fieldOutput1 = ff[0]</value>
 					</state>
 				</second>
 			</item>
-			<item>
-				<first>WriteField:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>WriteField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>3</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeList</name>
-								</first>
-								<second>
-									<name>FileTypeList</name>
-									<value>
-										<which>2</which>
-										<value>SCIRun Field Binary (*.fld);;SCIRun Field ASCII (*.fld);;CARPFiber (*.lon);;CARPMesh (*.elem *.pts *.lon);;CVRTI_FacPtsFileToTriSurf (*.fac *.tri *.pts *.pos);;CurveField (*.pts *.pos *.edge);;Matlab Field (*.mat);;NrrdFile (*.nhdr *.nrrd);;ObjToField (*.obj);;PointCloudField (*.pts *.pos *.txt);;TetVolField (*.elem *.tet *.pts *.pos);;TetVolFieldToVtk (*.vtk);;TetVolField[BaseIndex 1] (*.tet *.pts);;TriSurfField (*.fac *.tri *.pts *.pos);;TriSurfFieldSTL[ASCII] (*.stl);;TriSurfFieldSTL[Binary] (*.stl);;TriSurfFieldToExotxt (*.ex2);;TriSurfFieldToExotxt[BaseIndex 1] (*.ex2);;TriSurfFieldToM (*.m);;TriSurfFieldToVtk (*.vtk);;TriSurfField[BaseIndex 1] (*.fac *.pts)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>TriSurfFieldSTL[Binary]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg.stl</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>160</count>
+			<count>157</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
 				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
@@ -15593,18 +15501,6 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>CreateFieldData:6</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>GeneratePointSamplesFromField:0</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
@@ -15971,18 +15867,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>CalculateFieldData:4</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>WriteField:2</moduleId2_>
-				<port2_>
-					<name>FieldToWrite</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>ChooseInput:0</moduleId1_>
 				<port1_>
 					<name>Output</name>
@@ -16331,18 +16215,6 @@ fieldOutput1 = ff[0]</value>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GeneratePointSamplesFromField:0</moduleId1_>
-				<port1_>
-					<name>GeneratedWidget</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>3</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>GenerateSinglePointProbeFromField:0</moduleId1_>
 				<port1_>
 					<name>GeneratedPoint</name>
@@ -16504,18 +16376,6 @@ fieldOutput1 = ff[0]</value>
 					<name>PythonField1</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>CreateFieldData:3</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:0</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>ProjectPointsOntoMesh:0</moduleId2_>
 				<port2_>
 					<name>InputField</name>
@@ -16612,18 +16472,6 @@ fieldOutput1 = ff[0]</value>
 					<name>PythonField1</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>CreateFieldData:4</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:2</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>ProjectPointsOntoMesh:2</moduleId2_>
 				<port2_>
 					<name>InputField</name>
@@ -16637,18 +16485,6 @@ fieldOutput1 = ff[0]</value>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>CreateFieldData:2</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>InterfaceWithPython:3</moduleId1_>
-				<port1_>
-					<name>PythonField1</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CreateFieldData:5</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
@@ -16924,6 +16760,18 @@ fieldOutput1 = ff[0]</value>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
+				<moduleId2_>CreateFieldData:3</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ProjectPointsOntoMesh:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
 				<moduleId2_>ShowField:1</moduleId2_>
 				<port2_>
 					<name>Field</name>
@@ -16948,9 +16796,33 @@ fieldOutput1 = ff[0]</value>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
+				<moduleId2_>CreateFieldData:4</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ProjectPointsOntoMesh:2</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
 				<moduleId2_>ShowField:5</moduleId2_>
 				<port2_>
 					<name>Field</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ProjectPointsOntoMesh:3</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>CreateFieldData:5</moduleId2_>
+				<port2_>
+					<name>InputField</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -17497,13 +17369,13 @@ fieldOutput1 = ff[0]</value>
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>96</count>
+		<count>94</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
 			<second class_id="18" tracking_level="0" version="0">
-				<first>-2.24000000000000000e+02</first>
-				<second>-3.60000000000000000e+02</second>
+				<first>-2.55000000000000000e+02</first>
+				<second>-3.67000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17544,8 +17416,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ChooseInput:0</first>
 			<second>
-				<first>8.61000000000000000e+02</first>
-				<second>1.46000000000000000e+02</second>
+				<first>8.23000000000000000e+02</first>
+				<second>5.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
@@ -17647,13 +17519,6 @@ fieldOutput1 = ff[0]</value>
 			</second>
 		</item>
 		<item>
-			<first>GeneratePointSamplesFromField:0</first>
-			<second>
-				<first>9.50000000000000000e+01</first>
-				<second>-5.45000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
 			<first>GenerateSinglePointProbeFromField:0</first>
 			<second>
 				<first>7.81000000000000000e+02</first>
@@ -17670,8 +17535,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>GenerateSinglePointProbeFromField:2</first>
 			<second>
-				<first>1.04600000000000000e+03</first>
-				<second>1.67000000000000000e+02</second>
+				<first>1.01500000000000000e+03</first>
+				<second>1.60000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17705,8 +17570,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>InterfaceWithPython:0</first>
 			<second>
-				<first>7.90000000000000000e+02</first>
-				<second>-4.56000000000000000e+02</second>
+				<first>6.71000000000000000e+02</first>
+				<second>-3.71000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17845,8 +17710,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ProjectPointsOntoMesh:0</first>
 			<second>
-				<first>-2.55000000000000000e+02</first>
-				<second>-2.60000000000000000e+02</second>
+				<first>-3.26000000000000000e+02</first>
+				<second>-2.56000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17859,15 +17724,15 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ProjectPointsOntoMesh:2</first>
 			<second>
-				<first>-5.51000000000000000e+02</first>
-				<second>-2.87000000000000000e+02</second>
+				<first>-5.07000000000000000e+02</first>
+				<second>-2.72000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ProjectPointsOntoMesh:3</first>
 			<second>
-				<first>-7.47000000000000000e+02</first>
-				<second>-2.65000000000000000e+02</second>
+				<first>-7.03000000000000000e+02</first>
+				<second>-2.82000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -17880,7 +17745,7 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ProjectPointsOntoMesh:6</first>
 			<second>
-				<first>3.26000000000000000e+02</first>
+				<first>3.25000000000000000e+02</first>
 				<second>-4.78000000000000000e+02</second>
 			</second>
 		</item>
@@ -17929,7 +17794,7 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ReportFieldGeometryMeasures:1</first>
 			<second>
-				<first>-5.45000000000000000e+02</first>
+				<first>-5.44000000000000000e+02</first>
 				<second>3.80000000000000000e+01</second>
 			</second>
 		</item>
@@ -18006,8 +17871,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ShowField:0</first>
 			<second>
-				<first>-3.53000000000000000e+02</first>
-				<second>-1.55000000000000000e+02</second>
+				<first>-3.97000000000000000e+02</first>
+				<second>-1.88000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18097,8 +17962,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ShowField:8</first>
 			<second>
-				<first>4.71000000000000000e+02</first>
-				<second>-1.28000000000000000e+02</second>
+				<first>4.16000000000000000e+02</first>
+				<second>-1.48000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18125,8 +17990,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>TransformMeshWithTransform:0</first>
 			<second>
-				<first>-1.90000000000000000e+02</first>
-				<second>-2.80000000000000000e+02</second>
+				<first>-1.16000000000000000e+02</first>
+				<second>-2.75000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -18146,8 +18011,8 @@ fieldOutput1 = ff[0]</value>
 		<item>
 			<first>ViewScene:2</first>
 			<second>
-				<first>2.53000000000000000e+02</first>
-				<second>1.37900000000000000e+03</second>
+				<first>2.95000000000000000e+02</first>
+				<second>1.40300000000000000e+03</second>
 			</second>
 		</item>
 		<item>
@@ -18164,13 +18029,6 @@ fieldOutput1 = ff[0]</value>
 				<second>3.06000000000000000e+02</second>
 			</second>
 		</item>
-		<item>
-			<first>WriteField:2</first>
-			<second>
-				<first>1.00700000000000000e+03</first>
-				<second>1.40600000000000000e+03</second>
-			</second>
-		</item>
 	</modulePositions>
 	<moduleNotes class_id="19" tracking_level="0" version="0">
 		<count>0</count>
@@ -18181,7 +18039,7 @@ fieldOutput1 = ff[0]</value>
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="20" tracking_level="0" version="0">
-		<count>96</count>
+		<count>94</count>
 		<item_version>0</item_version>
 		<item class_id="21" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
@@ -18265,10 +18123,6 @@ fieldOutput1 = ff[0]</value>
 		</item>
 		<item>
 			<first>DisplayHistogram:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>GeneratePointSamplesFromField:0</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -18561,10 +18415,6 @@ fieldOutput1 = ff[0]</value>
 		</item>
 		<item>
 			<first>WriteField:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>WriteField:2</first>
 			<second>-1</second>
 		</item>
 	</moduleTags>
