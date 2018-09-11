@@ -905,7 +905,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>22495</value>
+										<value>16290</value>
 									</value>
 								</second>
 							</item>
@@ -917,7 +917,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>8137</value>
+										<value>22181</value>
 									</value>
 								</second>
 							</item>
@@ -1065,7 +1065,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>37022</value>
+										<value>74843</value>
 									</value>
 								</second>
 							</item>
@@ -1077,7 +1077,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>7906</value>
+										<value>46219</value>
 									</value>
 								</second>
 							</item>
@@ -1225,7 +1225,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>37397</value>
+										<value>30886</value>
 									</value>
 								</second>
 							</item>
@@ -1237,7 +1237,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>24416</value>
+										<value>40546</value>
 									</value>
 								</second>
 							</item>
@@ -1385,7 +1385,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>52051</value>
+										<value>57778</value>
 									</value>
 								</second>
 							</item>
@@ -1397,7 +1397,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>20496</value>
+										<value>50313</value>
 									</value>
 								</second>
 							</item>
@@ -1545,7 +1545,7 @@
 									<name>FieldElem</name>
 									<value>
 										<which>0</which>
-										<value>63763</value>
+										<value>68606</value>
 									</value>
 								</second>
 							</item>
@@ -1557,7 +1557,7 @@
 									<name>FieldNode</name>
 									<value>
 										<which>0</which>
-										<value>25610</value>
+										<value>50775</value>
 									</value>
 								</second>
 							</item>
@@ -4678,7 +4678,7 @@ fieldOutput1 = ff[0]</value>
 					</module>
 					<state>
 						<stateMap>
-							<count>12</count>
+							<count>13</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -4811,6 +4811,18 @@ fieldOutput1 = ff[0]</value>
 									<value>
 										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TransposeData</name>
+								</first>
+								<second>
+									<name>TransposeData</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -5378,7 +5390,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires.mat</value>
 									</value>
 								</second>
 							</item>
@@ -5482,7 +5494,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_mitral_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_mitral_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5534,7 +5546,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_tricusp_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_tricusp_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5586,7 +5598,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_pulm_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_pulm_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -5918,7 +5930,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>2.10000000000000000e+01</value>
+										<value>1.70000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -5982,7 +5994,7 @@ fieldOutput1 = ff[0]</value>
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>2.50000000000000000e+01</value>
+										<value>2.10000000000000000e+01</value>
 									</value>
 								</second>
 							</item>
@@ -14714,7 +14726,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarLength</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>9.99899999999999949e+01</value>
 									</value>
 								</second>
 							</item>
@@ -15234,7 +15246,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarNumTicks</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>

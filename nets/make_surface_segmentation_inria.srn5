@@ -5058,7 +5058,7 @@ fieldOutput1 = ff[0]</value>
 					</module>
 					<state>
 						<stateMap>
-							<count>12</count>
+							<count>13</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5191,6 +5191,18 @@ fieldOutput1 = ff[0]</value>
 									<value>
 										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TransposeData</name>
+								</first>
+								<second>
+									<name>TransposeData</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -6010,7 +6022,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires.mat</value>
 									</value>
 								</second>
 							</item>
@@ -6062,7 +6074,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_mitral_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_mitral_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -6114,7 +6126,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_tricusp_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_tricusp_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -6166,7 +6178,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_pulm_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_pulm_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -6218,7 +6230,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_cleaver_vol.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_cleaver_vol.mat</value>
 									</value>
 								</second>
 							</item>
@@ -6270,7 +6282,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_surface.stl</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_surface.stl</value>
 									</value>
 								</second>
 							</item>
@@ -6322,7 +6334,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_aortic_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_aortic_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -15054,7 +15066,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarMultiplier</name>
 									<value>
 										<which>1</which>
-										<value>9.99899999999999949e+01</value>
+										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -15490,7 +15502,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarFontSize</name>
 									<value>
 										<which>0</which>
-										<value>99</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -15502,7 +15514,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarHeight</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>2.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -15550,7 +15562,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarNumTicks</name>
 									<value>
 										<which>0</which>
-										<value>99</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -15734,7 +15746,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/inria_ventricles_hires_surface_seg.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Inria_submission/geom/inria_ventricles_hires_surface_seg.mat</value>
 									</value>
 								</second>
 							</item>

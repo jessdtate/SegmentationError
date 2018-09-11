@@ -895,7 +895,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>2</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -906,6 +906,21 @@
 									<value>
 										<which>0</which>
 										<value>15</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>PointPositions</name>
+								</first>
+								<second>
+									<name>PointPositions</name>
+									<value>
+										<which>5</which>
+										<value>
+											<count>0</count>
+											<item_version>0</item_version>
+										</value>
 									</value>
 								</second>
 							</item>
@@ -4718,7 +4733,7 @@ fieldOutput1 = ff[0]</value>
 					</module>
 					<state>
 						<stateMap>
-							<count>12</count>
+							<count>13</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -4851,6 +4866,18 @@ fieldOutput1 = ff[0]</value>
 									<value>
 										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TransposeData</name>
+								</first>
+								<second>
+									<name>TransposeData</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -5418,7 +5445,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires.mat</value>
 									</value>
 								</second>
 							</item>
@@ -5470,7 +5497,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_hires.nrrd</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -5522,7 +5549,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_mitral_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_mitral_points.txt</value>
 									</value>
 								</second>
 							</item>
@@ -5574,7 +5601,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_tricuspid_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_tricuspid_points.txt</value>
 									</value>
 								</second>
 							</item>
@@ -5626,7 +5653,7 @@ fieldOutput1 = ff[0]</value>
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/vent_staple_pulm_points.txt</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_pulm_points.txt</value>
 									</value>
 								</second>
 							</item>
@@ -14294,7 +14321,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarMultiplier</name>
 									<value>
 										<which>1</which>
-										<value>9.99899999999999949e+01</value>
+										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -14778,7 +14805,7 @@ fieldOutput1 = ff[0]</value>
 									<name>ScaleBarMultiplier</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>-0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
