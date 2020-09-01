@@ -16,7 +16,7 @@
 					</module>
 					<state class_id="6" tracking_level="0" version="0">
 						<stateMap class_id="7" tracking_level="0" version="0">
-							<count>2</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item class_id="8" tracking_level="0" version="0">
 								<first class_id="9" tracking_level="0" version="0">
@@ -42,6 +42,18 @@
 									</value>
 								</second>
 							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -56,7 +68,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>2</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -82,6 +94,18 @@
 									</value>
 								</second>
 							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -96,7 +120,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>8</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -161,6 +185,42 @@
 									</value>
 								</second>
 							</item>
+							<item>
+								<first>
+									<name>CustomColor0</name>
+								</first>
+								<second>
+									<name>CustomColor0</name>
+									<value>
+										<which>2</which>
+										<value>Color(0.2,0.2,0.2)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CustomColor1</name>
+								</first>
+								<second>
+									<name>CustomColor1</name>
+									<value>
+										<which>2</which>
+										<value>Color(0.8,0.8,0.8)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -175,7 +235,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -213,6 +273,18 @@
 									</value>
 								</second>
 							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -227,7 +299,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -237,7 +309,19 @@
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s%s_trans.mat</value>
+										<value>%strans_to_seg.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -255,7 +339,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -265,7 +349,19 @@
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s%s_small.stl</value>
+										<value>%s%s.stl</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -283,7 +379,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -294,6 +390,18 @@
 									<value>
 										<which>2</which>
 										<value>%s%s_carto_points.pts</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -311,7 +419,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -322,6 +430,18 @@
 									<value>
 										<which>2</which>
 										<value>%s%s_pacing_cite.pts</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -339,8 +459,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 							<item>
 								<first>
 									<name>ProjectMethod</name>
@@ -367,8 +499,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>1</count>
+							<count>2</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 							<item>
 								<first>
 									<name>ProjectMethod</name>
@@ -395,7 +539,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -417,7 +561,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/heart_surface.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/heart_surface.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -447,7 +615,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -469,7 +637,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/pacing_sites.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/pacing_sites.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -499,7 +691,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -521,7 +713,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/carto_rigidregistration.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/carto_rigidregistration.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -551,7 +767,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -573,7 +789,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg.mat</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface_seg.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -603,7 +843,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -625,7 +865,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg_small.stl</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface_seg.stl</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -655,7 +919,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -677,7 +941,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/heart_surface.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/heart_surface.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -707,7 +995,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -729,7 +1017,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/torso_surface.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/torso_surface.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -759,7 +1071,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -781,7 +1093,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/Dalhousie_torso_morphed.mat</value>
+										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/Dalhousie_torso_morphed.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -811,7 +1147,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -833,7 +1169,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/torso_staple_points.fac</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/torso_points.fac</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -863,7 +1223,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -885,7 +1245,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg_trans.mat</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/trans_to_seg.mat</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -915,7 +1299,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>4</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -949,7 +1333,19 @@
 									<name>FixedMin</name>
 									<value>
 										<which>1</which>
-										<value>1.99999999999999978e+00</value>
+										<value>1.99999999999999956e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -979,7 +1375,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1235,6 +1631,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -1451,7 +1859,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1707,6 +2115,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -1923,7 +2343,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -2179,6 +2599,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -2395,7 +2827,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -2651,6 +3083,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -2867,7 +3311,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -3123,6 +3567,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -3339,7 +3795,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -3595,6 +4051,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -3811,7 +4279,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -4067,6 +4535,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -4283,7 +4763,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -4539,6 +5019,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -4755,7 +5247,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5011,6 +5503,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -5227,7 +5731,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5483,6 +5987,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -5699,7 +6215,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5950,6 +6466,18 @@
 									<value>
 										<which>0</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -6171,7 +6699,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>38</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -6427,6 +6955,18 @@
 							</item>
 							<item>
 								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>RenderAsLocation</name>
 								</first>
 								<second>
@@ -6643,8 +7183,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6659,8 +7211,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6675,8 +7239,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6691,8 +7267,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6707,8 +7295,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6723,8 +7323,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6739,8 +7351,20 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -6755,7 +7379,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
+							<count>53</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -6790,6 +7414,54 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraDistance</name>
+								</first>
+								<second>
+									<name>CameraDistance</name>
+									<value>
+										<which>1</which>
+										<value>6.04923095703125000e+02</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraDistanceMinimum</name>
+								</first>
+								<second>
+									<name>CameraDistanceMinimum</name>
+									<value>
+										<which>1</which>
+										<value>1.00000000000000004e-10</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraLookAt</name>
+								</first>
+								<second>
+									<name>CameraLookAt</name>
+									<value>
+										<which>2</which>
+										<value>[68.0741, -142.83, -260.999]</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraRotation</name>
+								</first>
+								<second>
+									<name>CameraRotation</name>
+									<value>
+										<which>2</which>
+										<value>Quaternion(-0.657757,0.124252,-0.468031,-0.576944)</value>
 									</value>
 								</second>
 							</item>
@@ -6891,6 +7563,18 @@
 							</item>
 							<item>
 								<first>
+									<name>HeadLightAzimuth</name>
+								</first>
+								<second>
+									<name>HeadLightAzimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>HeadLightColor</name>
 								</first>
 								<second>
@@ -6898,6 +7582,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>HeadLightInclination</name>
+								</first>
+								<second>
+									<name>HeadLightInclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -6915,6 +7611,30 @@
 							</item>
 							<item>
 								<first>
+									<name>IsExecuting</name>
+								</first>
+								<second>
+									<name>IsExecuting</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light1Azimuth</name>
+								</first>
+								<second>
+									<name>Light1Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light1Color</name>
 								</first>
 								<second>
@@ -6922,6 +7642,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light1Inclination</name>
+								</first>
+								<second>
+									<name>Light1Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -6939,6 +7671,18 @@
 							</item>
 							<item>
 								<first>
+									<name>Light2Azimuth</name>
+								</first>
+								<second>
+									<name>Light2Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light2Color</name>
 								</first>
 								<second>
@@ -6946,6 +7690,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light2Inclination</name>
+								</first>
+								<second>
+									<name>Light2Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -6963,6 +7719,18 @@
 							</item>
 							<item>
 								<first>
+									<name>Light3Azimuth</name>
+								</first>
+								<second>
+									<name>Light3Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light3Color</name>
 								</first>
 								<second>
@@ -6970,6 +7738,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light3Inclination</name>
+								</first>
+								<second>
+									<name>Light3Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -7018,6 +7798,18 @@
 									<value>
 										<which>1</which>
 										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -7239,7 +8031,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -7273,7 +8065,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg_carto_points.pts</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface_seg_carto_points.pts</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -7291,7 +8107,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>3</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -7325,7 +8141,31 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface_seg_pacing_cite.pts</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface_seg_pacing_cite.pts</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -7335,7 +8175,7 @@
 			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>62</count>
+			<count>61</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
 				<moduleId1_>ClipFieldByFunction:0</moduleId1_>
@@ -7895,18 +8735,6 @@
 					<name>Base</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>PrintStringIntoString:0</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Base</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>PrintStringIntoString:1</moduleId2_>
 				<port2_>
 					<name>Input</name>
@@ -8096,7 +8924,7 @@
 		<item>
 			<first>ClipFieldByFunction:1</first>
 			<second>
-				<first>4.10000000000000000e+02</first>
+				<first>4.09000000000000000e+02</first>
 				<second>-1.80000000000000000e+02</second>
 			</second>
 		</item>
@@ -8117,8 +8945,8 @@
 		<item>
 			<first>PrintStringIntoString:0</first>
 			<second>
-				<first>4.60000000000000000e+01</first>
-				<second>-5.15000000000000000e+02</second>
+				<first>1.50000000000000000e+01</first>
+				<second>-4.50000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
@@ -8145,7 +8973,7 @@
 		<item>
 			<first>ProjectPointsOntoMesh:0</first>
 			<second>
-				<first>-4.20000000000000000e+01</first>
+				<first>-4.30000000000000000e+01</first>
 				<second>-3.10000000000000000e+01</second>
 			</second>
 		</item>
@@ -8389,17 +9217,173 @@
 		</item>
 	</modulePositions>
 	<moduleNotes class_id="19" tracking_level="0" version="0">
-		<count>0</count>
+		<count>12</count>
 		<item_version>0</item_version>
+		<item class_id="20" tracking_level="0" version="0">
+			<first>ShowField:0</first>
+			<second class_id="21" tracking_level="0" version="0">
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 0</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:10</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 10</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:11</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 11&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 11</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:13</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 13&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 13</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:2</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 2</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:3</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 3</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:4</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 4</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:5</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 5</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:6</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 6</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:7</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 7</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:8</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 8</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:9</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 9&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 9</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
 	</moduleNotes>
 	<connectionNotes>
 		<count>0</count>
 		<item_version>0</item_version>
 	</connectionNotes>
-	<moduleTags class_id="20" tracking_level="0" version="0">
+	<moduleTags class_id="22" tracking_level="0" version="0">
 		<count>43</count>
 		<item_version>0</item_version>
-		<item class_id="21" tracking_level="0" version="0">
+		<item class_id="23" tracking_level="0" version="0">
 			<first>ClipFieldByFunction:0</first>
 			<second>-1</second>
 		</item>
@@ -8572,7 +9556,7 @@
 			<second>-1</second>
 		</item>
 	</moduleTags>
-	<disabledModules class_id="22" tracking_level="0" version="0">
+	<disabledModules class_id="24" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledModules>
@@ -8580,12 +9564,12 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledConnections>
-	<moduleTagLabels class_id="23" tracking_level="0" version="0">
+	<moduleTagLabels class_id="25" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</moduleTagLabels>
 	<loadTagGroups>0</loadTagGroups>
-	<subnetworks class_id="24" tracking_level="0" version="0">
+	<subnetworks class_id="26" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</subnetworks>

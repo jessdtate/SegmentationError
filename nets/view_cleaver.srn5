@@ -4,53 +4,97 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>25</count>
+			<count>22</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
-				<first>ClipFieldByFunction:0</first>
+				<first>AlignMeshBoundingBoxes:0</first>
 				<second class_id="4" tracking_level="0" version="0">
 					<module class_id="5" tracking_level="0" version="0">
 						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>ClipFieldByFunction</module_name_>
+						<category_name_>ChangeMesh</category_name_>
+						<module_name_>AlignMeshBoundingBoxes</module_name_>
 					</module>
 					<state class_id="6" tracking_level="0" version="0">
 						<stateMap class_id="7" tracking_level="0" version="0">
-							<count>3</count>
+							<count>0</count>
+							<item_version>0</item_version>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>AlignMeshBoundingBoxes:2</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeMesh</category_name_>
+						<module_name_>AlignMeshBoundingBoxes</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>0</count>
+							<item_version>0</item_version>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>CalculateDistanceToField:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeFieldData</category_name_>
+						<module_name_>CalculateDistanceToField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item class_id="8" tracking_level="0" version="0">
 								<first class_id="9" tracking_level="0" version="0">
-									<name>ClipMethod</name>
+									<name>BasisType</name>
 								</first>
 								<second class_id="10" tracking_level="0" version="0">
-									<name>ClipMethod</name>
+									<name>BasisType</name>
 									<value class_id="11" tracking_level="0" version="0">
 										<which>2</which>
-										<value>Element Center</value>
+										<value>same as input</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>FunctionString</name>
+									<name>OutputFieldDatatype</name>
 								</first>
 								<second>
-									<name>FunctionString</name>
+									<name>OutputFieldDatatype</name>
 									<value>
 										<which>2</which>
-										<value>DATA1 &lt; 253;</value>
+										<value>double</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>ProgrammableInputPortEnabled</name>
+									<name>Truncate</name>
 								</first>
 								<second>
-									<name>ProgrammableInputPortEnabled</name>
+									<name>Truncate</name>
 									<value>
 										<which>3</which>
 										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TruncateDistance</name>
+								</first>
+								<second>
+									<name>TruncateDistance</name>
+									<value>
+										<which>1</which>
+										<value>1.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -68,7 +112,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>8</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -133,320 +177,6 @@
 									</value>
 								</second>
 							</item>
-							<item>
-								<first>
-									<name>CustomColor0</name>
-								</first>
-								<second>
-									<name>CustomColor0</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.2,0.2,0.2)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CustomColor1</name>
-								</first>
-								<second>
-									<name>CustomColor1</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.8,0.8,0.8)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ExtractSimpleIsosurface:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>ExtractIsosurface</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>10</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>IsovalueChoice</name>
-								</first>
-								<second>
-									<name>IsovalueChoice</name>
-									<value>
-										<which>2</which>
-										<value>Single</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueListInclusiveExclusive</name>
-								</first>
-								<second>
-									<name>IsovalueListInclusiveExclusive</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueListString</name>
-								</first>
-								<second>
-									<name>IsovalueListString</name>
-									<value>
-										<which>2</which>
-										<value>0
-84
-168
-252
-</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueQuantityFromField</name>
-								</first>
-								<second>
-									<name>IsovalueQuantityFromField</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ListOfIsovalues</name>
-								</first>
-								<second>
-									<name>ListOfIsovalues</name>
-									<value>
-										<which>2</which>
-										<value>84
-168
-252</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ManualMaximumIsovalue</name>
-								</first>
-								<second>
-									<name>ManualMaximumIsovalue</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ManualMinimumIsovalue</name>
-								</first>
-								<second>
-									<name>ManualMinimumIsovalue</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>QuantityOfIsovalues</name>
-								</first>
-								<second>
-									<name>QuantityOfIsovalues</name>
-									<value>
-										<which>0</which>
-										<value>4</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SingleIsoValue</name>
-								</first>
-								<second>
-									<name>SingleIsoValue</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000000e+02</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ExtractSimpleIsosurface:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>NewField</category_name_>
-						<module_name_>ExtractIsosurface</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>10</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>IsovalueChoice</name>
-								</first>
-								<second>
-									<name>IsovalueChoice</name>
-									<value>
-										<which>2</which>
-										<value>Single</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueListInclusiveExclusive</name>
-								</first>
-								<second>
-									<name>IsovalueListInclusiveExclusive</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueListString</name>
-								</first>
-								<second>
-									<name>IsovalueListString</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>IsovalueQuantityFromField</name>
-								</first>
-								<second>
-									<name>IsovalueQuantityFromField</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ListOfIsovalues</name>
-								</first>
-								<second>
-									<name>ListOfIsovalues</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ManualMaximumIsovalue</name>
-								</first>
-								<second>
-									<name>ManualMaximumIsovalue</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ManualMinimumIsovalue</name>
-								</first>
-								<second>
-									<name>ManualMinimumIsovalue</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>QuantityOfIsovalues</name>
-								</first>
-								<second>
-									<name>QuantityOfIsovalues</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SingleIsoValue</name>
-								</first>
-								<second>
-									<name>SingleIsoValue</name>
-									<value>
-										<which>1</which>
-										<value>2.53000000000000000e+02</value>
-									</value>
-								</second>
-							</item>
 						</stateMap>
 					</state>
 				</second>
@@ -461,7 +191,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>9</count>
+							<count>8</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -541,18 +271,6 @@
 								</first>
 								<second>
 									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
 									<value>
 										<which>3</which>
 										<value>0</value>
@@ -585,7 +303,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>9</count>
+							<count>8</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -665,18 +383,6 @@
 								</first>
 								<second>
 									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
 									<value>
 										<which>3</which>
 										<value>0</value>
@@ -709,7 +415,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>9</count>
+							<count>8</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -789,18 +495,6 @@
 								</first>
 								<second>
 									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
 									<value>
 										<which>3</which>
 										<value>0</value>
@@ -833,7 +527,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>9</count>
+							<count>8</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -913,18 +607,6 @@
 								</first>
 								<second>
 									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
 									<value>
 										<which>3</which>
 										<value>0</value>
@@ -948,23 +630,71 @@
 				</second>
 			</item>
 			<item>
-				<first>GetDomainBoundary:4</first>
+				<first>JoinFields:0</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
 						<category_name_>NewField</category_name_>
-						<module_name_>GetDomainBoundary</module_name_>
+						<module_name_>JoinFields</module_name_>
 					</module>
 					<state>
 						<stateMap>
-							<count>9</count>
+							<count>6</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>AddOuterBoundary</name>
+									<name>ForcePointCloud</name>
 								</first>
 								<second>
-									<name>AddOuterBoundary</name>
+									<name>ForcePointCloud</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>make_no_data</name>
+								</first>
+								<second>
+									<name>make_no_data</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>match_node_values</name>
+								</first>
+								<second>
+									<name>match_node_values</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>merge_elems</name>
+								</first>
+								<second>
+									<name>merge_elems</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>merge_nodes</name>
+								</first>
+								<second>
+									<name>merge_nodes</name>
 									<value>
 										<which>3</which>
 										<value>1</value>
@@ -973,97 +703,13 @@
 							</item>
 							<item>
 								<first>
-									<name>DisconnectBoundaries</name>
+									<name>tolerance</name>
 								</first>
 								<second>
-									<name>DisconnectBoundaries</name>
+									<name>tolerance</name>
 									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Domain</name>
-								</first>
-								<second>
-									<name>Domain</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InnerBoundaryOnly</name>
-								</first>
-								<second>
-									<name>InnerBoundaryOnly</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MaxRange</name>
-								</first>
-								<second>
-									<name>MaxRange</name>
-									<value>
-										<which>0</which>
-										<value>255</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>MinRange</name>
-								</first>
-								<second>
-									<name>MinRange</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NoInnerBoundary</name>
-								</first>
-								<second>
-									<name>NoInnerBoundary</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseRange</name>
-								</first>
-								<second>
-									<name>UseRange</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<which>1</which>
+										<value>9.99999999999999955e-07</value>
 									</value>
 								</second>
 							</item>
@@ -1081,7 +727,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1091,7 +737,7 @@
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
+										<value>Matlab Field</value>
 									</value>
 								</second>
 							</item>
@@ -1103,31 +749,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/vent_staple.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/Wv_min.mat</value>
 									</value>
 								</second>
 							</item>
@@ -1157,7 +779,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1167,7 +789,7 @@
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
+										<value>Matlab Field</value>
 									</value>
 								</second>
 							</item>
@@ -1179,31 +801,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/Utah_ventricles.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface_seg.mat</value>
 									</value>
 								</second>
 							</item>
@@ -1233,7 +831,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1255,31 +853,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/OHSU_ventricles_masked.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/Wv_min.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -1309,7 +883,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1319,7 +893,7 @@
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
+										<value>Matlab Field</value>
 									</value>
 								</second>
 							</item>
@@ -1331,31 +905,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/nijmegen_ventricles.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/Wv_max.mat</value>
 									</value>
 								</second>
 							</item>
@@ -1385,7 +935,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1407,107 +957,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/inria_ventricles.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScriptEnvironmentVariable</name>
-								</first>
-								<second>
-									<name>ScriptEnvironmentVariable</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ReadField:5</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>ReadField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>5</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/Wv.nrrd</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/finished_segs/Wv_max.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -1537,7 +987,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>5</count>
+							<count>4</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1547,7 +997,7 @@
 									<name>AutoScale</name>
 									<value>
 										<which>0</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1559,7 +1009,7 @@
 									<name>FixedMax</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+02</value>
+										<value>4.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -1571,19 +1021,7 @@
 									<name>FixedMin</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
+										<value>6.97223289662243589e-05</value>
 									</value>
 								</second>
 							</item>
@@ -1613,7 +1051,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
+							<count>38</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1659,7 +1097,7 @@
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.481239,0.820829,0.869947)</value>
+										<value>Color(0.5,0.5,0.5)</value>
 									</value>
 								</second>
 							</item>
@@ -1683,7 +1121,7 @@
 									<name>EdgeTransparency</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1803,7 +1241,7 @@
 									<name>FieldName</name>
 									<value>
 										<which>2</which>
-										<value>staple</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
@@ -1864,18 +1302,6 @@
 									<value>
 										<which>0</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2097,7 +1523,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
+							<count>38</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -2143,7 +1569,7 @@
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.865904,0,0)</value>
+										<value>Color(0.5,0.5,0.5)</value>
 									</value>
 								</second>
 							</item>
@@ -2167,7 +1593,7 @@
 									<name>EdgeTransparency</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -2239,7 +1665,7 @@
 									<name>FaceTransparency</name>
 									<value>
 										<which>3</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2251,7 +1677,7 @@
 									<name>FaceTransparencyValue</name>
 									<value>
 										<which>1</which>
-										<value>5.00000000000000000e-01</value>
+										<value>6.49999976158142090e-01</value>
 									</value>
 								</second>
 							</item>
@@ -2287,7 +1713,7 @@
 									<name>FieldName</name>
 									<value>
 										<which>2</which>
-										<value>utah</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
@@ -2348,18 +1774,6 @@
 									<value>
 										<which>0</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2581,7 +1995,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
+							<count>38</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -2627,7 +2041,7 @@
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0,0,0.695735)</value>
+										<value>Color(0.5,0.5,0.5)</value>
 									</value>
 								</second>
 							</item>
@@ -2735,7 +2149,7 @@
 									<name>FaceTransparencyValue</name>
 									<value>
 										<which>1</which>
-										<value>5.00000000000000000e-01</value>
+										<value>6.49999976158142090e-01</value>
 									</value>
 								</second>
 							</item>
@@ -2771,7 +2185,7 @@
 									<name>FieldName</name>
 									<value>
 										<which>2</which>
-										<value>OHSU</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
@@ -2832,502 +2246,6 @@
 									<value>
 										<which>0</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:3</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>39</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.858167,0.618036,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>5.00000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value>nijmegen</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -3549,491 +2467,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.947936,0.917586,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>5.00000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value>inria</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:5</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>39</count>
+							<count>38</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -4187,491 +2621,7 @@
 									<name>FaceTransparencyValue</name>
 									<value>
 										<which>1</which>
-										<value>5.00000000000000000e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
 										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:6</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>39</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.5,0.5,0.5)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>4.00000000000000022e-01</value>
 									</value>
 								</second>
 							</item>
@@ -4768,18 +2718,6 @@
 									<value>
 										<which>0</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -5001,7 +2939,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>53</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5036,54 +2974,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraDistance</name>
-								</first>
-								<second>
-									<name>CameraDistance</name>
-									<value>
-										<which>1</which>
-										<value>3.63986633300781250e+02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraDistanceMinimum</name>
-								</first>
-								<second>
-									<name>CameraDistanceMinimum</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000004e-10</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraLookAt</name>
-								</first>
-								<second>
-									<name>CameraLookAt</name>
-									<value>
-										<which>2</which>
-										<value>[30.3985, -188.492, -224]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraRotation</name>
-								</first>
-								<second>
-									<name>CameraRotation</name>
-									<value>
-										<which>2</which>
-										<value>Quaternion(-0.083878,0.541475,-0.782446,0.295886)</value>
 									</value>
 								</second>
 							</item>
@@ -5185,18 +3075,6 @@
 							</item>
 							<item>
 								<first>
-									<name>HeadLightAzimuth</name>
-								</first>
-								<second>
-									<name>HeadLightAzimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>HeadLightColor</name>
 								</first>
 								<second>
@@ -5204,18 +3082,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>HeadLightInclination</name>
-								</first>
-								<second>
-									<name>HeadLightInclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5233,30 +3099,6 @@
 							</item>
 							<item>
 								<first>
-									<name>IsExecuting</name>
-								</first>
-								<second>
-									<name>IsExecuting</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1Azimuth</name>
-								</first>
-								<second>
-									<name>Light1Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light1Color</name>
 								</first>
 								<second>
@@ -5264,18 +3106,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1Inclination</name>
-								</first>
-								<second>
-									<name>Light1Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5293,18 +3123,6 @@
 							</item>
 							<item>
 								<first>
-									<name>Light2Azimuth</name>
-								</first>
-								<second>
-									<name>Light2Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light2Color</name>
 								</first>
 								<second>
@@ -5312,18 +3130,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light2Inclination</name>
-								</first>
-								<second>
-									<name>Light2Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5341,18 +3147,6 @@
 							</item>
 							<item>
 								<first>
-									<name>Light3Azimuth</name>
-								</first>
-								<second>
-									<name>Light3Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light3Color</name>
 								</first>
 								<second>
@@ -5360,18 +3154,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light3Inclination</name>
-								</first>
-								<second>
-									<name>Light3Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5425,25 +3207,13 @@
 							</item>
 							<item>
 								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>ScaleBarFontSize</name>
 								</first>
 								<second>
 									<name>ScaleBarFontSize</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>17</value>
 									</value>
 								</second>
 							</item>
@@ -5653,7 +3423,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>53</count>
+							<count>39</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -5687,55 +3457,7 @@
 									<name>BackgroundColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(255,255,255)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraDistance</name>
-								</first>
-								<second>
-									<name>CameraDistance</name>
-									<value>
-										<which>1</which>
-										<value>5.90412109375000000e+02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraDistanceMinimum</name>
-								</first>
-								<second>
-									<name>CameraDistanceMinimum</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000004e-10</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraLookAt</name>
-								</first>
-								<second>
-									<name>CameraLookAt</name>
-									<value>
-										<which>2</which>
-										<value>[33.3672, -189.977, -224]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CameraRotation</name>
-								</first>
-								<second>
-									<name>CameraRotation</name>
-									<value>
-										<which>2</which>
-										<value>Quaternion(0.710141,0.177114,0.625129,0.271188)</value>
+										<value>Color(0,0,0)</value>
 									</value>
 								</second>
 							</item>
@@ -5837,18 +3559,6 @@
 							</item>
 							<item>
 								<first>
-									<name>HeadLightAzimuth</name>
-								</first>
-								<second>
-									<name>HeadLightAzimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>HeadLightColor</name>
 								</first>
 								<second>
@@ -5856,18 +3566,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>HeadLightInclination</name>
-								</first>
-								<second>
-									<name>HeadLightInclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5885,30 +3583,6 @@
 							</item>
 							<item>
 								<first>
-									<name>IsExecuting</name>
-								</first>
-								<second>
-									<name>IsExecuting</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1Azimuth</name>
-								</first>
-								<second>
-									<name>Light1Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light1Color</name>
 								</first>
 								<second>
@@ -5916,18 +3590,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light1Inclination</name>
-								</first>
-								<second>
-									<name>Light1Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5945,18 +3607,6 @@
 							</item>
 							<item>
 								<first>
-									<name>Light2Azimuth</name>
-								</first>
-								<second>
-									<name>Light2Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light2Color</name>
 								</first>
 								<second>
@@ -5964,18 +3614,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light2Inclination</name>
-								</first>
-								<second>
-									<name>Light2Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -5993,18 +3631,6 @@
 							</item>
 							<item>
 								<first>
-									<name>Light3Azimuth</name>
-								</first>
-								<second>
-									<name>Light3Azimuth</name>
-									<value>
-										<which>0</which>
-										<value>180</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>Light3Color</name>
 								</first>
 								<second>
@@ -6012,18 +3638,6 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Light3Inclination</name>
-								</first>
-								<second>
-									<name>Light3Inclination</name>
-									<value>
-										<which>0</which>
-										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -6077,25 +3691,13 @@
 							</item>
 							<item>
 								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
 									<name>ScaleBarFontSize</name>
 								</first>
 								<second>
 									<name>ScaleBarFontSize</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>99</value>
 									</value>
 								</second>
 							</item>
@@ -6295,62 +3897,78 @@
 					</state>
 				</second>
 			</item>
+			<item>
+				<first>WriteField:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>DataIO</category_name_>
+						<module_name_>WriteField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>3</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FileTypeList</name>
+								</first>
+								<second>
+									<name>FileTypeList</name>
+									<value>
+										<which>2</which>
+										<value>SCIRun Field Binary (*.fld);;SCIRun Field ASCII (*.fld);;CARPFiber (*.lon);;CARPMesh (*.elem *.pts *.lon);;CVRTI_FacPtsFileToTriSurf (*.fac *.tri *.pts *.pos);;CurveField (*.pts *.pos *.edge);;IV3D (*.g3d);;Matlab Field (*.mat);;NrrdFile (*.nhdr *.nrrd);;ObjToField (*.obj);;PointCloudField (*.pts *.pos *.txt);;TetVolField (*.elem *.tet *.pts *.pos);;TetVolFieldToVtk (*.vtk);;TetVolField[BaseIndex 1] (*.tet *.pts);;TriSurfField (*.fac *.tri *.pts *.pos);;TriSurfFieldSTL[ASCII] (*.stl);;TriSurfFieldSTL[Binary] (*.stl);;TriSurfFieldToExotxt (*.ex2);;TriSurfFieldToExotxt[BaseIndex 1] (*.ex2);;TriSurfFieldToM (*.m);;TriSurfFieldToVtk (*.vtk);;TriSurfField[BaseIndex 1] (*.fac *.pts)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FileTypeName</name>
+								</first>
+								<second>
+									<name>FileTypeName</name>
+									<value>
+										<which>2</which>
+										<value>Matlab Field</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Filename</name>
+								</first>
+								<second>
+									<name>Filename</name>
+									<value>
+										<which>2</which>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/Wv_distance.mat</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>25</count>
+			<count>24</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
-				<moduleId1_>CreateStandardColorMap:0</moduleId1_>
+				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
 				<port1_ class_id="15" tracking_level="0" version="0">
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>RescaleColorMap:0</moduleId2_>
-				<port2_>
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ExtractSimpleIsosurface:1</moduleId1_>
-				<port1_>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>RescaleColorMap:0</moduleId2_>
+				<moduleId2_>JoinFields:0</moduleId2_>
 				<port2_>
-					<name>Field</name>
-					<id>3</id>
+					<name>InputFields</name>
+					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ExtractSimpleIsosurface:1</moduleId1_>
+				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
 				<port1_>
 					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:6</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ExtractSimpleIsosurface:2</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:5</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>GetDomainBoundary:0</moduleId1_>
-				<port1_>
-					<name>BoundaryField</name>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:0</moduleId2_>
@@ -6360,9 +3978,21 @@
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GetDomainBoundary:1</moduleId1_>
+				<moduleId1_>AlignMeshBoundingBoxes:2</moduleId1_>
 				<port1_>
-					<name>BoundaryField</name>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>JoinFields:0</moduleId2_>
+				<port2_>
+					<name>InputFields</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>AlignMeshBoundingBoxes:2</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:2</moduleId2_>
@@ -6372,21 +4002,21 @@
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GetDomainBoundary:2</moduleId1_>
+				<moduleId1_>CalculateDistanceToField:0</moduleId1_>
 				<port1_>
-					<name>BoundaryField</name>
+					<name>DistanceField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:1</moduleId2_>
+				<moduleId2_>RescaleColorMap:0</moduleId2_>
 				<port2_>
 					<name>Field</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GetDomainBoundary:3</moduleId1_>
+				<moduleId1_>CalculateDistanceToField:0</moduleId1_>
 				<port1_>
-					<name>BoundaryField</name>
+					<name>DistanceField</name>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:4</moduleId2_>
@@ -6396,14 +4026,86 @@
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>GetDomainBoundary:4</moduleId1_>
+				<moduleId1_>CalculateDistanceToField:0</moduleId1_>
+				<port1_>
+					<name>DistanceField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>WriteField:0</moduleId2_>
+				<port2_>
+					<name>FieldToWrite</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CreateStandardColorMap:0</moduleId1_>
+				<port1_>
+					<name>ColorMapObject</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>RescaleColorMap:0</moduleId2_>
+				<port2_>
+					<name>ColorMapObject</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GetDomainBoundary:0</moduleId1_>
 				<port1_>
 					<name>BoundaryField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:3</moduleId2_>
+				<moduleId2_>AlignMeshBoundingBoxes:0</moduleId2_>
 				<port2_>
-					<name>Field</name>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GetDomainBoundary:1</moduleId1_>
+				<port1_>
+					<name>BoundaryField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>AlignMeshBoundingBoxes:0</moduleId2_>
+				<port2_>
+					<name>AlignmentField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GetDomainBoundary:2</moduleId1_>
+				<port1_>
+					<name>BoundaryField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>AlignMeshBoundingBoxes:2</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GetDomainBoundary:3</moduleId1_>
+				<port1_>
+					<name>BoundaryField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>AlignMeshBoundingBoxes:2</moduleId2_>
+				<port2_>
+					<name>AlignmentField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>JoinFields:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>CalculateDistanceToField:0</moduleId2_>
+				<port2_>
+					<name>ObjectField</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -6425,9 +4127,21 @@
 					<name>Field</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>GetDomainBoundary:2</moduleId2_>
+				<moduleId2_>CalculateDistanceToField:0</moduleId2_>
 				<port2_>
 					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:1</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ShowField:1</moduleId2_>
+				<port2_>
+					<name>Field</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -6449,7 +4163,7 @@
 					<name>Field</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>GetDomainBoundary:4</moduleId2_>
+				<moduleId2_>GetDomainBoundary:2</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
@@ -6468,48 +4182,12 @@
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ReadField:5</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ClipFieldByFunction:0</moduleId2_>
-				<port2_>
-					<name>InputFields</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:5</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ExtractSimpleIsosurface:1</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:5</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ExtractSimpleIsosurface:2</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>RescaleColorMap:0</moduleId1_>
 				<port1_>
 					<name>ColorMapOutput</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:6</moduleId2_>
+				<moduleId2_>ShowField:4</moduleId2_>
 				<port2_>
 					<name>ColorMapObject</name>
 					<id>0</id>
@@ -6548,18 +4226,6 @@
 				<moduleId2_>ViewScene:0</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
-					<id>2</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:3</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
 					<id>3</id>
 				</port2_>
 			</item>
@@ -6569,333 +4235,197 @@
 					<name>SceneGraph</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>4</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:5</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>ViewScene:1</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
 					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:6</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:1</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>1</id>
 				</port2_>
 			</item>
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>25</count>
+		<count>22</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
-			<first>ClipFieldByFunction:0</first>
+			<first>AlignMeshBoundingBoxes:0</first>
 			<second class_id="18" tracking_level="0" version="0">
-				<first>-8.63041275438126377e+02</first>
-				<second>-4.30414447835358942e+02</second>
+				<first>-2.11000000000000000e+02</first>
+				<second>-1.21000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>AlignMeshBoundingBoxes:2</first>
+			<second>
+				<first>8.90000000000000000e+01</first>
+				<second>-1.21000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>CalculateDistanceToField:0</first>
+			<second>
+				<first>3.12000000000000000e+02</first>
+				<second>1.92000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateStandardColorMap:0</first>
 			<second>
-				<first>-7.24088587499999562e+02</first>
-				<second>-5.06862011249999682e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ExtractSimpleIsosurface:1</first>
-			<second>
-				<first>-7.42190802187499571e+02</first>
-				<second>-3.23828507187499838e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ExtractSimpleIsosurface:2</first>
-			<second>
-				<first>-9.21201591874999394e+02</first>
-				<second>-2.79578649062499892e+02</second>
+				<first>4.59000000000000000e+02</first>
+				<second>-4.09000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>GetDomainBoundary:0</first>
 			<second>
-				<first>-5.27681443787987746e+02</first>
-				<second>-2.60322845602074040e+02</second>
+				<first>-9.60000000000000000e+01</first>
+				<second>-2.06000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>GetDomainBoundary:1</first>
 			<second>
-				<first>-1.51268680552556503e+02</first>
-				<second>-2.70876474477833767e+02</second>
+				<first>-2.64000000000000000e+02</first>
+				<second>-2.07000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>GetDomainBoundary:2</first>
 			<second>
-				<first>-3.30680371440472356e+02</first>
-				<second>-2.63840721893993873e+02</second>
+				<first>2.04000000000000000e+02</first>
+				<second>-2.06000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>GetDomainBoundary:3</first>
 			<second>
-				<first>2.49769216726314312e+02</first>
-				<second>-2.60322845602073983e+02</second>
+				<first>7.10000000000000000e+01</first>
+				<second>-2.72000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>GetDomainBoundary:4</first>
+			<first>JoinFields:0</first>
 			<second>
-				<first>6.33217732545584227e+01</first>
-				<second>-2.74394350769753771e+02</second>
+				<first>1.99000000000000000e+02</first>
+				<second>8.90000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
 			<second>
-				<first>-5.09627278738470295e+02</first>
-				<second>-4.14980515186806997e+02</second>
+				<first>-1.01000000000000000e+02</first>
+				<second>-3.88000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:1</first>
 			<second>
-				<first>-3.22983732229353222e+02</first>
-				<second>-4.16304433136396369e+02</second>
+				<first>3.62000000000000000e+02</first>
+				<second>-3.37000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:2</first>
 			<second>
-				<first>-1.40715051676796747e+02</first>
-				<second>-4.18627278738470409e+02</second>
+				<first>-2.72000000000000000e+02</first>
+				<second>-3.49000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:3</first>
 			<second>
-				<first>5.62860206707186705e+01</first>
-				<second>-4.18627278738470352e+02</second>
+				<first>2.02000000000000000e+02</first>
+				<second>-4.63000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:4</first>
 			<second>
-				<first>2.42733464142474418e+02</first>
-				<second>-4.22145155030390242e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ReadField:5</first>
-			<second>
-				<first>-9.49042591249999532e+02</first>
-				<second>-6.22486656562499775e+02</second>
+				<first>6.70000000000000000e+01</first>
+				<second>-4.32000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>RescaleColorMap:0</first>
 			<second>
-				<first>-7.74372517187499625e+02</first>
-				<second>-2.29294719374999772e+02</second>
+				<first>1.34000000000000000e+02</first>
+				<second>2.94000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:0</first>
 			<second>
-				<first>-5.52821522984374610e+02</first>
-				<second>-7.86440660312499631e+01</second>
+				<first>-1.01000000000000000e+02</first>
+				<second>-2.20000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:1</first>
 			<second>
-				<first>-3.19202385656249817e+02</first>
-				<second>-7.63310052656249525e+01</second>
+				<first>3.58000000000000000e+02</first>
+				<second>-1.52000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:2</first>
 			<second>
-				<first>-1.25367893496874956e+02</first>
-				<second>-1.26524423879687433e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:3</first>
-			<second>
-				<first>7.89910251460936621e+01</first>
-				<second>-1.41443665817968707e+02</second>
+				<first>7.40000000000000000e+01</first>
+				<second>-2.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:4</first>
 			<second>
-				<first>2.89942166971093570e+02</first>
-				<second>-1.51621133186718652e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:5</first>
-			<second>
-				<first>-9.21201591874999281e+02</first>
-				<second>-1.46829074687499940e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:6</first>
-			<second>
-				<first>-7.70690518437499577e+02</first>
-				<second>-1.45158433124999902e+02</second>
+				<first>2.70000000000000000e+02</first>
+				<second>4.04000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:0</first>
 			<second>
-				<first>-3.72402783265624748e+02</first>
-				<second>1.59601192828124908e+02</second>
+				<first>-1.13000000000000000e+02</first>
+				<second>7.90000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:1</first>
 			<second>
-				<first>-9.23212949062499547e+02</first>
-				<second>-5.22952868749999737e+01</second>
+				<first>1.84000000000000000e+02</first>
+				<second>6.03000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>WriteField:0</first>
+			<second>
+				<first>4.97000000000000000e+02</first>
+				<second>3.53000000000000000e+02</second>
 			</second>
 		</item>
 	</modulePositions>
 	<moduleNotes class_id="19" tracking_level="0" version="0">
-		<count>7</count>
+		<count>0</count>
 		<item_version>0</item_version>
-		<item class_id="20" tracking_level="0" version="0">
-			<first>ShowField:0</first>
-			<second class_id="21" tracking_level="0" version="0">
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 0</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:1</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 1</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:2</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 2</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:3</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 3</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:4</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 4</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:5</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 5</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:6</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 6</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
 	</moduleNotes>
 	<connectionNotes>
 		<count>0</count>
 		<item_version>0</item_version>
 	</connectionNotes>
-	<moduleTags class_id="22" tracking_level="0" version="0">
-		<count>25</count>
+	<moduleTags class_id="20" tracking_level="0" version="0">
+		<count>22</count>
 		<item_version>0</item_version>
-		<item class_id="23" tracking_level="0" version="0">
-			<first>ClipFieldByFunction:0</first>
+		<item class_id="21" tracking_level="0" version="0">
+			<first>AlignMeshBoundingBoxes:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>AlignMeshBoundingBoxes:2</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>CalculateDistanceToField:0</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>CreateStandardColorMap:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ExtractSimpleIsosurface:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ExtractSimpleIsosurface:2</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -6915,7 +4445,7 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>GetDomainBoundary:4</first>
+			<first>JoinFields:0</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -6939,10 +4469,6 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ReadField:5</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>RescaleColorMap:0</first>
 			<second>-1</second>
 		</item>
@@ -6959,19 +4485,7 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ShowField:3</first>
-			<second>-1</second>
-		</item>
-		<item>
 			<first>ShowField:4</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ShowField:5</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ShowField:6</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -6982,8 +4496,12 @@ p, li { white-space: pre-wrap; }
 			<first>ViewScene:1</first>
 			<second>-1</second>
 		</item>
+		<item>
+			<first>WriteField:0</first>
+			<second>-1</second>
+		</item>
 	</moduleTags>
-	<disabledModules class_id="24" tracking_level="0" version="0">
+	<disabledModules class_id="22" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledModules>
@@ -6991,12 +4509,12 @@ p, li { white-space: pre-wrap; }
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledConnections>
-	<moduleTagLabels class_id="25" tracking_level="0" version="0">
+	<moduleTagLabels class_id="23" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</moduleTagLabels>
 	<loadTagGroups>0</loadTagGroups>
-	<subnetworks class_id="26" tracking_level="0" version="0">
+	<subnetworks class_id="24" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</subnetworks>

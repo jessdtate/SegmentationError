@@ -1030,7 +1030,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Bordeaux_submission/geom/../inverse_solutions/61059415_06.120avg.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/Bordeaux_submission/geom/../inverse_solutions/61059415_06.120avg_dist_lap.mat</value>
 									</value>
 								</second>
 							</item>

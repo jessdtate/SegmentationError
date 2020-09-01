@@ -4,27 +4,131 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>11</count>
+			<count>18</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
-				<first>GetDomainBoundary:0</first>
+				<first>CalculateMeshNodes:0</first>
 				<second class_id="4" tracking_level="0" version="0">
 					<module class_id="5" tracking_level="0" version="0">
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeMesh</category_name_>
+						<module_name_>CalculateMeshNodes</module_name_>
+					</module>
+					<state class_id="6" tracking_level="0" version="0">
+						<stateMap class_id="7" tracking_level="0" version="0">
+							<count>2</count>
+							<item_version>0</item_version>
+							<item class_id="8" tracking_level="0" version="0">
+								<first class_id="9" tracking_level="0" version="0">
+									<name>FunctionString</name>
+								</first>
+								<second class_id="10" tracking_level="0" version="0">
+									<name>FunctionString</name>
+									<value class_id="11" tracking_level="0" version="0">
+										<which>2</which>
+										<value>NEWPOS = vector(Y,-X,Z);</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>CreateFieldData:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeFieldData</category_name_>
+						<module_name_>CreateFieldData</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>4</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>BasisString</name>
+								</first>
+								<second>
+									<name>BasisString</name>
+									<value>
+										<which>2</which>
+										<value>Constant</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>Scalar</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FunctionString</name>
+								</first>
+								<second>
+									<name>FunctionString</name>
+									<value>
+										<which>2</which>
+										<value>RESULT = 1;</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>GetDomainBoundary:0</first>
+				<second>
+					<module>
 						<package_name_>SCIRun</package_name_>
 						<category_name_>NewField</category_name_>
 						<module_name_>GetDomainBoundary</module_name_>
 					</module>
-					<state class_id="6" tracking_level="0" version="0">
-						<stateMap class_id="7" tracking_level="0" version="0">
+					<state>
+						<stateMap>
 							<count>9</count>
 							<item_version>0</item_version>
-							<item class_id="8" tracking_level="0" version="0">
-								<first class_id="9" tracking_level="0" version="0">
+							<item>
+								<first>
 									<name>AddOuterBoundary</name>
 								</first>
-								<second class_id="10" tracking_level="0" version="0">
+								<second>
 									<name>AddOuterBoundary</name>
-									<value class_id="11" tracking_level="0" version="0">
+									<value>
 										<which>3</which>
 										<value>1</value>
 									</value>
@@ -131,86 +235,98 @@
 				</second>
 			</item>
 			<item>
-				<first>InterfaceWithPython:0</first>
+				<first>GetDomainBoundary:1</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>Python</category_name_>
-						<module_name_>InterfaceWithPython</module_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>GetDomainBoundary</module_name_>
 					</module>
 					<state>
 						<stateMap>
-							<count>18</count>
+							<count>9</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>InputField:0</name>
+									<name>AddOuterBoundary</name>
 								</first>
 								<second>
-									<name>InputField:0</name>
+									<name>AddOuterBoundary</name>
 									<value>
-										<which>2</which>
-										<value>fieldInput1</value>
+										<which>3</which>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputField:1</name>
+									<name>DisconnectBoundaries</name>
 								</first>
 								<second>
-									<name>InputField:1</name>
+									<name>DisconnectBoundaries</name>
 									<value>
-										<which>2</which>
-										<value>fieldInput2</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputField:2</name>
+									<name>Domain</name>
 								</first>
 								<second>
-									<name>InputField:2</name>
-									<value>
-										<which>2</which>
-										<value>fieldInput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InputField:3</name>
-								</first>
-								<second>
-									<name>InputField:3</name>
-									<value>
-										<which>2</which>
-										<value>fieldInput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NumberOfRetries</name>
-								</first>
-								<second>
-									<name>NumberOfRetries</name>
+									<name>Domain</name>
 									<value>
 										<which>0</which>
-										<value>50</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PollingIntervalMilliseconds</name>
+									<name>InnerBoundaryOnly</name>
 								</first>
 								<second>
-									<name>PollingIntervalMilliseconds</name>
+									<name>InnerBoundaryOnly</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MaxRange</name>
+								</first>
+								<second>
+									<name>MaxRange</name>
 									<value>
 										<which>0</which>
-										<value>200</value>
+										<value>255</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MinRange</name>
+								</first>
+								<second>
+									<name>MinRange</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NoInnerBoundary</name>
+								</first>
+								<second>
+									<name>NoInnerBoundary</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -228,159 +344,401 @@
 							</item>
 							<item>
 								<first>
-									<name>PythonCode</name>
+									<name>UseRange</name>
 								</first>
 								<second>
-									<name>PythonCode</name>
+									<name>UseRange</name>
 									<value>
-										<which>2</which>
-										<value># Insert your Python code here. The SCIRun API package is automatically imported.
-
-import numpy as np
-
-
-sys.path.append(os.environ[&apos;SCIRUNDATADIR&apos;]+&apos;/PythonLibrary/ICP/&apos;)
-import icp
-
-field1 = fieldInput1
-field2 = fieldInput2
-
-
-
-model = np.array(field1[&apos;node&apos;])
-data = np.array(field2[&apos;node&apos;])
-
-[TR, TS, TT, out] = icp.icp(model.T,data.T)
-
-DATA = TR*data*TS
-DATA = DATA+np.matlib.repmat(TT,1,N)
-
-print(TR)
-print(TS)
-print(TT)
-
-</value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>GetFieldBoundary:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>GetFieldBoundary</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>InterfaceWithTetGen:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>InterfaceWithTetGen</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>14</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>AssignFlag</name>
+								</first>
+								<second>
+									<name>AssignFlag</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputField1Name</name>
+									<name>DetectIntersectionsFlag</name>
 								</first>
 								<second>
-									<name>PythonOutputField1Name</name>
+									<name>DetectIntersectionsFlag</name>
 									<value>
-										<which>2</which>
-										<value>fieldOutput1</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputField2Name</name>
+									<name>MaxVolConstraint</name>
 								</first>
 								<second>
-									<name>PythonOutputField2Name</name>
+									<name>MaxVolConstraint</name>
 									<value>
-										<which>2</which>
-										<value>fieldOutput2</value>
+										<which>1</which>
+										<value>1.00000000000000006e-01</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputField3Name</name>
+									<name>MinRadius</name>
 								</first>
 								<second>
-									<name>PythonOutputField3Name</name>
+									<name>MinRadius</name>
 									<value>
-										<which>2</which>
-										<value>fieldOutput3</value>
+										<which>1</which>
+										<value>2.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputMatrix1Name</name>
+									<name>MoreSwitches</name>
 								</first>
 								<second>
-									<name>PythonOutputMatrix1Name</name>
+									<name>MoreSwitches</name>
 									<value>
 										<which>2</which>
-										<value>matrixOutput1</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputMatrix2Name</name>
+									<name>PiecewiseFlag</name>
 								</first>
 								<second>
-									<name>PythonOutputMatrix2Name</name>
+									<name>PiecewiseFlag</name>
 									<value>
-										<which>2</which>
-										<value>matrixOutput2</value>
+										<which>3</which>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputMatrix3Name</name>
+									<name>ProgrammableInputPortEnabled</name>
 								</first>
 								<second>
-									<name>PythonOutputMatrix3Name</name>
+									<name>ProgrammableInputPortEnabled</name>
 									<value>
-										<which>2</which>
-										<value>matrixOutput3</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputString1Name</name>
+									<name>QualityFlag</name>
 								</first>
 								<second>
-									<name>PythonOutputString1Name</name>
+									<name>QualityFlag</name>
 									<value>
-										<which>2</which>
-										<value>stringOutput1</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputString2Name</name>
+									<name>SetMaxVolConstraintFlag</name>
 								</first>
 								<second>
-									<name>PythonOutputString2Name</name>
+									<name>SetMaxVolConstraintFlag</name>
 									<value>
-										<which>2</which>
-										<value>stringOutput2</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputString3Name</name>
+									<name>SetNonzeroAttributeFlag</name>
 								</first>
 								<second>
-									<name>PythonOutputString3Name</name>
+									<name>SetNonzeroAttributeFlag</name>
 									<value>
-										<which>2</which>
-										<value>stringOutput3</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonTopLevelCode</name>
+									<name>SetRatioFlag</name>
 								</first>
 								<second>
-									<name>PythonTopLevelCode</name>
+									<name>SetRatioFlag</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SetSplitFlag</name>
+								</first>
+								<second>
+									<name>SetSplitFlag</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SuppressSplitFlag</name>
+								</first>
+								<second>
+									<name>SuppressSplitFlag</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>VolConstraintFlag</name>
+								</first>
+								<second>
+									<name>VolConstraintFlag</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>MapFieldDataOntoElements:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeFieldData</category_name_>
+						<module_name_>MapFieldDataOntoElements</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>7</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>InterpolationModel</name>
+								</first>
+								<second>
+									<name>InterpolationModel</name>
 									<value>
 										<which>2</which>
-										<value># Main namespace/top level context code goes here; for example, import statements and global variables.
-# This code will be executed before the &apos;Code&apos; tab, and no input/output variables are available.</value>
+										<value>interpolateddata</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MaxDistance</name>
+								</first>
+								<second>
+									<name>MaxDistance</name>
+									<value>
+										<which>1</which>
+										<value>1.79769313486231571e+308</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>OutsideValue</name>
+								</first>
+								<second>
+									<name>OutsideValue</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Quantity</name>
+								</first>
+								<second>
+									<name>Quantity</name>
+									<value>
+										<which>2</which>
+										<value>value</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SampleMethod</name>
+								</first>
+								<second>
+									<name>SampleMethod</name>
+									<value>
+										<which>2</which>
+										<value>average</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SamplePoints</name>
+								</first>
+								<second>
+									<name>SamplePoints</name>
+									<value>
+										<which>2</which>
+										<value>regular1</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>MapFieldDataOntoNodes:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>ChangeFieldData</category_name_>
+						<module_name_>MapFieldDataOntoNodes</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>5</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>InterpolationModel</name>
+								</first>
+								<second>
+									<name>InterpolationModel</name>
+									<value>
+										<which>2</which>
+										<value>interpolateddata</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MaxDistance</name>
+								</first>
+								<second>
+									<name>MaxDistance</name>
+									<value>
+										<which>1</which>
+										<value>1.79769313486231571e+308</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>OutsideValue</name>
+								</first>
+								<second>
+									<name>OutsideValue</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Quantity</name>
+								</first>
+								<second>
+									<name>Quantity</name>
+									<value>
+										<which>2</which>
+										<value>value</value>
 									</value>
 								</second>
 							</item>
@@ -408,7 +766,7 @@ print(TT)
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>Matlab Field</value>
+										<value>EcgsimFileToTriSurf</value>
 									</value>
 								</second>
 							</item>
@@ -420,7 +778,7 @@ print(TT)
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/heart_surface.mat</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/Nijmegen_3_submission/Machteld/modelstudy_0_ventricles.tri</value>
 									</value>
 								</second>
 							</item>
@@ -484,7 +842,7 @@ print(TT)
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>Matlab Field</value>
+										<value>NrrdFile[DataOnElements]</value>
 									</value>
 								</second>
 							</item>
@@ -496,7 +854,7 @@ print(TT)
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/pacing_sites.mat</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/Utah_ventricles.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -560,7 +918,7 @@ print(TT)
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>Matlab Field</value>
+										<value>NrrdFile</value>
 									</value>
 								</second>
 							</item>
@@ -572,83 +930,7 @@ print(TT)
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Meshes/carto_rigidregistration.mat</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ScriptEnvironmentVariable</name>
-								</first>
-								<second>
-									<name>ScriptEnvironmentVariable</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ReadField:3</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>ReadField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>5</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>NrrdFile[DataOnElements]</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/orig_seg/vent_staple.nrrd</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/Utah_submission/Ventricles.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -1024,7 +1306,7 @@ print(TT)
 									<name>ShowEdges</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1232,7 +1514,7 @@ print(TT)
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.548592,0,0)</value>
+										<value>Color(0.5,0.5,0.5)</value>
 									</value>
 								</second>
 							</item>
@@ -1292,7 +1574,7 @@ print(TT)
 									<name>EdgesAvailable</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1352,7 +1634,7 @@ print(TT)
 									<name>FacesAvailable</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1364,7 +1646,7 @@ print(TT)
 									<name>FacesColoring</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1376,7 +1658,7 @@ print(TT)
 									<name>FieldName</name>
 									<value>
 										<which>2</which>
-										<value></value>
+										<value>segmentation boundary</value>
 									</value>
 								</second>
 							</item>
@@ -1388,7 +1670,7 @@ print(TT)
 									<name>NodeAsSpheres</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1436,7 +1718,7 @@ print(TT)
 									<name>NodesColoring</name>
 									<value>
 										<which>0</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1532,31 +1814,31 @@ print(TT)
 									<name>ShowFaces</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodeIndices</name>
+								</first>
+								<second>
+									<name>ShowNodeIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodes</name>
+								</first>
+								<second>
+									<name>ShowNodes</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1580,7 +1862,7 @@ print(TT)
 									<name>SphereResolution</name>
 									<value>
 										<which>0</which>
-										<value>10</value>
+										<value>5</value>
 									</value>
 								</second>
 							</item>
@@ -1592,7 +1874,7 @@ print(TT)
 									<name>SphereScaleValue</name>
 									<value>
 										<which>1</which>
-										<value>3.00000000000000000e+00</value>
+										<value>2.99999999999999989e-02</value>
 									</value>
 								</second>
 							</item>
@@ -1716,7 +1998,7 @@ print(TT)
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.100847,0.0861372,0.520668)</value>
+										<value>Color(0.5,0.5,0.5)</value>
 									</value>
 								</second>
 							</item>
@@ -1788,31 +2070,31 @@ print(TT)
 									<name>EdgesColoring</name>
 									<value>
 										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FaceInvertNormals</name>
+								</first>
+								<second>
+									<name>FaceInvertNormals</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FaceTransparency</name>
+								</first>
+								<second>
+									<name>FaceTransparency</name>
+									<value>
+										<which>3</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1848,7 +2130,7 @@ print(TT)
 									<name>FacesColoring</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1872,7 +2154,7 @@ print(TT)
 									<name>NodeAsSpheres</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1920,7 +2202,7 @@ print(TT)
 									<name>NodesColoring</name>
 									<value>
 										<which>0</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -2016,31 +2298,31 @@ print(TT)
 									<name>ShowFaces</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodeIndices</name>
+								</first>
+								<second>
+									<name>ShowNodeIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodes</name>
+								</first>
+								<second>
+									<name>ShowNodes</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2064,7 +2346,7 @@ print(TT)
 									<name>SphereResolution</name>
 									<value>
 										<which>0</which>
-										<value>10</value>
+										<value>5</value>
 									</value>
 								</second>
 							</item>
@@ -2076,7 +2358,7 @@ print(TT)
 									<name>SphereScaleValue</name>
 									<value>
 										<which>1</which>
-										<value>3.00000000000000000e+00</value>
+										<value>2.99999999999999989e-02</value>
 									</value>
 								</second>
 							</item>
@@ -2272,7 +2554,7 @@ print(TT)
 									<name>EdgesColoring</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -2629,6 +2911,118 @@ print(TT)
 				</second>
 			</item>
 			<item>
+				<first>ShowOrientationAxes:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>Visualization</category_name_>
+						<module_name_>ShowOrientationAxes</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>8</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Scale</name>
+								</first>
+								<second>
+									<name>Scale</name>
+									<value>
+										<which>1</which>
+										<value>1.00000000000000000e+02</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ScaleByField</name>
+								</first>
+								<second>
+									<name>ScaleByField</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ScaleByScaleFactor</name>
+								</first>
+								<second>
+									<name>ScaleByScaleFactor</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>UseFieldPosition</name>
+								</first>
+								<second>
+									<name>UseFieldPosition</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>X</name>
+								</first>
+								<second>
+									<name>X</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Y</name>
+								</first>
+								<second>
+									<name>Y</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Z</name>
+								</first>
+								<second>
+									<name>Z</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
 				<first>ViewScene:0</first>
 				<second>
 					<module>
@@ -2684,7 +3078,7 @@ print(TT)
 									<name>CameraDistance</name>
 									<value>
 										<which>1</which>
-										<value>1.05903564453125000e+03</value>
+										<value>3.14889007568359375e+02</value>
 									</value>
 								</second>
 							</item>
@@ -2708,7 +3102,7 @@ print(TT)
 									<name>CameraLookAt</name>
 									<value>
 										<which>2</which>
-										<value>[120.045, -23.6404, -138.25]</value>
+										<value>[87.1588, -162.727, -199.738]</value>
 									</value>
 								</second>
 							</item>
@@ -2720,7 +3114,7 @@ print(TT)
 									<name>CameraRotation</name>
 									<value>
 										<which>2</which>
-										<value>Quaternion(-0.542171,0.806364,-0.236072,0.009924)</value>
+										<value>Quaternion(0.503779,-0.600563,0.388104,0.484671)</value>
 									</value>
 								</second>
 							</item>
@@ -2756,7 +3150,7 @@ print(TT)
 									<name>Emission</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -3080,7 +3474,7 @@ print(TT)
 									<name>ScaleBarFontSize</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>8</value>
 									</value>
 								</second>
 							</item>
@@ -3092,7 +3486,7 @@ print(TT)
 									<name>ScaleBarHeight</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>1.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -3104,7 +3498,7 @@ print(TT)
 									<name>ScaleBarLength</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>1.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -3128,7 +3522,7 @@ print(TT)
 									<name>ScaleBarMultiplier</name>
 									<value>
 										<which>1</which>
-										<value>0.00000000000000000e+00</value>
+										<value>1.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -3140,7 +3534,7 @@ print(TT)
 									<name>ScaleBarNumTicks</name>
 									<value>
 										<which>0</which>
-										<value>0</value>
+										<value>11</value>
 									</value>
 								</second>
 							</item>
@@ -3164,7 +3558,7 @@ print(TT)
 									<name>Shine</name>
 									<value>
 										<which>1</which>
-										<value>1.00000000000000000e+00</value>
+										<value>5.00000000000000000e-01</value>
 									</value>
 								</second>
 							</item>
@@ -3212,7 +3606,7 @@ print(TT)
 									<name>Specular</name>
 									<value>
 										<which>1</which>
-										<value>4.00000000000000022e-01</value>
+										<value>2.99999999999999989e-01</value>
 									</value>
 								</second>
 							</item>
@@ -3280,24 +3674,136 @@ print(TT)
 					</state>
 				</second>
 			</item>
+			<item>
+				<first>WriteField:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>DataIO</category_name_>
+						<module_name_>WriteField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>4</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FileTypeName</name>
+								</first>
+								<second>
+									<name>FileTypeName</name>
+									<value>
+										<which>2</which>
+										<value>NrrdFile</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Filename</name>
+								</first>
+								<second>
+									<name>Filename</name>
+									<value>
+										<which>2</which>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/Nijmegen_3_submission/Ventricles.nrrd</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>GuiFileTypeName</name>
+								</first>
+								<second>
+									<name>GuiFileTypeName</name>
+									<value>
+										<which>2</which>
+										<value>NrrdFile (*.nhdr *.nrrd)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
 		</modules>
 		<connections class_id="12" tracking_level="0" version="0">
-			<count>11</count>
+			<count>20</count>
 			<item_version>0</item_version>
 			<item class_id="13" tracking_level="0" version="0">
-				<moduleId1_>GetDomainBoundary:0</moduleId1_>
+				<moduleId1_>CalculateMeshNodes:0</moduleId1_>
 				<port1_ class_id="14" tracking_level="0" version="0">
-					<name>BoundaryField</name>
+					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
+				<moduleId2_>InterfaceWithTetGen:0</moduleId2_>
 				<port2_>
-					<name>InputField</name>
-					<id>2</id>
+					<name>Main</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CalculateMeshNodes:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ShowField:0</moduleId2_>
+				<port2_>
+					<name>Field</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CreateFieldData:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>MapFieldDataOntoElements:0</moduleId2_>
+				<port2_>
+					<name>Source</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CreateFieldData:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>MapFieldDataOntoNodes:0</moduleId2_>
+				<port2_>
+					<name>Source</name>
+					<id>0</id>
 				</port2_>
 			</item>
 			<item>
 				<moduleId1_>GetDomainBoundary:0</moduleId1_>
+				<port1_>
+					<name>BoundaryField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ShowField:1</moduleId2_>
+				<port2_>
+					<name>Field</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GetDomainBoundary:1</moduleId1_>
 				<port1_>
 					<name>BoundaryField</name>
 					<id>0</id>
@@ -3309,45 +3815,9 @@ print(TT)
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ReadField:0</moduleId1_>
+				<moduleId1_>GetFieldBoundary:0</moduleId1_>
 				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>3</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:0</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:0</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:1</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:1</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:2</moduleId1_>
-				<port1_>
-					<name>Field</name>
+					<name>BoundaryField</name>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>ShowField:2</moduleId2_>
@@ -3357,14 +3827,98 @@ print(TT)
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ReadField:3</moduleId1_>
+				<moduleId1_>InterfaceWithTetGen:0</moduleId1_>
 				<port1_>
-					<name>Field</name>
+					<name>TetVol</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>CreateFieldData:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>MapFieldDataOntoElements:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
 				<moduleId2_>GetDomainBoundary:0</moduleId2_>
 				<port2_>
 					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>MapFieldDataOntoElements:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>WriteField:0</moduleId2_>
+				<port2_>
+					<name>FieldToWrite</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:0</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>CalculateMeshNodes:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:1</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GetDomainBoundary:1</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:2</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GetFieldBoundary:0</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:2</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>MapFieldDataOntoElements:0</moduleId2_>
+				<port2_>
+					<name>Destination</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ReadField:2</moduleId1_>
+				<port1_>
+					<name>Field</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>MapFieldDataOntoNodes:0</moduleId2_>
+				<port2_>
+					<name>Destination</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -3416,86 +3970,147 @@ print(TT)
 					<id>3</id>
 				</port2_>
 			</item>
+			<item>
+				<moduleId1_>ShowOrientationAxes:0</moduleId1_>
+				<port1_>
+					<name>OutputGeom</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ViewScene:0</moduleId2_>
+				<port2_>
+					<name>GeneralGeom</name>
+					<id>4</id>
+				</port2_>
+			</item>
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="15" tracking_level="0" version="0">
-		<count>11</count>
+		<count>18</count>
 		<item_version>0</item_version>
 		<item class_id="16" tracking_level="0" version="0">
-			<first>GetDomainBoundary:0</first>
+			<first>CalculateMeshNodes:0</first>
 			<second class_id="17" tracking_level="0" version="0">
-				<first>4.20000000000000000e+01</first>
-				<second>-1.76000000000000000e+02</second>
+				<first>-2.47000000000000000e+02</first>
+				<second>-3.43000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>CreateFieldData:0</first>
 			<second>
-				<first>-1.18000000000000000e+02</first>
-				<second>6.50000000000000000e+01</second>
+				<first>-6.45000000000000000e+02</first>
+				<second>-6.20000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>GetDomainBoundary:0</first>
+			<second>
+				<first>-5.83000000000000000e+02</first>
+				<second>1.30000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>GetDomainBoundary:1</first>
+			<second>
+				<first>-9.01000000000000000e+02</first>
+				<second>-8.50000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>GetFieldBoundary:0</first>
+			<second>
+				<first>-4.38000000000000000e+02</first>
+				<second>-6.80000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>InterfaceWithTetGen:0</first>
+			<second>
+				<first>-5.12000000000000000e+02</first>
+				<second>-1.69000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>MapFieldDataOntoElements:0</first>
+			<second>
+				<first>-7.38000000000000000e+02</first>
+				<second>4.60000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>MapFieldDataOntoNodes:0</first>
+			<second>
+				<first>-2.78000000000000000e+02</first>
+				<second>1.86000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
 			<second>
-				<first>-5.01000000000000000e+02</first>
-				<second>-2.70000000000000000e+02</second>
+				<first>-2.78000000000000000e+02</first>
+				<second>-4.28000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:1</first>
 			<second>
-				<first>-3.23000000000000000e+02</first>
-				<second>-2.70000000000000000e+02</second>
+				<first>-8.79000000000000000e+02</first>
+				<second>-3.67000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:2</first>
 			<second>
-				<first>-1.30000000000000000e+02</first>
-				<second>-2.73000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>ReadField:3</first>
-			<second>
-				<first>3.00000000000000000e+01</first>
-				<second>-2.68000000000000000e+02</second>
+				<first>-6.16000000000000000e+02</first>
+				<second>-3.76000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:0</first>
 			<second>
-				<first>-4.80000000000000000e+02</first>
-				<second>-1.43000000000000000e+02</second>
+				<first>-2.46000000000000000e+02</first>
+				<second>-6.90000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:1</first>
 			<second>
-				<first>-3.23000000000000000e+02</first>
-				<second>-1.40000000000000000e+02</second>
+				<first>-4.98000000000000000e+02</first>
+				<second>3.34000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:2</first>
 			<second>
-				<first>-1.51000000000000000e+02</first>
-				<second>-1.46000000000000000e+02</second>
+				<first>-4.14000000000000000e+02</first>
+				<second>8.80000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:3</first>
 			<second>
-				<first>1.40000000000000000e+01</first>
-				<second>-6.40000000000000000e+01</second>
+				<first>-8.11000000000000000e+02</first>
+				<second>2.19000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>ShowOrientationAxes:0</first>
+			<second>
+				<first>-1.43000000000000000e+02</first>
+				<second>9.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:0</first>
 			<second>
-				<first>-4.54000000000000000e+02</first>
-				<second>7.90000000000000000e+01</second>
+				<first>-3.58000000000000000e+02</first>
+				<second>5.05000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>WriteField:0</first>
+			<second>
+				<first>-1.79000000000000000e+02</first>
+				<second>3.81000000000000000e+02</second>
 			</second>
 		</item>
 	</modulePositions>
@@ -3509,7 +4124,7 @@ print(TT)
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
 				<noteText>ID: 0</noteText>
 				<position>0</position>
 				<fontSize>13</fontSize>
@@ -3522,7 +4137,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
 				<noteText>ID: 1</noteText>
 				<position>0</position>
 				<fontSize>13</fontSize>
@@ -3535,7 +4150,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
 				<noteText>ID: 2</noteText>
 				<position>0</position>
 				<fontSize>13</fontSize>
@@ -3548,7 +4163,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
 				<noteText>ID: 3</noteText>
 				<position>0</position>
 				<fontSize>13</fontSize>
@@ -3560,14 +4175,38 @@ p, li { white-space: pre-wrap; }
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="21" tracking_level="0" version="0">
-		<count>11</count>
+		<count>18</count>
 		<item_version>0</item_version>
 		<item class_id="22" tracking_level="0" version="0">
+			<first>CalculateMeshNodes:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>CreateFieldData:0</first>
+			<second>-1</second>
+		</item>
+		<item>
 			<first>GetDomainBoundary:0</first>
 			<second>-1</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>GetDomainBoundary:1</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>GetFieldBoundary:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>InterfaceWithTetGen:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>MapFieldDataOntoElements:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>MapFieldDataOntoNodes:0</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -3580,10 +4219,6 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>ReadField:2</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ReadField:3</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -3603,17 +4238,27 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
+			<first>ShowOrientationAxes:0</first>
+			<second>-1</second>
+		</item>
+		<item>
 			<first>ViewScene:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>WriteField:0</first>
 			<second>-1</second>
 		</item>
 	</moduleTags>
 	<disabledModules class_id="23" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item>WriteField:0</item>
 	</disabledModules>
 	<disabledConnections>
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item>WriteField:0--MapFieldDataOntoElements:0</item>
 	</disabledConnections>
 	<moduleTagLabels class_id="24" tracking_level="0" version="0">
 		<count>0</count>

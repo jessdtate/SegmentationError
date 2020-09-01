@@ -4,7 +4,7 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>26</count>
+			<count>27</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
 				<first>AlignMeshBoundingBoxes:0</first>
@@ -647,6 +647,166 @@
 				</second>
 			</item>
 			<item>
+				<first>GeneratePointSamplesFromField:4</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>GeneratePointSamplesFromField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>3</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>NumSeeds</name>
+								</first>
+								<second>
+									<name>NumSeeds</name>
+									<value>
+										<which>0</which>
+										<value>15</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>PointPositions</name>
+								</first>
+								<second>
+									<name>PointPositions</name>
+									<value>
+										<which>5</which>
+										<value>
+											<count>15</count>
+											<item_version>0</item_version>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+											<item>
+												<name>widget_i</name>
+												<value>
+													<which>2</which>
+													<value>[33.3672, -189.977, -224.516]</value>
+												</value>
+											</item>
+										</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProbeScale</name>
+								</first>
+								<second>
+									<name>ProbeScale</name>
+									<value>
+										<which>1</which>
+										<value>2.30000000000000010e-01</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
 				<first>GetDomainBoundary:0</first>
 				<second>
 					<module>
@@ -1070,7 +1230,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires.mat</value>
 									</value>
 								</second>
 							</item>
@@ -1656,7 +1816,7 @@
 					</module>
 					<state>
 						<stateMap>
-							<count>39</count>
+							<count>50</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
@@ -1691,6 +1851,97 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraDistance</name>
+								</first>
+								<second>
+									<name>CameraDistance</name>
+									<value>
+										<which>1</which>
+										<value>5.53284240722656250e+02</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraLookAt</name>
+								</first>
+								<second>
+									<name>CameraLookAt</name>
+									<value>
+										<which>5</which>
+										<value>
+											<count>3</count>
+											<item_version>0</item_version>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>5.38328170776367188e+01</value>
+												</value>
+											</item>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>-2.14682144165039062e+02</value>
+												</value>
+											</item>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>-1.40415908813476562e+02</value>
+												</value>
+											</item>
+										</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CameraRotation</name>
+								</first>
+								<second>
+									<name>CameraRotation</name>
+									<value>
+										<which>5</which>
+										<value>
+											<count>4</count>
+											<item_version>0</item_version>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>-2.31831241399049759e-02</value>
+												</value>
+											</item>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>-8.30997288227081299e-01</value>
+												</value>
+											</item>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>3.36049109697341919e-01</value>
+												</value>
+											</item>
+											<item>
+												<name>listElement</name>
+												<value>
+													<which>1</which>
+													<value>4.42694067955017090e-01</value>
+												</value>
+											</item>
+										</value>
 									</value>
 								</second>
 							</item>
@@ -1792,6 +2043,18 @@
 							</item>
 							<item>
 								<first>
+									<name>HeadLightAzimuth</name>
+								</first>
+								<second>
+									<name>HeadLightAzimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>HeadLightColor</name>
 								</first>
 								<second>
@@ -1799,6 +2062,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>HeadLightInclination</name>
+								</first>
+								<second>
+									<name>HeadLightInclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -1816,6 +2091,18 @@
 							</item>
 							<item>
 								<first>
+									<name>Light1Azimuth</name>
+								</first>
+								<second>
+									<name>Light1Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light1Color</name>
 								</first>
 								<second>
@@ -1823,6 +2110,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light1Inclination</name>
+								</first>
+								<second>
+									<name>Light1Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -1840,6 +2139,18 @@
 							</item>
 							<item>
 								<first>
+									<name>Light2Azimuth</name>
+								</first>
+								<second>
+									<name>Light2Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light2Color</name>
 								</first>
 								<second>
@@ -1847,6 +2158,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light2Inclination</name>
+								</first>
+								<second>
+									<name>Light2Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -1864,6 +2187,18 @@
 							</item>
 							<item>
 								<first>
+									<name>Light3Azimuth</name>
+								</first>
+								<second>
+									<name>Light3Azimuth</name>
+									<value>
+										<which>0</which>
+										<value>180</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
 									<name>Light3Color</name>
 								</first>
 								<second>
@@ -1871,6 +2206,18 @@
 									<value>
 										<which>2</which>
 										<value>Color(0,0,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Light3Inclination</name>
+								</first>
+								<second>
+									<name>Light3Inclination</name>
+									<value>
+										<which>0</which>
+										<value>90</value>
 									</value>
 								</second>
 							</item>
@@ -2174,7 +2521,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_cleaver_vol.mat</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_cleaver_vol.mat</value>
 									</value>
 								</second>
 							</item>
@@ -2226,7 +2573,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_surface.stl</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_surface.stl</value>
 									</value>
 								</second>
 							</item>
@@ -2278,7 +2625,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_mitral_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_mitral_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -2330,7 +2677,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_tricusp_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_tricusp_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -2382,7 +2729,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_pulm_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_pulm_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -2434,7 +2781,7 @@
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/meshes/vent_staple_hires_aortic_valve_pts.pts</value>
+										<value>/Users/jess/FP/segmentation_error/Dalhousie_seg/staple_submission/geom/vent_staple_hires_aortic_valve_pts.pts</value>
 									</value>
 								</second>
 							</item>
@@ -2444,7 +2791,7 @@
 			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>42</count>
+			<count>44</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
 				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
@@ -2489,6 +2836,18 @@
 					<id>0</id>
 				</port1_>
 				<moduleId2_>GeneratePointSamplesFromField:3</moduleId2_>
+				<port2_>
+					<name>InputField</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>AlignMeshBoundingBoxes:0</moduleId1_>
+				<port1_>
+					<name>OutputField</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GeneratePointSamplesFromField:4</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
@@ -2563,7 +2922,7 @@
 				<moduleId2_>ViewScene:0</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
-					<id>1</id>
+					<id>8</id>
 				</port2_>
 			</item>
 			<item>
@@ -2587,7 +2946,7 @@
 				<moduleId2_>ViewScene:0</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
-					<id>7</id>
+					<id>9</id>
 				</port2_>
 			</item>
 			<item>
@@ -2611,7 +2970,7 @@
 				<moduleId2_>ViewScene:0</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
-					<id>3</id>
+					<id>10</id>
 				</port2_>
 			</item>
 			<item>
@@ -2635,7 +2994,19 @@
 				<moduleId2_>ViewScene:0</moduleId2_>
 				<port2_>
 					<name>GeneralGeom</name>
-					<id>6</id>
+					<id>11</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>GeneratePointSamplesFromField:4</moduleId1_>
+				<port1_>
+					<name>GeneratedWidget</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ViewScene:0</moduleId2_>
+				<port2_>
+					<name>GeneralGeom</name>
+					<id>12</id>
 				</port2_>
 			</item>
 			<item>
@@ -2953,7 +3324,7 @@
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>26</count>
+		<count>27</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
@@ -2998,6 +3369,13 @@
 			</second>
 		</item>
 		<item>
+			<first>GeneratePointSamplesFromField:4</first>
+			<second>
+				<first>2.36000000000000000e+02</first>
+				<second>-5.30000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
 			<first>GetDomainBoundary:0</first>
 			<second>
 				<first>-2.44000000000000000e+02</first>
@@ -3021,8 +3399,8 @@
 		<item>
 			<first>PrintStringIntoString:1</first>
 			<second>
-				<first>-2.12000000000000000e+02</first>
-				<second>1.20000000000000000e+01</second>
+				<first>-2.43000000000000000e+02</first>
+				<second>8.00000000000000000e+00</second>
 			</second>
 		</item>
 		<item>
@@ -3199,7 +3577,7 @@ p, li { white-space: pre-wrap; }
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="22" tracking_level="0" version="0">
-		<count>26</count>
+		<count>27</count>
 		<item_version>0</item_version>
 		<item class_id="23" tracking_level="0" version="0">
 			<first>AlignMeshBoundingBoxes:0</first>
@@ -3223,6 +3601,10 @@ p, li { white-space: pre-wrap; }
 		</item>
 		<item>
 			<first>GeneratePointSamplesFromField:3</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>GeneratePointSamplesFromField:4</first>
 			<second>-1</second>
 		</item>
 		<item>
