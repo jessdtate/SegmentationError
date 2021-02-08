@@ -7,17 +7,24 @@ def upsample_heart(Filename, outputfilename,name):
   layers = importlayer(filename=Filename, importer='[Teem Importer]', mode='label_mask')
   wait_for_layer(layers[0])
   
-  dims = get(stateid = 'group_0::dimensions')
+  g_id = getlayergroup(layerid = layers[0])
+  dims = get(stateid = g_id+'::dimensions')
 
   r_im1=resample(layerids=[layers[0]],x=dims[0],y=dims[1],z=dims[2]*4,crop='false',kernel='box',replace='false')
   wait_for_layer(r_im1[0])
+  
+  p_im = padfilter(layerids = [r_im1[0]],pad_level = [1,1,4],padding ='0')
+  wait_for_layer(p_im[0])
+  
   #de_im = erodefilter(layerid = r_im1[0], radius = 1, replace = True)
   #wait_for_layer(de_im)
-  de_im = dilatefilter(layerid = r_im1[0], radius = 4, replace = True)
+  de_im = dilatefilter(layerid = p_im[0], radius = 4, replace = True)
   wait_for_layer(de_im)
   de_im = erodefilter(layerid = de_im, radius = 5, replace = True)
   wait_for_layer(de_im)
-  de_im = dilatefilter(layerid = de_im, radius = 1, replace = True)
+  de_im = dilatefilter(layerid = de_im, radius = 5, replace = True)
+  wait_for_layer(de_im)
+  de_im = erodefilter(layerid = de_im, radius = 4, replace = True)
   wait_for_layer(de_im)
 
 #r_im2=resample(layerids=[de_im],x=dims[0],y=dims[1],z=dims[2]*4,crop='false',kernel='box',replace='false')
@@ -33,7 +40,7 @@ def upsample_heart(Filename, outputfilename,name):
   #de2_im = dilatefilter(layerid = de2_im, radius = 2, replace = True)
   #wait_for_layer(de2_im)
 
-  c_im = crop(layerids=[de_im],origin='[-64.8343,-299.594,-314]',size='[189.818,189.947,159]',replace='false')
+  c_im = crop(layerids=[de_im],origin='[-64.8343,-299.594,-314]',size='[189.818,189.947,165]',replace='false')
   wait_for_layer(c_im[0])
   set(stateid=c_im[0]+'::name',value=name)
   result=exportsegmentation(layers=c_im[0],file_path=outputfilename ,exporter='[NRRD Exporter]',extension='.nrrd')
@@ -46,6 +53,7 @@ def torso_points(Filename, outputfilename,name):
   computeisosurface(layerid=layers[0],quality_factor=0.25)
   set(stateid=layers[0]+'::name',value=name)
   exportisosurface(layer=layers[0],file_path=outputfilename+name+'.fac',binary='false')
+
 
 
 def wait_for_layer(layer,MAX_ITERATIONS = 1000):

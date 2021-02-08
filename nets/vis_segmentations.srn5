@@ -4,15 +4,15 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>19</count>
+			<count>13</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
-				<first>AppendMatrix:0</first>
+				<first>CreateString:0</first>
 				<second class_id="4" tracking_level="0" version="0">
 					<module class_id="5" tracking_level="0" version="0">
 						<package_name_>SCIRun</package_name_>
-						<category_name_>Math</category_name_>
-						<module_name_>AppendMatrix</module_name_>
+						<category_name_>String</category_name_>
+						<module_name_>CreateString</module_name_>
 					</module>
 					<state class_id="6" tracking_level="0" version="0">
 						<stateMap class_id="7" tracking_level="0" version="0">
@@ -20,24 +20,24 @@
 							<item_version>0</item_version>
 							<item class_id="8" tracking_level="0" version="0">
 								<first class_id="9" tracking_level="0" version="0">
-									<name>ProgrammableInputPortEnabled</name>
+									<name>InputString</name>
 								</first>
 								<second class_id="10" tracking_level="0" version="0">
-									<name>ProgrammableInputPortEnabled</name>
+									<name>InputString</name>
 									<value class_id="11" tracking_level="0" version="0">
-										<which>3</which>
-										<value>0</value>
+										<which>2</which>
+										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_rv_centered/PrepOutput/groom_and_meshes/</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>RowsOrColumns</name>
+									<name>ProgrammableInputPortEnabled</name>
 								</first>
 								<second>
-									<name>RowsOrColumns</name>
+									<name>ProgrammableInputPortEnabled</name>
 									<value>
-										<which>0</which>
+										<which>3</which>
 										<value>0</value>
 									</value>
 								</second>
@@ -47,12 +47,12 @@
 				</second>
 			</item>
 			<item>
-				<first>AppendMatrix:1</first>
+				<first>CreateString:1</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>Math</category_name_>
-						<module_name_>AppendMatrix</module_name_>
+						<category_name_>String</category_name_>
+						<module_name_>CreateString</module_name_>
 					</module>
 					<state>
 						<stateMap>
@@ -60,192 +60,13 @@
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>ProgrammableInputPortEnabled</name>
+									<name>InputString</name>
 								</first>
 								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RowsOrColumns</name>
-								</first>
-								<second>
-									<name>RowsOrColumns</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>CreateFieldData:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>ChangeFieldData</category_name_>
-						<module_name_>CreateFieldData</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>4</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>BasisString</name>
-								</first>
-								<second>
-									<name>BasisString</name>
+									<name>InputString</name>
 									<value>
 										<which>2</which>
-										<value>Linear</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FormatString</name>
-								</first>
-								<second>
-									<name>FormatString</name>
-									<value>
-										<which>2</which>
-										<value>Scalar</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FunctionString</name>
-								</first>
-								<second>
-									<name>FunctionString</name>
-									<value>
-										<which>2</which>
-										<value>RESULT = INDEX;</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>CreateStandardColorMap:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>CreateStandardColorMap</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>8</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>AlphaUserPointsVector</name>
-								</first>
-								<second>
-									<name>AlphaUserPointsVector</name>
-									<value>
-										<which>5</which>
-										<value class_id="12" tracking_level="0" version="0">
-											<count>0</count>
-											<item_version>0</item_version>
-										</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ColorMapInvert</name>
-								</first>
-								<second>
-									<name>ColorMapInvert</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ColorMapName</name>
-								</first>
-								<second>
-									<name>ColorMapName</name>
-									<value>
-										<which>2</which>
-										<value>Rainbow</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ColorMapResolution</name>
-								</first>
-								<second>
-									<name>ColorMapResolution</name>
-									<value>
-										<which>0</which>
-										<value>256</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ColorMapShift</name>
-								</first>
-								<second>
-									<name>ColorMapShift</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CustomColor0</name>
-								</first>
-								<second>
-									<name>CustomColor0</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.2,0.2,0.2)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CustomColor1</name>
-								</first>
-								<second>
-									<name>CustomColor1</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.8,0.8,0.8)</value>
+										<value>.isores.center.pad.cropped.DT.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -402,86 +223,174 @@
 				</second>
 			</item>
 			<item>
-				<first>InterfaceWithPython:0</first>
+				<first>FairMesh:0</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>Python</category_name_>
-						<module_name_>InterfaceWithPython</module_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>FairMesh</module_name_>
 					</module>
 					<state>
 						<stateMap>
-							<count>18</count>
+							<count>5</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>InputString:0</name>
+									<name>FairMeshMethod</name>
 								</first>
 								<second>
-									<name>InputString:0</name>
+									<name>FairMeshMethod</name>
 									<value>
 										<which>2</which>
-										<value>stringInput1</value>
+										<value>fast</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputString:1</name>
+									<name>FilterCutoff</name>
 								</first>
 								<second>
-									<name>InputString:1</name>
+									<name>FilterCutoff</name>
 									<value>
-										<which>2</which>
-										<value>stringInput2</value>
+										<which>1</which>
+										<value>1.00000000000000006e-01</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputString:2</name>
+									<name>Lambda</name>
 								</first>
 								<second>
-									<name>InputString:2</name>
+									<name>Lambda</name>
 									<value>
-										<which>2</which>
-										<value>stringInput1</value>
+										<which>1</which>
+										<value>6.30700000000000038e-01</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputString:3</name>
+									<name>NumIterations</name>
 								</first>
 								<second>
-									<name>InputString:3</name>
-									<value>
-										<which>2</which>
-										<value>stringInput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NumberOfRetries</name>
-								</first>
-								<second>
-									<name>NumberOfRetries</name>
+									<name>NumIterations</name>
 									<value>
 										<which>0</which>
-										<value>3</value>
+										<value>50</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PollingIntervalMilliseconds</name>
+									<name>ProgrammableInputPortEnabled</name>
 								</first>
 								<second>
-									<name>PollingIntervalMilliseconds</name>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>GetDomainBoundary:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>NewField</category_name_>
+						<module_name_>GetDomainBoundary</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>9</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>AddOuterBoundary</name>
+								</first>
+								<second>
+									<name>AddOuterBoundary</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>DisconnectBoundaries</name>
+								</first>
+								<second>
+									<name>DisconnectBoundaries</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Domain</name>
+								</first>
+								<second>
+									<name>Domain</name>
 									<value>
 										<which>0</which>
-										<value>20</value>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>InnerBoundaryOnly</name>
+								</first>
+								<second>
+									<name>InnerBoundaryOnly</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MaxRange</name>
+								</first>
+								<second>
+									<name>MaxRange</name>
+									<value>
+										<which>0</which>
+										<value>255</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MinRange</name>
+								</first>
+								<second>
+									<name>MinRange</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NoInnerBoundary</name>
+								</first>
+								<second>
+									<name>NoInnerBoundary</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -499,153 +408,13 @@
 							</item>
 							<item>
 								<first>
-									<name>PythonCode</name>
+									<name>UseRange</name>
 								</first>
 								<second>
-									<name>PythonCode</name>
+									<name>UseRange</name>
 									<value>
-										<which>2</which>
-										<value>import os
-import fnmatch
-
-path = stringInput1
-fileroot = stringInput2
-print(fileroot)
-print(path)
-
-p_pnt = fileroot.find(&apos;.&apos;)
-
-iso_file = fnmatch.filter(os.listdir(path), fileroot[0:p_pnt]+&apos;*.DT.nrrd&apos;)
-
-print(fileroot[0:p_pnt]+&apos;*.DT.nrrd &apos;)
-print(iso_file)
-
-print(iso_file)
-
-stringOutput1 = os.path.join(path, iso_file[0])
-
-</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField1Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField2Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField3Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix1Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix2Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix3Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString1Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString2Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString3Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonTopLevelCode</name>
-								</first>
-								<second>
-									<name>PythonTopLevelCode</name>
-									<value>
-										<which>2</which>
-										<value># Main namespace/top level context code goes here; for example, import statements and global variables.
-# This code will be executed before the &apos;Code&apos; tab, and no input/output variables are available.</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -673,87 +442,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s../../image/%s_back.txt</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>PrintStringIntoString:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>String</category_name_>
-						<module_name_>PrintStringIntoString</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FormatString</name>
-								</first>
-								<second>
-									<name>FormatString</name>
-									<value>
-										<which>2</which>
-										<value>%s../../image/%s_front.txt</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>PrintStringIntoString:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>String</category_name_>
-						<module_name_>PrintStringIntoString</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>2</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FormatString</name>
-								</first>
-								<second>
-									<name>FormatString</name>
-									<value>
-										<which>2</which>
-										<value>%s../../PrepOutput/groom_and_meshes/</value>
+										<value>%s%s%s</value>
 									</value>
 								</second>
 							</item>
@@ -793,7 +482,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>NrrdFile</value>
+										<value>NrrdFile[DataOnElements]</value>
 									</value>
 								</second>
 							</item>
@@ -805,7 +494,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../PrepOutput/groom_and_meshes/BO_LV_endo.isores.center.pad.cropped.DT.nrrd</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/finished_segs/split_vent/rv/Utah_RV_endo.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -869,7 +558,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FileTypeName</name>
 									<value>
 										<which>2</which>
-										<value>PointCloudField</value>
+										<value>NrrdFile</value>
 									</value>
 								</second>
 							</item>
@@ -881,7 +570,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles.txt</value>
+										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_rv_centered/PrepOutput/groom_and_meshes/Utah_RV_endo.isores.center.pad.cropped.DT.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -917,7 +606,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>ScriptEnvironmentVariable</name>
 									<value>
 										<which>2</which>
-										<value>$POINT_FILE</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
@@ -926,83 +615,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</second>
 			</item>
 			<item>
-				<first>RescaleColorMap:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>RescaleColorMap</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>5</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>AutoScale</name>
-								</first>
-								<second>
-									<name>AutoScale</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FixedMax</name>
-								</first>
-								<second>
-									<name>FixedMax</name>
-									<value>
-										<which>1</which>
-										<value>2.55000000000000000e+02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FixedMin</name>
-								</first>
-								<second>
-									<name>FixedMin</name>
-									<value>
-										<which>1</which>
-										<value>0.00000000000000000e+00</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Symmetric</name>
-								</first>
-								<second>
-									<name>Symmetric</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>ShowField:1</first>
+				<first>ShowField:0</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
@@ -1057,7 +670,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.5,0.5,0.5)</value>
+										<value>Color(0.494118,0.494118,0.623529)</value>
 									</value>
 								</second>
 							</item>
@@ -1117,7 +730,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>EdgesAvailable</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1129,7 +742,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>EdgesColoring</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1177,7 +790,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FacesAvailable</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1189,7 +802,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FacesColoring</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1213,7 +826,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>NodeAsSpheres</name>
 									<value>
 										<which>0</which>
-										<value>1</value>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1357,31 +970,31 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>ShowFaces</name>
 									<value>
 										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
 										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodeIndices</name>
+								</first>
+								<second>
+									<name>ShowNodeIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodes</name>
+								</first>
+								<second>
+									<name>ShowNodes</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -1417,7 +1030,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>SphereScaleValue</name>
 									<value>
 										<which>1</which>
-										<value>2.00000000000000000e+00</value>
+										<value>2.99999999999999989e-02</value>
 									</value>
 								</second>
 							</item>
@@ -1486,7 +1099,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</second>
 			</item>
 			<item>
-				<first>ShowField:2</first>
+				<first>ShowField:1</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
@@ -1541,7 +1154,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>DefaultMeshColor</name>
 									<value>
 										<which>2</which>
-										<value>Color(0.848692,0.855375,0)</value>
+										<value>Color(0.494118,0.494118,0.627176)</value>
 									</value>
 								</second>
 							</item>
@@ -2053,7 +1666,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraDistance</name>
 									<value>
 										<which>1</which>
-										<value>2.99298614501953125e+02</value>
+										<value>2.36610855102539062e+02</value>
 									</value>
 								</second>
 							</item>
@@ -2077,7 +1690,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraLookAt</name>
 									<value>
 										<which>2</which>
-										<value>[2.25, 13.616, 16.2371]</value>
+										<value>[31.6662, -191.363, -228.211]</value>
 									</value>
 								</second>
 							</item>
@@ -2089,7 +1702,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraRotation</name>
 									<value>
 										<which>2</which>
-										<value>Quaternion(0.784740,-0.615885,-0.007011,0.069422)</value>
+										<value>Quaternion(-0.835084,-0.139440,-0.235686,0.477120)</value>
 									</value>
 								</second>
 							</item>
@@ -2641,7 +2254,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>TimeExecutionFinished</name>
 									<value>
 										<which>0</which>
-										<value>1555869950</value>
+										<value>1530314660</value>
 									</value>
 								</second>
 							</item>
@@ -2729,7 +2342,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraDistance</name>
 									<value>
 										<which>1</which>
-										<value>2.67451965332031250e+02</value>
+										<value>2.35162307739257812e+02</value>
 									</value>
 								</second>
 							</item>
@@ -2753,7 +2366,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraLookAt</name>
 									<value>
 										<which>2</which>
-										<value>[2.25, 13.616, 16.2371]</value>
+										<value>[2.25, 13.616, 5.5]</value>
 									</value>
 								</second>
 							</item>
@@ -2765,7 +2378,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraRotation</name>
 									<value>
 										<which>2</which>
-										<value>Quaternion(-0.069422,-0.007011,0.615885,0.784740)</value>
+										<value>Quaternion(-0.835444,-0.138729,-0.233622,0.477711)</value>
 									</value>
 								</second>
 							</item>
@@ -3317,7 +2930,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>TimeExecutionFinished</name>
 									<value>
 										<which>0</which>
-										<value>1555869978</value>
+										<value>1530312219</value>
 									</value>
 								</second>
 							</item>
@@ -3342,134 +2955,6 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<value>
 										<which>3</which>
 										<value>1</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>WriteMatrix:0</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>WriteMatrix</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>4</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>SimpleTextFile</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../image/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles_front.txt</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>SimpleTextFile (*.*)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
-				<first>WriteMatrix:1</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>DataIO</category_name_>
-						<module_name_>WriteMatrix</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>4</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>FileTypeName</name>
-								</first>
-								<second>
-									<name>FileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>SimpleTextFile</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>Filename</name>
-								</first>
-								<second>
-									<name>Filename</name>
-									<value>
-										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../image/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles_back.txt</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>GuiFileTypeName</name>
-								</first>
-								<second>
-									<name>GuiFileTypeName</name>
-									<value>
-										<which>2</which>
-										<value>SimpleTextFile (*.*)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -3478,47 +2963,35 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</second>
 			</item>
 		</modules>
-		<connections class_id="13" tracking_level="0" version="0">
-			<count>30</count>
+		<connections class_id="12" tracking_level="0" version="0">
+			<count>12</count>
 			<item_version>0</item_version>
-			<item class_id="14" tracking_level="0" version="0">
-				<moduleId1_>AppendMatrix:0</moduleId1_>
-				<port1_ class_id="15" tracking_level="0" version="0">
-					<name>ResultMatrix</name>
+			<item class_id="13" tracking_level="0" version="0">
+				<moduleId1_>CreateString:0</moduleId1_>
+				<port1_ class_id="14" tracking_level="0" version="0">
+					<name>NewString</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:0</moduleId2_>
+				<moduleId2_>PrintStringIntoString:0</moduleId2_>
 				<port2_>
-					<name>MatrixToWrite</name>
-					<id>0</id>
+					<name>Input</name>
+					<id>1</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>AppendMatrix:1</moduleId1_>
+				<moduleId1_>CreateString:1</moduleId1_>
 				<port1_>
-					<name>ResultMatrix</name>
+					<name>NewString</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:1</moduleId2_>
+				<moduleId2_>PrintStringIntoString:0</moduleId2_>
 				<port2_>
-					<name>MatrixToWrite</name>
-					<id>0</id>
+					<name>Input</name>
+					<id>3</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>CreateFieldData:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>RescaleColorMap:0</moduleId2_>
-				<port2_>
-					<name>Field</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>CreateFieldData:0</moduleId1_>
+				<moduleId1_>ExtractIsosurface:0</moduleId1_>
 				<port1_>
 					<name>OutputField</name>
 					<id>0</id>
@@ -3530,38 +3003,26 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>CreateStandardColorMap:0</moduleId1_>
+				<moduleId1_>FairMesh:0</moduleId1_>
 				<port1_>
-					<name>ColorMapObject</name>
+					<name>Faired_Mesh</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>RescaleColorMap:0</moduleId2_>
-				<port2_>
-					<name>ColorMapObject</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ExtractIsosurface:0</moduleId1_>
-				<port1_>
-					<name>OutputField</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ShowField:2</moduleId2_>
+				<moduleId2_>ShowField:0</moduleId2_>
 				<port2_>
 					<name>Field</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>InterfaceWithPython:0</moduleId1_>
+				<moduleId1_>GetDomainBoundary:0</moduleId1_>
 				<port1_>
-					<name>PythonString1</name>
+					<name>BoundaryField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ReadField:0</moduleId2_>
+				<moduleId2_>FairMesh:0</moduleId2_>
 				<port2_>
-					<name>Filename</name>
+					<name>Input_Mesh</name>
 					<id>0</id>
 				</port2_>
 			</item>
@@ -3571,34 +3032,10 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:1</moduleId2_>
+				<moduleId2_>ReadField:1</moduleId2_>
 				<port2_>
 					<name>Filename</name>
 					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>PrintStringIntoString:1</moduleId1_>
-				<port1_>
-					<name>Output</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>WriteMatrix:0</moduleId2_>
-				<port2_>
-					<name>Filename</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>PrintStringIntoString:2</moduleId1_>
-				<port1_>
-					<name>Output</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
-				<port2_>
-					<name>InputString</name>
-					<id>2</id>
 				</port2_>
 			</item>
 			<item>
@@ -3607,26 +3044,14 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Field</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ExtractIsosurface:0</moduleId2_>
+				<moduleId2_>GetDomainBoundary:0</moduleId2_>
 				<port2_>
 					<name>InputField</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ReadField:1</moduleId1_>
-				<port1_>
-					<name>Field</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>CreateFieldData:0</moduleId2_>
-				<port2_>
-					<name>InputField</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ReadField:1</moduleId1_>
+				<moduleId1_>ReadField:0</moduleId1_>
 				<port1_>
 					<name>FileLoaded</name>
 					<id>0</id>
@@ -3638,43 +3063,19 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>RescaleColorMap:0</moduleId1_>
+				<moduleId1_>ReadField:1</moduleId1_>
 				<port1_>
-					<name>ColorMapOutput</name>
+					<name>Field</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:1</moduleId2_>
+				<moduleId2_>ExtractIsosurface:0</moduleId2_>
 				<port2_>
-					<name>ColorMapObject</name>
+					<name>InputField</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ShowField:1</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:1</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:1</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:2</moduleId1_>
+				<moduleId1_>ShowField:0</moduleId1_>
 				<port1_>
 					<name>SceneGraph</name>
 					<id>0</id>
@@ -3686,7 +3087,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ShowField:2</moduleId1_>
+				<moduleId1_>ShowField:1</moduleId1_>
 				<port1_>
 					<name>SceneGraph</name>
 					<id>0</id>
@@ -3703,289 +3104,128 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Base</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
-				<port2_>
-					<name>InputString</name>
-					<id>3</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Base</name>
-					<id>0</id>
-				</port1_>
 				<moduleId2_>PrintStringIntoString:0</moduleId2_>
 				<port2_>
 					<name>Input</name>
-					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Base</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>PrintStringIntoString:1</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>1</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Pathname</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>PrintStringIntoString:0</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Pathname</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>PrintStringIntoString:1</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Pathname</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>PrintStringIntoString:2</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:0</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataBlue</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:0</moduleId2_>
-				<port2_>
-					<name>InputMatrices</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:0</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataGreen</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:0</moduleId2_>
-				<port2_>
-					<name>SecondMatrix</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:0</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataRed</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:0</moduleId2_>
-				<port2_>
-					<name>FirstMatrix</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:1</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataBlue</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:1</moduleId2_>
-				<port2_>
-					<name>InputMatrices</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:1</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataGreen</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:1</moduleId2_>
-				<port2_>
-					<name>SecondMatrix</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ViewScene:1</moduleId1_>
-				<port1_>
-					<name>ScreenshotDataRed</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>AppendMatrix:1</moduleId2_>
-				<port2_>
-					<name>FirstMatrix</name>
-					<id>0</id>
+					<id>2</id>
 				</port2_>
 			</item>
 		</connections>
 	</networkInfo>
-	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>19</count>
+	<modulePositions class_id="15" tracking_level="0" version="0">
+		<count>13</count>
 		<item_version>0</item_version>
-		<item class_id="17" tracking_level="0" version="0">
-			<first>AppendMatrix:0</first>
-			<second class_id="18" tracking_level="0" version="0">
-				<first>-3.91000000000000000e+02</first>
-				<second>2.34000000000000000e+02</second>
+		<item class_id="16" tracking_level="0" version="0">
+			<first>CreateString:0</first>
+			<second class_id="17" tracking_level="0" version="0">
+				<first>3.20000000000000000e+01</first>
+				<second>-5.37000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>AppendMatrix:1</first>
+			<first>CreateString:1</first>
 			<second>
-				<first>-1.81000000000000000e+02</first>
-				<second>2.29000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>CreateFieldData:0</first>
-			<second>
-				<first>-1.53000000000000000e+02</first>
-				<second>-2.90000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>CreateStandardColorMap:0</first>
-			<second>
-				<first>-3.40000000000000000e+02</first>
-				<second>-4.69000000000000000e+02</second>
+				<first>1.35000000000000000e+02</first>
+				<second>-4.32000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ExtractIsosurface:0</first>
 			<second>
-				<first>-4.67000000000000000e+02</first>
-				<second>-8.50000000000000000e+01</second>
+				<first>1.40000000000000000e+02</first>
+				<second>-1.40000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>FairMesh:0</first>
 			<second>
-				<first>-4.53000000000000000e+02</first>
-				<second>-3.05000000000000000e+02</second>
+				<first>-2.48000000000000000e+02</first>
+				<second>-8.80000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>GetDomainBoundary:0</first>
+			<second>
+				<first>-2.47000000000000000e+02</first>
+				<second>-1.76000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>PrintStringIntoString:0</first>
 			<second>
-				<first>5.10000000000000000e+01</first>
-				<second>-8.60000000000000000e+01</second>
-			</second>
-		</item>
-		<item>
-			<first>PrintStringIntoString:1</first>
-			<second>
-				<first>-3.16000000000000000e+02</first>
-				<second>1.00000000000000000e+00</second>
-			</second>
-		</item>
-		<item>
-			<first>PrintStringIntoString:2</first>
-			<second>
-				<first>-2.51000000000000000e+02</first>
-				<second>-3.91000000000000000e+02</second>
+				<first>-1.47000000000000000e+02</first>
+				<second>-3.50000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
 			<second>
-				<first>-4.56000000000000000e+02</first>
-				<second>-1.69000000000000000e+02</second>
+				<first>-1.98000000000000000e+02</first>
+				<second>-5.26000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:1</first>
 			<second>
-				<first>-1.36000000000000000e+02</first>
-				<second>-5.72000000000000000e+02</second>
+				<first>1.00000000000000000e+00</first>
+				<second>-2.66000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>RescaleColorMap:0</first>
+			<first>ShowField:0</first>
 			<second>
-				<first>-2.25000000000000000e+02</first>
-				<second>-1.94000000000000000e+02</second>
+				<first>-2.46000000000000000e+02</first>
+				<second>-1.60000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:1</first>
 			<second>
-				<first>-1.49000000000000000e+02</first>
-				<second>-6.20000000000000000e+01</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:2</first>
-			<second>
-				<first>-4.71000000000000000e+02</first>
-				<second>4.00000000000000000e+00</second>
+				<first>7.60000000000000000e+01</first>
+				<second>-2.90000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>SplitFileName:0</first>
 			<second>
-				<first>-4.70000000000000000e+01</first>
-				<second>-4.80000000000000000e+02</second>
+				<first>-1.75000000000000000e+02</first>
+				<second>-4.53000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:0</first>
 			<second>
-				<first>-3.91000000000000000e+02</first>
-				<second>1.38000000000000000e+02</second>
+				<first>-2.46000000000000000e+02</first>
+				<second>8.00000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:1</first>
 			<second>
-				<first>-1.83000000000000000e+02</first>
-				<second>1.35000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>WriteMatrix:0</first>
-			<second>
-				<first>-4.05000000000000000e+02</first>
-				<second>3.16000000000000000e+02</second>
-			</second>
-		</item>
-		<item>
-			<first>WriteMatrix:1</first>
-			<second>
-				<first>-1.66000000000000000e+02</first>
-				<second>3.07000000000000000e+02</second>
+				<first>1.29000000000000000e+02</first>
+				<second>7.40000000000000000e+01</second>
 			</second>
 		</item>
 	</modulePositions>
-	<moduleNotes class_id="19" tracking_level="0" version="0">
+	<moduleNotes class_id="18" tracking_level="0" version="0">
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="20" tracking_level="0" version="0">
+		<item class_id="19" tracking_level="0" version="0">
+			<first>ShowField:0</first>
+			<second class_id="20" tracking_level="0" version="0">
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 0</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
 			<first>ShowField:1</first>
-			<second class_id="21" tracking_level="0" version="0">
+			<second>
 				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -3996,41 +3236,20 @@ p, li { white-space: pre-wrap; }
 				<fontSize>13</fontSize>
 			</second>
 		</item>
-		<item>
-			<first>ShowField:2</first>
-			<second>
-				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 2</noteText>
-				<position>0</position>
-				<fontSize>13</fontSize>
-			</second>
-		</item>
 	</moduleNotes>
 	<connectionNotes>
 		<count>0</count>
 		<item_version>0</item_version>
 	</connectionNotes>
-	<moduleTags class_id="22" tracking_level="0" version="0">
-		<count>19</count>
+	<moduleTags class_id="21" tracking_level="0" version="0">
+		<count>13</count>
 		<item_version>0</item_version>
-		<item class_id="23" tracking_level="0" version="0">
-			<first>AppendMatrix:0</first>
+		<item class_id="22" tracking_level="0" version="0">
+			<first>CreateString:0</first>
 			<second>-1</second>
 		</item>
 		<item>
-			<first>AppendMatrix:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>CreateFieldData:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>CreateStandardColorMap:0</first>
+			<first>CreateString:1</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -4038,19 +3257,15 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>FairMesh:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>GetDomainBoundary:0</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>PrintStringIntoString:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>PrintStringIntoString:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>PrintStringIntoString:2</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -4062,15 +3277,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>RescaleColorMap:0</first>
+			<first>ShowField:0</first>
 			<second>-1</second>
 		</item>
 		<item>
 			<first>ShowField:1</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>ShowField:2</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -4085,16 +3296,8 @@ p, li { white-space: pre-wrap; }
 			<first>ViewScene:1</first>
 			<second>-1</second>
 		</item>
-		<item>
-			<first>WriteMatrix:0</first>
-			<second>-1</second>
-		</item>
-		<item>
-			<first>WriteMatrix:1</first>
-			<second>-1</second>
-		</item>
 	</moduleTags>
-	<disabledModules class_id="24" tracking_level="0" version="0">
+	<disabledModules class_id="23" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledModules>
@@ -4102,12 +3305,12 @@ p, li { white-space: pre-wrap; }
 		<count>0</count>
 		<item_version>0</item_version>
 	</disabledConnections>
-	<moduleTagLabels class_id="25" tracking_level="0" version="0">
+	<moduleTagLabels class_id="24" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</moduleTagLabels>
 	<loadTagGroups>0</loadTagGroups>
-	<subnetworks class_id="26" tracking_level="0" version="0">
+	<subnetworks class_id="25" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</subnetworks>

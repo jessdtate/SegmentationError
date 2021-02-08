@@ -36,14 +36,14 @@ for k = 1:length(file)
 	sigma = max(sigma,[],2);
 	sigma = sigma(3);
     
-    sigma = 30;
+%     sigma = 30;
     
     iE = exp( -D./(2*sigma));
     
     save(Wieghts_file,'iE')
     
 
-	[wghFcn] = invExplonentialWeight(heart, sigma, 1e-6);
+	[wghFcn] = invExplonentialWeight(heart, sigma, 1e-5);
 
 	[cDf, cHf] = meshVolDiffHessMatrix(heart,wghFcn);
 	

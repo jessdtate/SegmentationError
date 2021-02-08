@@ -5,6 +5,7 @@ import numpy as np
 from skimage.io import imsave
 
 image_dir = "/Users/jess/software/ShapeWorks/Examples/Python/Test_epi_centered/image"
+#image_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/epi_centered/9samples/SR_images/front/"
 
 image_files = fnmatch.filter(os.listdir(image_dir), '*.txt')
 

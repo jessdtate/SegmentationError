@@ -24,9 +24,10 @@ s_file=$ft'/'$froot'_tmp.py'
 
 echo -e "exec(open('/Users/jess/FP/segmentation_error/seg_error/py_scripts/upsample_segs.py').read()) \nupsample_heart('"$1"', '"$ft'/'"','"$froot'_hires'"')" > $s_file
 
-echo $seg3d_call --headless --python=$s_file
+echo $seg3d_call --python=$s_file
 cd $seg3d_bin
-$seg3d_call --headless --python=$s_file
+#$seg3d_call --headless --python=$s_file
+$seg3d_call --python=$s_file
 out=$?
 cd $curr_dir
 

@@ -4,7 +4,7 @@
 <networkFile class_id="0" tracking_level="0" version="6">
 	<networkInfo class_id="1" tracking_level="0" version="0">
 		<modules class_id="2" tracking_level="0" version="0">
-			<count>19</count>
+			<count>24</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="0" version="0">
 				<first>AppendMatrix:0</first>
@@ -266,6 +266,174 @@
 				</second>
 			</item>
 			<item>
+				<first>CreateStandardMatrix:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>Math</category_name_>
+						<module_name_>CreateStandardMatrix</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>6</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>Columns</name>
+								</first>
+								<second>
+									<name>Columns</name>
+									<value>
+										<which>0</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>MatrixType</name>
+								</first>
+								<second>
+									<name>MatrixType</name>
+									<value>
+										<which>2</which>
+										<value>Series</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Rows</name>
+								</first>
+								<second>
+									<name>Rows</name>
+									<value>
+										<which>0</which>
+										<value>20</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>Size</name>
+								</first>
+								<second>
+									<name>Size</name>
+									<value>
+										<which>1</which>
+										<value>1.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>StartPointer</name>
+								</first>
+								<second>
+									<name>StartPointer</name>
+									<value>
+										<which>1</which>
+										<value>0.00000000000000000e+00</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>CreateString:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>CreateString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>InputString</name>
+								</first>
+								<second>
+									<name>InputString</name>
+									<value>
+										<which>2</which>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/rv_centered/9samples/</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>CreateString:1</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>CreateString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>InputString</name>
+								</first>
+								<second>
+									<name>InputString</name>
+									<value>
+										<which>2</which>
+										<value>rv_9_3</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
 				<first>ExtractIsosurface:0</first>
 				<second>
 					<module>
@@ -393,7 +561,7 @@
 									<name>SingleIsoValue</name>
 									<value>
 										<which>1</which>
-										<value>-0.00000000000000000e+00</value>
+										<value>0.00000000000000000e+00</value>
 									</value>
 								</second>
 							</item>
@@ -402,86 +570,62 @@
 				</second>
 			</item>
 			<item>
-				<first>InterfaceWithPython:0</first>
+				<first>GetMatrixSlice:0</first>
 				<second>
 					<module>
 						<package_name_>SCIRun</package_name_>
-						<category_name_>Python</category_name_>
-						<module_name_>InterfaceWithPython</module_name_>
+						<category_name_>Math</category_name_>
+						<module_name_>GetMatrixSlice</module_name_>
 					</module>
 					<state>
 						<stateMap>
-							<count>18</count>
+							<count>7</count>
 							<item_version>0</item_version>
 							<item>
 								<first>
-									<name>InputString:0</name>
+									<name>IsSliceColumn</name>
 								</first>
 								<second>
-									<name>InputString:0</name>
+									<name>IsSliceColumn</name>
 									<value>
-										<which>2</which>
-										<value>stringInput1</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>InputString:1</name>
+									<name>MaxIndex</name>
 								</first>
 								<second>
-									<name>InputString:1</name>
-									<value>
-										<which>2</which>
-										<value>stringInput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InputString:2</name>
-								</first>
-								<second>
-									<name>InputString:2</name>
-									<value>
-										<which>2</which>
-										<value>stringInput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>InputString:3</name>
-								</first>
-								<second>
-									<name>InputString:3</name>
-									<value>
-										<which>2</which>
-										<value>stringInput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NumberOfRetries</name>
-								</first>
-								<second>
-									<name>NumberOfRetries</name>
+									<name>MaxIndex</name>
 									<value>
 										<which>0</which>
-										<value>3</value>
+										<value>19</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PollingIntervalMilliseconds</name>
+									<name>PlayModeDelay</name>
 								</first>
 								<second>
-									<name>PollingIntervalMilliseconds</name>
+									<name>PlayModeDelay</name>
 									<value>
 										<which>0</which>
-										<value>20</value>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>PlayModeType</name>
+								</first>
+								<second>
+									<name>PlayModeType</name>
+									<value>
+										<which>2</which>
+										<value>looponce</value>
 									</value>
 								</second>
 							</item>
@@ -499,153 +643,65 @@
 							</item>
 							<item>
 								<first>
-									<name>PythonCode</name>
+									<name>SliceIncrement</name>
 								</first>
 								<second>
-									<name>PythonCode</name>
+									<name>SliceIncrement</name>
 									<value>
-										<which>2</which>
-										<value>import os
-import fnmatch
-
-path = stringInput1
-fileroot = stringInput2
-print(fileroot)
-print(path)
-
-p_pnt = fileroot.find(&apos;.&apos;)
-
-iso_file = fnmatch.filter(os.listdir(path), fileroot[0:p_pnt]+&apos;*.DT.nrrd&apos;)
-
-print(fileroot[0:p_pnt]+&apos;*.DT.nrrd &apos;)
-print(iso_file)
-
-print(iso_file)
-
-stringOutput1 = os.path.join(path, iso_file[0])
-
-</value>
+										<which>0</which>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputField1Name</name>
+									<name>SliceIndex</name>
 								</first>
 								<second>
-									<name>PythonOutputField1Name</name>
+									<name>SliceIndex</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintMatrixIntoString:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintMatrixIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>fieldOutput1</value>
+										<value>%i</value>
 									</value>
 								</second>
 							</item>
 							<item>
 								<first>
-									<name>PythonOutputField2Name</name>
+									<name>ProgrammableInputPortEnabled</name>
 								</first>
 								<second>
-									<name>PythonOutputField2Name</name>
+									<name>ProgrammableInputPortEnabled</name>
 									<value>
-										<which>2</which>
-										<value>fieldOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputField3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputField3Name</name>
-									<value>
-										<which>2</which>
-										<value>fieldOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix1Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix2Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputMatrix3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputMatrix3Name</name>
-									<value>
-										<which>2</which>
-										<value>matrixOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString1Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString1Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString2Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString2Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput2</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonOutputString3Name</name>
-								</first>
-								<second>
-									<name>PythonOutputString3Name</name>
-									<value>
-										<which>2</which>
-										<value>stringOutput3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>PythonTopLevelCode</name>
-								</first>
-								<second>
-									<name>PythonTopLevelCode</name>
-									<value>
-										<which>2</which>
-										<value># Main namespace/top level context code goes here; for example, import statements and global variables.
-# This code will be executed before the &apos;Code&apos; tab, and no input/output variables are available.</value>
+										<which>3</which>
+										<value>0</value>
 									</value>
 								</second>
 							</item>
@@ -673,7 +729,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s../../image/%s_back.txt</value>
+										<value>%s/SR_surfaces/%s_surface_vol.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -713,7 +769,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s../../image/%s_front.txt</value>
+										<value>%s%s-%s.pts</value>
 									</value>
 								</second>
 							</item>
@@ -753,7 +809,47 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>FormatString</name>
 									<value>
 										<which>2</which>
-										<value>%s../../PrepOutput/groom_and_meshes/</value>
+										<value>%s/SR_images/front/%s_front.txt</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>PrintStringIntoString:3</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>String</category_name_>
+						<module_name_>PrintStringIntoString</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>2</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>FormatString</name>
+								</first>
+								<second>
+									<name>FormatString</name>
+									<value>
+										<which>2</which>
+										<value>%s/SR_images/back/%s_back.txt</value>
 									</value>
 								</second>
 							</item>
@@ -805,7 +901,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../PrepOutput/groom_and_meshes/BO_LV_endo.isores.center.pad.cropped.DT.nrrd</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/rv_centered/9samples//SR_surfaces/rv_9_3-0_surface_vol.nrrd</value>
 									</value>
 								</second>
 							</item>
@@ -881,7 +977,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles.txt</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/rv_centered/9samples/rv_9_3-0.pts</value>
 									</value>
 								</second>
 							</item>
@@ -917,7 +1013,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>ScriptEnvironmentVariable</name>
 									<value>
 										<which>2</which>
-										<value>$POINT_FILE</value>
+										<value></value>
 									</value>
 								</second>
 							</item>
@@ -994,6 +1090,490 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<value>
 										<which>3</which>
 										<value>0</value>
+									</value>
+								</second>
+							</item>
+						</stateMap>
+					</state>
+				</second>
+			</item>
+			<item>
+				<first>ShowField:0</first>
+				<second>
+					<module>
+						<package_name_>SCIRun</package_name_>
+						<category_name_>Visualization</category_name_>
+						<module_name_>ShowField</module_name_>
+					</module>
+					<state>
+						<stateMap>
+							<count>39</count>
+							<item_version>0</item_version>
+							<item>
+								<first>
+									<name>CullBackfacingText</name>
+								</first>
+								<second>
+									<name>CullBackfacingText</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CylinderRadius</name>
+								</first>
+								<second>
+									<name>CylinderRadius</name>
+									<value>
+										<which>1</which>
+										<value>1.00000000000000006e-01</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>CylinderResolution</name>
+								</first>
+								<second>
+									<name>CylinderResolution</name>
+									<value>
+										<which>0</which>
+										<value>5</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>DefaultMeshColor</name>
+								</first>
+								<second>
+									<name>DefaultMeshColor</name>
+									<value>
+										<which>2</which>
+										<value>Color(0.696971,0.753353,0)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>DefaultTextColor</name>
+								</first>
+								<second>
+									<name>DefaultTextColor</name>
+									<value>
+										<which>2</which>
+										<value>Color(1,1,1)</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>EdgeTransparency</name>
+								</first>
+								<second>
+									<name>EdgeTransparency</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>EdgeTransparencyValue</name>
+								</first>
+								<second>
+									<name>EdgeTransparencyValue</name>
+									<value>
+										<which>1</which>
+										<value>6.49999976158142090e-01</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>EdgesAsCylinders</name>
+								</first>
+								<second>
+									<name>EdgesAsCylinders</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>EdgesAvailable</name>
+								</first>
+								<second>
+									<name>EdgesAvailable</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>EdgesColoring</name>
+								</first>
+								<second>
+									<name>EdgesColoring</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FaceInvertNormals</name>
+								</first>
+								<second>
+									<name>FaceInvertNormals</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FaceTransparency</name>
+								</first>
+								<second>
+									<name>FaceTransparency</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FaceTransparencyValue</name>
+								</first>
+								<second>
+									<name>FaceTransparencyValue</name>
+									<value>
+										<which>1</which>
+										<value>6.49999976158142090e-01</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FacesAvailable</name>
+								</first>
+								<second>
+									<name>FacesAvailable</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FacesColoring</name>
+								</first>
+								<second>
+									<name>FacesColoring</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>FieldName</name>
+								</first>
+								<second>
+									<name>FieldName</name>
+									<value>
+										<which>2</which>
+										<value></value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NodeAsSpheres</name>
+								</first>
+								<second>
+									<name>NodeAsSpheres</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NodeTransparency</name>
+								</first>
+								<second>
+									<name>NodeTransparency</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NodeTransparencyValue</name>
+								</first>
+								<second>
+									<name>NodeTransparencyValue</name>
+									<value>
+										<which>1</which>
+										<value>6.49999976158142090e-01</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NodesAvailable</name>
+								</first>
+								<second>
+									<name>NodesAvailable</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>NodesColoring</name>
+								</first>
+								<second>
+									<name>NodesColoring</name>
+									<value>
+										<which>0</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ProgrammableInputPortEnabled</name>
+								</first>
+								<second>
+									<name>ProgrammableInputPortEnabled</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>RenderAsLocation</name>
+								</first>
+								<second>
+									<name>RenderAsLocation</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowCellIndices</name>
+								</first>
+								<second>
+									<name>ShowCellIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowDataValues</name>
+								</first>
+								<second>
+									<name>ShowDataValues</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowEdgeIndices</name>
+								</first>
+								<second>
+									<name>ShowEdgeIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowEdges</name>
+								</first>
+								<second>
+									<name>ShowEdges</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowFaceIndices</name>
+								</first>
+								<second>
+									<name>ShowFaceIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowFaces</name>
+								</first>
+								<second>
+									<name>ShowFaces</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodeIndices</name>
+								</first>
+								<second>
+									<name>ShowNodeIndices</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowNodes</name>
+								</first>
+								<second>
+									<name>ShowNodes</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>ShowText</name>
+								</first>
+								<second>
+									<name>ShowText</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SphereResolution</name>
+								</first>
+								<second>
+									<name>SphereResolution</name>
+									<value>
+										<which>0</which>
+										<value>5</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>SphereScaleValue</name>
+								</first>
+								<second>
+									<name>SphereScaleValue</name>
+									<value>
+										<which>1</which>
+										<value>2.99999999999999989e-02</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TextAlwaysVisible</name>
+								</first>
+								<second>
+									<name>TextAlwaysVisible</name>
+									<value>
+										<which>3</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TextColoring</name>
+								</first>
+								<second>
+									<name>TextColoring</name>
+									<value>
+										<which>0</which>
+										<value>0</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TextPrecision</name>
+								</first>
+								<second>
+									<name>TextPrecision</name>
+									<value>
+										<which>0</which>
+										<value>3</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>TextSize</name>
+								</first>
+								<second>
+									<name>TextSize</name>
+									<value>
+										<which>0</which>
+										<value>8</value>
+									</value>
+								</second>
+							</item>
+							<item>
+								<first>
+									<name>UseFaceNormals</name>
+								</first>
+								<second>
+									<name>UseFaceNormals</name>
+									<value>
+										<which>3</which>
+										<value>1</value>
 									</value>
 								</second>
 							</item>
@@ -1486,490 +2066,6 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</second>
 			</item>
 			<item>
-				<first>ShowField:2</first>
-				<second>
-					<module>
-						<package_name_>SCIRun</package_name_>
-						<category_name_>Visualization</category_name_>
-						<module_name_>ShowField</module_name_>
-					</module>
-					<state>
-						<stateMap>
-							<count>39</count>
-							<item_version>0</item_version>
-							<item>
-								<first>
-									<name>CullBackfacingText</name>
-								</first>
-								<second>
-									<name>CullBackfacingText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderRadius</name>
-								</first>
-								<second>
-									<name>CylinderRadius</name>
-									<value>
-										<which>1</which>
-										<value>1.00000000000000006e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>CylinderResolution</name>
-								</first>
-								<second>
-									<name>CylinderResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultMeshColor</name>
-								</first>
-								<second>
-									<name>DefaultMeshColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(0.848692,0.855375,0)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>DefaultTextColor</name>
-								</first>
-								<second>
-									<name>DefaultTextColor</name>
-									<value>
-										<which>2</which>
-										<value>Color(1,1,1)</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparency</name>
-								</first>
-								<second>
-									<name>EdgeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgeTransparencyValue</name>
-								</first>
-								<second>
-									<name>EdgeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAsCylinders</name>
-								</first>
-								<second>
-									<name>EdgesAsCylinders</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesAvailable</name>
-								</first>
-								<second>
-									<name>EdgesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>EdgesColoring</name>
-								</first>
-								<second>
-									<name>EdgesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceInvertNormals</name>
-								</first>
-								<second>
-									<name>FaceInvertNormals</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparency</name>
-								</first>
-								<second>
-									<name>FaceTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FaceTransparencyValue</name>
-								</first>
-								<second>
-									<name>FaceTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesAvailable</name>
-								</first>
-								<second>
-									<name>FacesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FacesColoring</name>
-								</first>
-								<second>
-									<name>FacesColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>FieldName</name>
-								</first>
-								<second>
-									<name>FieldName</name>
-									<value>
-										<which>2</which>
-										<value></value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeAsSpheres</name>
-								</first>
-								<second>
-									<name>NodeAsSpheres</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparency</name>
-								</first>
-								<second>
-									<name>NodeTransparency</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodeTransparencyValue</name>
-								</first>
-								<second>
-									<name>NodeTransparencyValue</name>
-									<value>
-										<which>1</which>
-										<value>6.49999976158142090e-01</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesAvailable</name>
-								</first>
-								<second>
-									<name>NodesAvailable</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>NodesColoring</name>
-								</first>
-								<second>
-									<name>NodesColoring</name>
-									<value>
-										<which>0</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ProgrammableInputPortEnabled</name>
-								</first>
-								<second>
-									<name>ProgrammableInputPortEnabled</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>RenderAsLocation</name>
-								</first>
-								<second>
-									<name>RenderAsLocation</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowCellIndices</name>
-								</first>
-								<second>
-									<name>ShowCellIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowDataValues</name>
-								</first>
-								<second>
-									<name>ShowDataValues</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdgeIndices</name>
-								</first>
-								<second>
-									<name>ShowEdgeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowEdges</name>
-								</first>
-								<second>
-									<name>ShowEdges</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaceIndices</name>
-								</first>
-								<second>
-									<name>ShowFaceIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowFaces</name>
-								</first>
-								<second>
-									<name>ShowFaces</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodeIndices</name>
-								</first>
-								<second>
-									<name>ShowNodeIndices</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowNodes</name>
-								</first>
-								<second>
-									<name>ShowNodes</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>ShowText</name>
-								</first>
-								<second>
-									<name>ShowText</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereResolution</name>
-								</first>
-								<second>
-									<name>SphereResolution</name>
-									<value>
-										<which>0</which>
-										<value>5</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>SphereScaleValue</name>
-								</first>
-								<second>
-									<name>SphereScaleValue</name>
-									<value>
-										<which>1</which>
-										<value>2.99999999999999989e-02</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextAlwaysVisible</name>
-								</first>
-								<second>
-									<name>TextAlwaysVisible</name>
-									<value>
-										<which>3</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextColoring</name>
-								</first>
-								<second>
-									<name>TextColoring</name>
-									<value>
-										<which>0</which>
-										<value>0</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextPrecision</name>
-								</first>
-								<second>
-									<name>TextPrecision</name>
-									<value>
-										<which>0</which>
-										<value>3</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>TextSize</name>
-								</first>
-								<second>
-									<name>TextSize</name>
-									<value>
-										<which>0</which>
-										<value>8</value>
-									</value>
-								</second>
-							</item>
-							<item>
-								<first>
-									<name>UseFaceNormals</name>
-								</first>
-								<second>
-									<name>UseFaceNormals</name>
-									<value>
-										<which>3</which>
-										<value>1</value>
-									</value>
-								</second>
-							</item>
-						</stateMap>
-					</state>
-				</second>
-			</item>
-			<item>
 				<first>SplitFileName:0</first>
 				<second>
 					<module>
@@ -2053,7 +2149,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraDistance</name>
 									<value>
 										<which>1</which>
-										<value>2.99298614501953125e+02</value>
+										<value>2.76131408691406250e+02</value>
 									</value>
 								</second>
 							</item>
@@ -2077,7 +2173,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraLookAt</name>
 									<value>
 										<which>2</which>
-										<value>[2.25, 13.616, 16.2371]</value>
+										<value>[3.83859, 11.5778, 5.84386]</value>
 									</value>
 								</second>
 							</item>
@@ -2089,7 +2185,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraRotation</name>
 									<value>
 										<which>2</which>
-										<value>Quaternion(0.784740,-0.615885,-0.007011,0.069422)</value>
+										<value>Quaternion(0.126272,0.030764,0.429405,0.893712)</value>
 									</value>
 								</second>
 							</item>
@@ -2641,7 +2737,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>TimeExecutionFinished</name>
 									<value>
 										<which>0</which>
-										<value>1555869950</value>
+										<value>1473829207</value>
 									</value>
 								</second>
 							</item>
@@ -2729,7 +2825,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraDistance</name>
 									<value>
 										<which>1</which>
-										<value>2.67451965332031250e+02</value>
+										<value>2.76131408691406250e+02</value>
 									</value>
 								</second>
 							</item>
@@ -2753,7 +2849,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraLookAt</name>
 									<value>
 										<which>2</which>
-										<value>[2.25, 13.616, 16.2371]</value>
+										<value>[1.08401, 9.47181, 5.84386]</value>
 									</value>
 								</second>
 							</item>
@@ -2765,7 +2861,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>CameraRotation</name>
 									<value>
 										<which>2</which>
-										<value>Quaternion(-0.069422,-0.007011,0.615885,0.784740)</value>
+										<value>Quaternion(0.893712,-0.429405,0.030764,-0.126272)</value>
 									</value>
 								</second>
 							</item>
@@ -3317,7 +3413,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>TimeExecutionFinished</name>
 									<value>
 										<which>0</which>
-										<value>1555869978</value>
+										<value>1473829230</value>
 									</value>
 								</second>
 							</item>
@@ -3381,7 +3477,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../image/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles_front.txt</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/rv_centered/9samples//SR_images/front/rv_9_3-0_front.txt</value>
 									</value>
 								</second>
 							</item>
@@ -3445,7 +3541,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 									<name>Filename</name>
 									<value>
 										<which>2</which>
-										<value>/Users/jess/software/ShapeWorks/Examples/Python/Test_lv_centered/PointFiles/256/../../image/BO_LV_endo.isores.center.pad.cropped.tpSmoothDT_world.particles_back.txt</value>
+										<value>/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/rv_centered/9samples//SR_images/back/rv_9_3-0_back.txt</value>
 									</value>
 								</second>
 							</item>
@@ -3479,7 +3575,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 			</item>
 		</modules>
 		<connections class_id="13" tracking_level="0" version="0">
-			<count>30</count>
+			<count>35</count>
 			<item_version>0</item_version>
 			<item class_id="14" tracking_level="0" version="0">
 				<moduleId1_>AppendMatrix:0</moduleId1_>
@@ -3487,7 +3583,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>ResultMatrix</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:0</moduleId2_>
+				<moduleId2_>WriteMatrix:1</moduleId2_>
 				<port2_>
 					<name>MatrixToWrite</name>
 					<id>0</id>
@@ -3499,7 +3595,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>ResultMatrix</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:1</moduleId2_>
+				<moduleId2_>WriteMatrix:0</moduleId2_>
 				<port2_>
 					<name>MatrixToWrite</name>
 					<id>0</id>
@@ -3542,27 +3638,75 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
+				<moduleId1_>CreateStandardMatrix:0</moduleId1_>
+				<port1_>
+					<name>OutputMatrix</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>GetMatrixSlice:0</moduleId2_>
+				<port2_>
+					<name>InputMatrix</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CreateString:0</moduleId1_>
+				<port1_>
+					<name>NewString</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>CreateString:1</moduleId1_>
+				<port1_>
+					<name>NewString</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
 				<moduleId1_>ExtractIsosurface:0</moduleId1_>
 				<port1_>
 					<name>OutputField</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ShowField:2</moduleId2_>
+				<moduleId2_>ShowField:0</moduleId2_>
 				<port2_>
 					<name>Field</name>
 					<id>0</id>
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>InterfaceWithPython:0</moduleId1_>
+				<moduleId1_>GetMatrixSlice:0</moduleId1_>
 				<port1_>
-					<name>PythonString1</name>
+					<name>OutputMatrix</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>ReadField:0</moduleId2_>
+				<moduleId2_>PrintMatrixIntoString:0</moduleId2_>
 				<port2_>
-					<name>Filename</name>
+					<name>Input</name>
 					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintMatrixIntoString:0</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>2</id>
 				</port2_>
 			</item>
 			<item>
@@ -3571,7 +3715,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:1</moduleId2_>
+				<moduleId2_>ReadField:0</moduleId2_>
 				<port2_>
 					<name>Filename</name>
 					<id>0</id>
@@ -3583,7 +3727,7 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>WriteMatrix:0</moduleId2_>
+				<moduleId2_>ReadField:1</moduleId2_>
 				<port2_>
 					<name>Filename</name>
 					<id>0</id>
@@ -3595,10 +3739,22 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Output</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
+				<moduleId2_>WriteMatrix:0</moduleId2_>
 				<port2_>
-					<name>InputString</name>
-					<id>2</id>
+					<name>Filename</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>PrintStringIntoString:3</moduleId1_>
+				<port1_>
+					<name>Output</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>WriteMatrix:1</moduleId2_>
+				<port2_>
+					<name>Filename</name>
+					<id>0</id>
 				</port2_>
 			</item>
 			<item>
@@ -3650,6 +3806,30 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
+				<moduleId1_>ShowField:0</moduleId1_>
+				<port1_>
+					<name>SceneGraph</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ViewScene:0</moduleId2_>
+				<port2_>
+					<name>GeneralGeom</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>ShowField:0</moduleId1_>
+				<port1_>
+					<name>SceneGraph</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>ViewScene:1</moduleId2_>
+				<port2_>
+					<name>GeneralGeom</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
 				<moduleId1_>ShowField:1</moduleId1_>
 				<port1_>
 					<name>SceneGraph</name>
@@ -3674,42 +3854,6 @@ stringOutput1 = os.path.join(path, iso_file[0])
 				</port2_>
 			</item>
 			<item>
-				<moduleId1_>ShowField:2</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:0</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>ShowField:2</moduleId1_>
-				<port1_>
-					<name>SceneGraph</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>ViewScene:1</moduleId2_>
-				<port2_>
-					<name>GeneralGeom</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Base</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>InterfaceWithPython:0</moduleId2_>
-				<port2_>
-					<name>InputString</name>
-					<id>3</id>
-				</port2_>
-			</item>
-			<item>
 				<moduleId1_>SplitFileName:0</moduleId1_>
 				<port1_>
 					<name>Base</name>
@@ -3727,7 +3871,19 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<name>Base</name>
 					<id>0</id>
 				</port1_>
-				<moduleId2_>PrintStringIntoString:1</moduleId2_>
+				<moduleId2_>PrintStringIntoString:2</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>1</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Base</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:3</moduleId2_>
 				<port2_>
 					<name>Input</name>
 					<id>1</id>
@@ -3740,18 +3896,6 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<id>0</id>
 				</port1_>
 				<moduleId2_>PrintStringIntoString:0</moduleId2_>
-				<port2_>
-					<name>Input</name>
-					<id>0</id>
-				</port2_>
-			</item>
-			<item>
-				<moduleId1_>SplitFileName:0</moduleId1_>
-				<port1_>
-					<name>Pathname</name>
-					<id>0</id>
-				</port1_>
-				<moduleId2_>PrintStringIntoString:1</moduleId2_>
 				<port2_>
 					<name>Input</name>
 					<id>0</id>
@@ -3764,6 +3908,18 @@ stringOutput1 = os.path.join(path, iso_file[0])
 					<id>0</id>
 				</port1_>
 				<moduleId2_>PrintStringIntoString:2</moduleId2_>
+				<port2_>
+					<name>Input</name>
+					<id>0</id>
+				</port2_>
+			</item>
+			<item>
+				<moduleId1_>SplitFileName:0</moduleId1_>
+				<port1_>
+					<name>Pathname</name>
+					<id>0</id>
+				</port1_>
+				<moduleId2_>PrintStringIntoString:3</moduleId2_>
 				<port2_>
 					<name>Input</name>
 					<id>0</id>
@@ -3844,167 +4000,228 @@ stringOutput1 = os.path.join(path, iso_file[0])
 		</connections>
 	</networkInfo>
 	<modulePositions class_id="16" tracking_level="0" version="0">
-		<count>19</count>
+		<count>24</count>
 		<item_version>0</item_version>
 		<item class_id="17" tracking_level="0" version="0">
 			<first>AppendMatrix:0</first>
 			<second class_id="18" tracking_level="0" version="0">
-				<first>-3.91000000000000000e+02</first>
-				<second>2.34000000000000000e+02</second>
+				<first>-5.41000000000000000e+02</first>
+				<second>1.86000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>AppendMatrix:1</first>
 			<second>
-				<first>-1.81000000000000000e+02</first>
-				<second>2.29000000000000000e+02</second>
+				<first>-3.09000000000000000e+02</first>
+				<second>1.89000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateFieldData:0</first>
 			<second>
-				<first>-1.53000000000000000e+02</first>
-				<second>-2.90000000000000000e+02</second>
+				<first>-2.24000000000000000e+02</first>
+				<second>-2.38000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>CreateStandardColorMap:0</first>
 			<second>
-				<first>-3.40000000000000000e+02</first>
-				<second>-4.69000000000000000e+02</second>
+				<first>-7.85000000000000000e+02</first>
+				<second>-3.13000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>CreateStandardMatrix:0</first>
+			<second>
+				<first>-2.54000000000000000e+02</first>
+				<second>-9.34000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>CreateString:0</first>
+			<second>
+				<first>-5.90000000000000000e+02</first>
+				<second>-8.14000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>CreateString:1</first>
+			<second>
+				<first>-4.37000000000000000e+02</first>
+				<second>-8.06000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ExtractIsosurface:0</first>
 			<second>
-				<first>-4.67000000000000000e+02</first>
-				<second>-8.50000000000000000e+01</second>
+				<first>-5.22000000000000000e+02</first>
+				<second>-2.17000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>GetMatrixSlice:0</first>
 			<second>
-				<first>-4.53000000000000000e+02</first>
-				<second>-3.05000000000000000e+02</second>
+				<first>-2.57000000000000000e+02</first>
+				<second>-8.51000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintMatrixIntoString:0</first>
+			<second>
+				<first>-2.94000000000000000e+02</first>
+				<second>-7.87000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>PrintStringIntoString:0</first>
 			<second>
-				<first>5.10000000000000000e+01</first>
-				<second>-8.60000000000000000e+01</second>
+				<first>-4.63000000000000000e+02</first>
+				<second>-3.89000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>PrintStringIntoString:1</first>
 			<second>
-				<first>-3.16000000000000000e+02</first>
-				<second>1.00000000000000000e+00</second>
+				<first>-4.55000000000000000e+02</first>
+				<second>-6.87000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>PrintStringIntoString:2</first>
 			<second>
-				<first>-2.51000000000000000e+02</first>
-				<second>-3.91000000000000000e+02</second>
+				<first>-5.90000000000000000e+01</first>
+				<second>-9.20000000000000000e+01</second>
+			</second>
+		</item>
+		<item>
+			<first>PrintStringIntoString:3</first>
+			<second>
+				<first>-6.05000000000000000e+02</first>
+				<second>-1.22000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:0</first>
 			<second>
-				<first>-4.56000000000000000e+02</first>
-				<second>-1.69000000000000000e+02</second>
+				<first>-4.65000000000000000e+02</first>
+				<second>-3.08000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ReadField:1</first>
 			<second>
-				<first>-1.36000000000000000e+02</first>
-				<second>-5.72000000000000000e+02</second>
+				<first>-3.03000000000000000e+02</first>
+				<second>-5.41000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>RescaleColorMap:0</first>
 			<second>
-				<first>-2.25000000000000000e+02</first>
-				<second>-1.94000000000000000e+02</second>
+				<first>-3.29000000000000000e+02</first>
+				<second>-1.58000000000000000e+02</second>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:0</first>
+			<second>
+				<first>-5.32000000000000000e+02</first>
+				<second>-2.10000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>ShowField:1</first>
 			<second>
-				<first>-1.49000000000000000e+02</first>
-				<second>-6.20000000000000000e+01</second>
-			</second>
-		</item>
-		<item>
-			<first>ShowField:2</first>
-			<second>
-				<first>-4.71000000000000000e+02</first>
-				<second>4.00000000000000000e+00</second>
+				<first>-3.13000000000000000e+02</first>
+				<second>-5.40000000000000000e+01</second>
 			</second>
 		</item>
 		<item>
 			<first>SplitFileName:0</first>
 			<second>
-				<first>-4.70000000000000000e+01</first>
-				<second>-4.80000000000000000e+02</second>
+				<first>-2.91000000000000000e+02</first>
+				<second>-4.65000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:0</first>
 			<second>
-				<first>-3.91000000000000000e+02</first>
-				<second>1.38000000000000000e+02</second>
+				<first>-5.41000000000000000e+02</first>
+				<second>1.03000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>ViewScene:1</first>
 			<second>
-				<first>-1.83000000000000000e+02</first>
-				<second>1.35000000000000000e+02</second>
+				<first>-3.10000000000000000e+02</first>
+				<second>1.10000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>WriteMatrix:0</first>
 			<second>
-				<first>-4.05000000000000000e+02</first>
-				<second>3.16000000000000000e+02</second>
+				<first>-2.82000000000000000e+02</first>
+				<second>2.69000000000000000e+02</second>
 			</second>
 		</item>
 		<item>
 			<first>WriteMatrix:1</first>
 			<second>
-				<first>-1.66000000000000000e+02</first>
-				<second>3.07000000000000000e+02</second>
+				<first>-5.22000000000000000e+02</first>
+				<second>2.83000000000000000e+02</second>
 			</second>
 		</item>
 	</modulePositions>
 	<moduleNotes class_id="19" tracking_level="0" version="0">
-		<count>2</count>
+		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="20" tracking_level="0" version="0">
-			<first>ShowField:1</first>
+			<first>CreateString:0</first>
 			<second class_id="21" tracking_level="0" version="0">
 				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 1</noteText>
-				<position>0</position>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:16pt;&quot;&gt;Filepath&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>Filepath</noteText>
+				<position>3</position>
 				<fontSize>13</fontSize>
 			</second>
 		</item>
 		<item>
-			<first>ShowField:2</first>
+			<first>CreateString:1</first>
 			<second>
 				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ID: 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
-				<noteText>ID: 2</noteText>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:16pt;&quot;&gt;file root&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>file root</noteText>
+				<position>3</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:0</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 0</noteText>
+				<position>0</position>
+				<fontSize>13</fontSize>
+			</second>
+		</item>
+		<item>
+			<first>ShowField:1</first>
+			<second>
+				<noteHTML>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; color:#ffffff;&quot;&gt;ID: 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</noteHTML>
+				<noteText>ID: 1</noteText>
 				<position>0</position>
 				<fontSize>13</fontSize>
 			</second>
@@ -4015,7 +4232,7 @@ p, li { white-space: pre-wrap; }
 		<item_version>0</item_version>
 	</connectionNotes>
 	<moduleTags class_id="22" tracking_level="0" version="0">
-		<count>19</count>
+		<count>24</count>
 		<item_version>0</item_version>
 		<item class_id="23" tracking_level="0" version="0">
 			<first>AppendMatrix:0</first>
@@ -4034,11 +4251,27 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
+			<first>CreateStandardMatrix:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>CreateString:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>CreateString:1</first>
+			<second>-1</second>
+		</item>
+		<item>
 			<first>ExtractIsosurface:0</first>
 			<second>-1</second>
 		</item>
 		<item>
-			<first>InterfaceWithPython:0</first>
+			<first>GetMatrixSlice:0</first>
+			<second>-1</second>
+		</item>
+		<item>
+			<first>PrintMatrixIntoString:0</first>
 			<second>-1</second>
 		</item>
 		<item>
@@ -4054,6 +4287,10 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
+			<first>PrintStringIntoString:3</first>
+			<second>-1</second>
+		</item>
+		<item>
 			<first>ReadField:0</first>
 			<second>-1</second>
 		</item>
@@ -4066,11 +4303,11 @@ p, li { white-space: pre-wrap; }
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ShowField:1</first>
+			<first>ShowField:0</first>
 			<second>-1</second>
 		</item>
 		<item>
-			<first>ShowField:2</first>
+			<first>ShowField:1</first>
 			<second>-1</second>
 		</item>
 		<item>
