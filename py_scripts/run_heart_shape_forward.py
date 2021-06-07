@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 
 #place for UQ files
-output_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data"
+output_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/Forward"
 torso_pots_dir = "/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Interventions/BSPM_pf/"
 torso_pots_fname = "6105d439_43.120avg-pf.mat"
 #torso_pots_fname = "6105829a_01.120avg-pf.mat" # sinus
@@ -25,22 +25,31 @@ torso_pots_fname = "6105b134_16.120avg-pf.mat" # RV paced
 
 torso_pots = os.path.join(torso_pots_dir,torso_pots_fname)
 
-tmp_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/tmp/"
-SR_output_file = os.path.join(tmp_dir, torso_pots_fname[:-4]+"_UQ_heart_SR_solutions.txt")
-samples_file = os.path.join(tmp_dir, "UQ_heart_samples.mat")
+tmp_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/Forward/tmp/"
+SR_output_file = os.path.join(tmp_dir, torso_pots_fname[:-4]+"_UQ_heart_forward_SR_solutions.txt")
+samples_file = os.path.join(tmp_dir, "UQ_heart_forward_samples.mat")
+
+
+scirun_call = "/Users/jess/software/SCIRun/bin/SCIRun/SCIRun_test"
+#scirun_call = "/Applications/SCIRun.app/Contents/MacOS/SCIRun"
+seg3D_call = "/Applications/Seg3D2.app/Contents/MacOS/Seg3D2"
+cleaver_call = "/Users/jess/software/cleaver2/build/bin/cleaver-cli"
+
 
 # get matrix size
 tp = scipy.io.loadmat(torso_pots)
 tp_sz = tp['ts']['potvals'][0][0].shape
-N = 512*tp_sz[1]
+N = 1024*tp_sz[1]
 
-pot_size = (512, tp_sz[1])
-
-
+pot_size = (1024, tp_sz[1])
 
 
-domain = np.array([[-125, 125], [-85, 85], [-60, 60], [-40, 40]]).T
-sample_params = { "dimension": 4, "alpha": 1, "beta": 1, "domain": domain}
+
+
+#domain = np.array([[-165, 165], [-112, 112], [-85, 85], [-55, 55], [-45,45]]).T
+# 1.5 sigma
+domain = np.array([[-125, 125], [-84, 84], [-64, 64], [-38, 38], [-34,34]]).T
+sample_params = { "dimension": 5, "alpha": 1, "beta": 1, "domain": domain}
 
 
 
@@ -89,12 +98,77 @@ def set_distribution(sample_params):
     indices = TotalDegreeSet(dim=dimension, order=order)
     pce = PolynomialChaosExpansion(indices, dist)
     return pce
+    
+def make_meshes(indicator_files):
+    # better done on the server
+    # replace with script
+    B = 0.01
+    F= 2
+    ofiles = []
+    for files in indicator_files:
+        tmp_file = os.path.split(files[0])
+        ofile_rt = tmp_file[1][:-4] + "_MD_F" + str(F)
+        call_text = cleaver_call + "-I -i " + files+" -j -B "+ str(B) + " -f matlab -o " + tmp_file[0] + " -n " + ofile_rt + " -v -F " + str(F)
+        
+        os.system(call_text)
+        
+        ofiles.append(os.path.join(tmp_file[0],ofile_rt+".mat"))
+        
+    return ofiles
+        
+    
+    
+    
+    
+def make_shape_points(samples):
+    shape_data_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/"
+    shape_data_outdir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/shape_models/"
+    mean_shape_file = "mode_0-9.pts"
+    eig_vect_files = ["eigenvectors0.eval", "eigenvectors1.eval", "eigenvectors2.eval", "eigenvectors3.eval", "eigenvectors4.eval"]
+    
+    eigvect = []
+    for ef in eig_vect_files:
+        eigvect.append(np.loadtxt(shape_data_dir+ef))
+    
+    mean_points = np.loadtxt(shape_data_dir+mean_shape_file)
+    cnt = 0
+    filenames=[]
+    for l in range(samples.shape[0]):
+#        print(samples[l])
+        displacement = np.zeros(mean_points.shape)
+        for k in range(samples.shape[1]):
+            displacement+=samples[l,k]*eigvect[k]
+            
+        shape_points = mean_points+displacement
+        
+        filename = shape_data_outdir+"model_params_"+f"{cnt:03}"+".pts"
+        np.savetxt(filename,shape_points)
+        filenames.append(filename)
+        
+        cnt+=1
+        
+    return filenames
+        
+        
+        
+    
+    
+def make_indicator_functions(shape_points_files):
+    # run seg3D to make indicator functions
+    seg3d_script = "/Users/jess/CIBC/FP/segmentation_error/seg_error/bash_scripts/make_seg3d_ind_function_MD.sh"
+    
+    outfiles = []
+    for f in shape_points_files:
+        os.system(seg3d_script+" "+f)
+        outfiles.append([f[:-4]+"_surface_vent_vol.nrrd",f[:-4]+"_surface_lv_vol.nrrd",f[:-4]+"_surface_rv_vol.nrrd",f[:-4]+"_surface_air_vol.nrrd"])
+    
+    return outfiles
+    
    
     
 def make_runscript():
         # convert samples into transformation matrices, save to disk, load in SCIRun, run model, save solutions to disk, load back to script.
-#    scirun_call = "/Users/jess/software/SCIRun/bin_clean/SCIRun/SCIRun_test"
-    scirun_call = "/Applications/SCIRun.app/Contents/MacOS/SCIRun"
+        
     network_file = "/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/run_UQ_model_all.srn5"
     # experiment files.  It is here for now to make some things easier
     
@@ -291,18 +365,28 @@ def main():
     if options.compute_samples:
         make_samples(samples_file, pce)
         print("Samples compute.  Make sure to run the model")
-        return
+#        return
+        samples = pce.samples
+    else:
+        tmp = scipy.io.loadmat(samples_file)
+        samples = tmp["samples"]
+        
         
         
         
         
     if options.run_model:
-        prep_run=make_runscript()
-        input("press enter when SCIRun net is finished.")
-        model_output = load_SR_data(SR_output_file)
-        scipy.io.savemat(SR_output_file[:-4]+".mat",{"model_solutions" : model_output, "mat_size": pot_size})
-        options.run_pce = True
-        options.run_model_values = True
+        files = make_shape_points(samples)
+        ind_func_files = make_indicator_functions(files)
+        print("make cleaver meshes")
+        
+        
+#        prep_run=make_runscript()
+#        input("press enter when SCIRun net is finished.")
+#        model_output = load_SR_data(SR_output_file)
+#        scipy.io.savemat(SR_output_file[:-4]+".mat",{"model_solutions" : model_output, "mat_size": pot_size})
+#        options.run_pce = True
+#        options.run_model_values = True
     else:
         tmp = scipy.io.loadmat(SR_output_file[:-4]+".mat")
         model_output  = tmp["model_solutions"]
@@ -311,6 +395,7 @@ def main():
 #    model_output = load_SR_data(SR_output_file)
 #    scipy.io.savemat(SR_output_file[:-4]+".mat",{"model_solutions" : model_output, "mat_size": pot_size})
 
+    return
     
     print("SCIRun solutions loaded")
     
