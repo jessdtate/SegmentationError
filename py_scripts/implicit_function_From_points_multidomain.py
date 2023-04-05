@@ -22,9 +22,17 @@ def implicit_model(vol_fname, points, outputpath, out_name):
     # assume the regions are split: LV 1/4 , RV 1/4, epi 1/2
     num_pnts = len(points)
     print(num_pnts)
-    points_lv = points[:int(num_pnts/4)]
-    points_rv = points[int(num_pnts/4):int(num_pnts/2)]
-    points_epi = points[int(num_pnts/2):]
+    
+    if num_pnts==1024:
+        points_lv = points[int(num_pnts/2):int(3*num_pnts/4)]
+        points_rv = points[int(3*num_pnts/4):]
+        points_epi = points[:int(num_pnts/2)]
+    elif num_pnts == 1536:
+        points_lv = points[int(num_pnts/3):int(2*num_pnts/3)]
+        points_rv = points[int(2*num_pnts/3):]
+        points_epi = points[:int(num_pnts/3)]
+    else:
+        raise ValueError('number of points indicate an unexpected case')
     
     pnt_str_lv = points2str(points_lv)
     pnt_str_rv = points2str(points_rv)
@@ -113,9 +121,9 @@ def combine_domains(im_model_lv, im_model_rv, im_model_epi, outputpath, out_name
     exportisosurface(layer=seg_im_rough, file_path=outputpath+out_name+'_vent.fac', binary='false')
     
 #    im_model = medianfilter(layerid = im_model_rough, radius=1)
-#
+##
 #    wait_for_layer(im_model)
-#
+##
 #    set(stateid=im_model+'::name',value=out_name+'_vent_smth_vol')
 #    result=exportlayer(layer=im_model, file_path = os.path.join(outputpath,out_name+'_vent_smth_vol'), exporter='[NRRD Exporter]', extension='.nrrd')
 #
@@ -143,10 +151,9 @@ def load_points(filename):
     fid.close()
 
     lines = str_dump.split('\n')
-
-#    pnts = [ [float(p) for p in l.split('   ')] for l in lines[:-1]]
-    pnts = [ [float(p) for p in l.split(' ')] for l in lines[:-1]]
-
+    
+    pnts = [ [float(p) for p in l.split(' ') if len(p)>0] for l in lines[:-1]]
+        
 #    pnts=np.loadtxt(filename)
 
 #    return pnts.tolist()

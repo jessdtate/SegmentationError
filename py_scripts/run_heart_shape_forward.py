@@ -6,6 +6,7 @@ import argparse
 import numpy as np
 import math
 import scipy.signal as sig
+from tabulate import tabulate
 
 from UncertainSCI.distributions import BetaDistribution
 from UncertainSCI.indexing import TotalDegreeSet
@@ -13,43 +14,63 @@ from UncertainSCI.pce import PolynomialChaosExpansion
 
 import matplotlib.pyplot as plt
 
+import csv
+import glob
+import random
+
+import re
+import sys
+
+sys.path.append("/Users/jess/CIBC/FP/UQ/py_scripts")
+
+print(sys.path)
+
+from run_torso_postition_for_dnn import run_pce_data, load_pce_data, run_pce_metrics, load_pce_files, make_summary_stats,plot_quantile_bands
+
+from check_DNN_results import load_geom, calc_correlation, calc_rmse, calc_rms, calc_rms_e
+
+#calc_rms, calc_corr, calc_rmse, calc_rms_e, cal
 
 #place for UQ files
-output_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/Forward"
+output_dir_root = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/Forward/"
+shapedata_dir_root = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/"
+default_datadir = "vent_MD_cheat/11samples/"
+
+
 torso_pots_dir = "/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Interventions/BSPM_pf/"
-torso_pots_fname = "6105d439_43.120avg-pf.mat"
-#torso_pots_fname = "6105829a_01.120avg-pf.mat" # sinus
-torso_pots_fname = "61058472_03.120avg-pf.mat" # paced
-#torso_pots_fname = "6105b06d_10.120avg-pf.mat" # pace (phrenic)
-torso_pots_fname = "6105b134_16.120avg-pf.mat" # RV paced
-
-torso_pots = os.path.join(torso_pots_dir,torso_pots_fname)
-
-tmp_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data/Forward/tmp/"
-SR_output_file = os.path.join(tmp_dir, torso_pots_fname[:-4]+"_UQ_heart_forward_SR_solutions.txt")
-samples_file = os.path.join(tmp_dir, "UQ_heart_forward_samples.mat")
 
 
-scirun_call = "/Users/jess/software/SCIRun/bin/SCIRun/SCIRun_test"
+scirun_call = "/Users/jess/software/SCIRun_testing/bin/SCIRun/SCIRun_test"
 #scirun_call = "/Applications/SCIRun.app/Contents/MacOS/SCIRun"
 seg3D_call = "/Applications/Seg3D2.app/Contents/MacOS/Seg3D2"
 cleaver_call = "/Users/jess/software/cleaver2/build/bin/cleaver-cli"
 
 
-# get matrix size
-tp = scipy.io.loadmat(torso_pots)
-tp_sz = tp['ts']['potvals'][0][0].shape
-N = 1024*tp_sz[1]
-
-pot_size = (1024, tp_sz[1])
 
 
+fid_map = { "sinus" : {"sf": 0.5, "qon" : 0, "qoff" : 37, "stoff" : 100, "toff": 200},
+            "apex" : {"sf": 0.5, "qon" : 0, "qoff" : 54, "stoff" : 110, "toff": 220},
+            "LV" : {"sf": 0.5, "qon" : 0, "qoff" : 65, "stoff" : 114, "toff": 230},
+            "RV" : {"sf": 0.5, "qon" : 0, "qoff" : 66, "stoff" : 116, "toff": 230},
+            "septal" : {"sf": 0.5, "qon" : 0, "qoff" : 50, "stoff" : 108, "toff": 220},
+            "RVV" : {"sf": 0.5, "qon" : 0, "qoff" : 60, "stoff" : 110, "toff": 225},
+            "LVV" : {"sf": 0.5, "qon" : 0, "qoff" : 60, "stoff" : 115, "toff": 220},
+            "Rvot" : {"sf": 0.5, "qon" : 0, "qoff" : 60, "stoff" : 105, "toff": 220},
+            "Lvot" : {"sf": 0.5, "qon" : 0, "qoff" : 60, "stoff" : 105, "toff": 220},
+            "RVB" : {"sf": 0.5, "qon" : 2, "qoff" : 65, "stoff" : 105, "toff": 225}
+}
+
+pacing_lists = {"all" : [ k for  k in fid_map.keys()],
+                "old" : ["sinus", "apex", "LV", "RV", "septal"],
+                "new" : ["RVV", "LVV", "Rvot", "Lvot", "RVB"]
+}
 
 
 #domain = np.array([[-165, 165], [-112, 112], [-85, 85], [-55, 55], [-45,45]]).T
 # 1.5 sigma
-domain = np.array([[-125, 125], [-84, 84], [-64, 64], [-38, 38], [-34,34]]).T
-sample_params = { "dimension": 5, "alpha": 1, "beta": 1, "domain": domain}
+default_domain = np.array([[-101, 101], [-55, 55], [-40, 40], [-35, 35], [-25,25]]).T
+# this is uniform, but probably should be guassian from ShapeWorks
+sample_params = { "dimension": 5, "alpha": 1, "beta": 1}
 
 
 
@@ -57,33 +78,143 @@ def build_parser():
     parser = argparse.ArgumentParser()
 
     # This will be implemented as rollout broadens
-    parser.add_argument('--compute_samples', type=bool,
-                        dest='compute_samples', help='compute samples to run in model.  Otherwise load from file.',
-                        metavar='', required=False, default = False)
-                        
-    parser.add_argument('--run_model', type=bool,
-                        dest='run_model', help='run the model with the samples.  Otherwise load from file.',
-                        metavar='', required=False, default = False)
-                        
-    parser.add_argument('--run_pce', type=bool,
-                        dest='run_pce', help='run the build PCE from samples and model solutions.  Otherwise load from file.',
-                        metavar='', required=False, default = False)
-    parser.add_argument('--run_model_values', type=bool,
-                        dest='run_model_values', help='run the secondary model values for the model, LATs and RMS curves.  Otherwise load from file.',
-                        metavar='', required=False, default = False)
-                        
-    parser.add_argument('--plot_solutions', type=bool,
-                        dest='plot_solutions', help='plot the signals, dv/dt, and activation times for solutions.',
-                        metavar='', required=False, default = False)
-                        
+    parser.add_argument('--data_dir', required=False,
+                        help='directory where the shape data is located, relative to the shape_data dir',
+                        default = default_datadir)
+    parser.add_argument('--pacing', required=False,
+                        help='pacing profile to run.  {[sinus], apex, RV, LV, septal, RVV, LVV, Rvot, Lvot, RVB, all, old, or new}',
+                        default = "sinus")
+    parser.add_argument('--resultset', required=False,
+                        help='pacing profile to run.  {[pseudoECG], inriaLAT, ECGsimLAT, ECGsimBSP, inriaTMP, ECG}',
+                        default = "pseudoECG")
+    parser.add_argument('--compute_samples',
+                        help='compute samples to run in model.  Otherwise load from file.',
+                        required=False, action = "store_true")
+    parser.add_argument('--run_model',
+                        help='run the model with the samples.  Otherwise load from file.',
+                        required=False, action = "store_true")
+    parser.add_argument('--run_pce',
+                        help='run the build PCE from samples and model solutions.  Otherwise load from file.',
+                        required=False, action = "store_true")
+    parser.add_argument('--run_model_values',
+                        help='run the secondary model values for the model, LATs and RMS curves.  Otherwise load from file.',
+                        required=False, action = "store_true")
+    parser.add_argument('--plot_solutions',
+                        help='plot the signals, dv/dt, and activation times for solutions.',
+                        required=False, action = "store_true")
     parser.add_argument('--plot_channels', type=int,
                         dest='plot_channels', help='plot all channels a given solution.  The signals, dv/dt, and activation times are plotted.',
                         metavar='', required=False, default = -1)
+    parser.add_argument('--make_FIDs',
+                        help='an option to manually choose fiducials for the ecg',
+                        required=False, action = "store_true")
+    parser.add_argument('--hardchecks',
+                        help='stop pipeline rather than run parameters implicitly',
+                        required=False, action = "store_true")
     return parser
+    
+def set_dirs(data_dir,resultset,pacing):
+
+    global shape_data_dir, shape_data_outdir, output_dir, tmp_dir, SR_output_file, samples_file, torso_pots_fname, torso_pots, solutions_dir, results_dir
+    
+    if pacing == "all" or pacing == "new" or pacing == "old":
+        pacing = "sinus"
+    
+    output_dir = os.path.join(output_dir_root,data_dir)
+    solutions_dir = os.path.join(output_dir,"solutions")
+    
+    samples_file = os.path.join(output_dir, "UQ_heart_forward_samples.mat")
+        
+        
+    shape_data_dir = os.path.join(shapedata_dir_root,data_dir)
+    shape_data_outdir = os.path.join(output_dir,"shape_models/")
+    
+    pacing_map = {"sinus" : "6105829a_01.120avg-pf.mat", "LV" : "61058472_03.120avg-pf.mat", "apex" : "6105b06d_10.120avg-pf.mat", "RV": "6105b134_16.120avg-pf.mat", "septal": "6105d439_43.120avg-pf.mat", "RVV" : "", "LVV" : "", "Rvot" : "", "Lvot" : "", "RVB" : "" }
+    
+    resultdir_map = {"pseudoECG": "Solutions_inria_iso/inria_iso_PseudoECG", "inriaLAT" : "Solutions_inria_iso/inria_iso_hires_LAT_sampled" , "ECGsimLAT" : "Solutions_ECGsim/activation_times_sampled" , "ECGsimBSP" : "Solutions_ECGsim/BSP_signals", "ECG" : "Solutions_ECGsim/triECG" , "inriaTMP" : "Solutions_inria_iso/inria_iso_hires_sampled"}
+    results_dir = os.path.join(solutions_dir,resultdir_map[resultset])
+    
+#    torso_pots_fname = "6105d439_43.120avg-pf.mat"
+    #torso_pots_fname = "6105829a_01.120avg-pf.mat" # sinus
+#    torso_pots_fname = "61058472_03.120avg-pf.mat" # paced
+    #torso_pots_fname = "6105b06d_10.120avg-pf.mat" # pace (phrenic)
+#    torso_pots_fname = "6105b134_16.120avg-pf.mat" # RV paced
+
+    torso_pots_fname = pacing_map[pacing]
+    
+    if not torso_pots_fname:
+        print(pacing+" not mapped to recorded ECGs")
+        return False
+        
+
+    torso_pots = os.path.join(torso_pots_dir,torso_pots_fname)
+    
+    if not os.path.exists(shape_data_outdir):
+        os.makedirs(shape_data_outdir)
+    
+    
+    
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    tmp_dir = os.path.join(output_dir,"tmp")
+    
+    if not os.path.exists(tmp_dir):
+        os.makedirs(tmp_dir)
+        
+    SR_output_file = os.path.join(tmp_dir, torso_pots_fname[:-4]+"_UQ_heart_forward_SR_solutions.txt")
+    
+    
+    
+    
+    
+    # get matrix size
+    tp = scipy.io.loadmat(torso_pots)
+    tp_sz = tp['ts']['potvals'][0][0].shape
+#    N = 1024*tp_sz[1]
+#
+#    pot_size = (1024, tp_sz[1])
+    
+    return True
+    
+def get_ranges_from_scores(sample_params, factor = 1.0):
+    
+    csv_files = glob.glob(shape_data_dir+"/*.csv" )
+    
+    if len(csv_files)==0:
+        print("save scores from shapeworks studio as csv")
+        return np.array([])
+    elif len(csv_files)>1:
+        times = [os.path.getmtime(f) for f in csv_files]
+        ind = times.index(max(times))
+        csv_files = csv_files[ind]
+    else:
+        csv_files=csv_files[0]
+    
+    with open(csv_files, newline='') as csvfile:
+        data = list(csv.reader(csvfile))
+        
+#    print(data)
+    
+    data_np = np.array(data[1:])
+    scores = np.zeros(data_np.shape)
+    for k in range(len(data_np)):
+        for l in range(len(data_np[0])):
+            scores[k,l] = float(data_np[k,l])
+#    print(scores)
+    std_scores = np.std(scores,axis = 0)
+#    print(std_scores)
+    
+    domain = []
+    for k in range(sample_params['dimension']):
+        domain.append([-std_scores[k+1]*factor, std_scores[k+1]*factor ])
+    
+    return np.array(domain).T
+    
     
     
 def make_samples(Filename, pce):
-    pce.generate_samples()
+    pce.generate_samples(oversampling = 20)
     scipy.io.savemat(Filename, dict(samples=pce.samples))
     return True
     
@@ -96,6 +227,7 @@ def set_distribution(sample_params):
     # # Expressivity setup
     order = 5
     indices = TotalDegreeSet(dim=dimension, order=order)
+    print("number of indices = ",indices.get_indices().shape)
     pce = PolynomialChaosExpansion(indices, dist)
     return pce
     
@@ -121,8 +253,7 @@ def make_meshes(indicator_files):
     
     
 def make_shape_points(samples):
-    shape_data_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/"
-    shape_data_outdir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/shape_models/"
+    
     mean_shape_file = "mode_0-9.pts"
     eig_vect_files = ["eigenvectors0.eval", "eigenvectors1.eval", "eigenvectors2.eval", "eigenvectors3.eval", "eigenvectors4.eval"]
     
@@ -131,7 +262,6 @@ def make_shape_points(samples):
         eigvect.append(np.loadtxt(shape_data_dir+ef))
     
     mean_points = np.loadtxt(shape_data_dir+mean_shape_file)
-    cnt = 0
     filenames=[]
     for l in range(samples.shape[0]):
 #        print(samples[l])
@@ -141,11 +271,9 @@ def make_shape_points(samples):
             
         shape_points = mean_points+displacement
         
-        filename = shape_data_outdir+"model_params_"+f"{cnt:03}"+".pts"
+        filename = shape_data_outdir+"model_params_"+f"{l:03}"+".pts"
         np.savetxt(filename,shape_points)
         filenames.append(filename)
-        
-        cnt+=1
         
     return filenames
         
@@ -207,15 +335,164 @@ def load_SR_data(SR_output_file):
     pot_solution = np.loadtxt(SR_output_file)
     return pot_solution.T
     
+def load_solutions(resultset, pacing, options):
+    
+    solutions = load_mat_data_from_dir(resultset, pacing, options)
+    
+    return solutions
+    
+def load_mat_data_from_dir(resultset, pacing, options, varname=[]):
+
+    if pacing == "default":
+        raise ValueError("no solutions for "+pacing+" pacing")
+    files = os.listdir(results_dir)
+    files.sort()
+    
+        
+    ofiles = []
+    solutions = []
+    
+    fid = fid_map[options.pacing]
+    plot_fids = False
+    if options.make_FIDs or (not fid and not "LAT" in options.resultset):
+#        raise ValueError(pacing+" not fully implemented for ECGs. Run --make_FIDs option")
+        # only QRS implemented right now
+        fid = {"sf": 1, "qon": 0, "qoff": - 1, "ton": 0, "toff": - 1}
+        plot_fids = True
+    
+    for f in files:
+        if pacing+"_stim" in f:
+            print(f)
+            tmp = scipy.io.loadmat(os.path.join(results_dir,f))
+            if len(varname)==0:
+                vars=[k for k in tmp.keys() if not k[0]=='_']
+                if len(vars)==0:
+                    raise ValueError("No data found in file",os.path.join(results_dir,f))
+                elif len(vars)>1:
+                    print("multiple variables found in file, using: ",vars[0])
+                varname=vars[0]
+                
+            ofiles.append(f)
+            
+#            qon = int(fid["qon"]/fid["sf"])
+#            toff = int(fid["toff"]/fid["sf"])
+            
+            if 'pseudoECG' == options.resultset:
+                qon = int(fid["qon"]/fid["sf"])
+                toff = int(fid["toff"]/fid["sf"])
+                data = np.transpose(tmp[varname])[:, qon:toff]
+                solutions.append(data.flatten()/(4*np.pi))
+            elif 'ECGsimBSP' == options.resultset or 'ECG' == options.resultset:
+#                data = tmp[varname]
+                qon = int(fid["qon"]/fid["sf"])
+                toff = int(fid["toff"]/fid["sf"])
+                data = tmp[varname][:, qon:toff]
+                solutions.append(data.flatten())
+            elif 'ECGsimLAT' == options.resultset or 'inriaTMP' == options.resultset:
+                data = tmp[varname]
+                solutions.append(data.flatten())
+            elif 'inriaLAT' == options.resultset:
+                data = tmp[varname]
+                solutions.append(np.transpose(data).flatten())
+            else:
+                raise ValueError("solution file could not be loaded")
+    if plot_fids:
+        choose_FIDS(solutions, data.shape)
+        plt.show()
+        return False
+    
+                
+#    if 'ECGsim' in results_dir or 'inriaTMP' == options.resultset:
+#        sol_size = np.shape(tmp[varname])
+#    else:
+#        sol_size = np.shape(np.transpose(tmp[varname]))
+            
+#    print(len(solutions))
+#    print(np.vstack(solutions).shape)
+#    print(ofiles)
+    
+    return solutions, data.shape, ofiles
+    
+def compute_surface_variance(domain):
+    eig_vect_files = ["eigenvectors0.eval", "eigenvectors1.eval", "eigenvectors2.eval", "eigenvectors3.eval", "eigenvectors4.eval"]
+    print("computing surface variance")
+    magns = []
+    for k in range(len(domain[0])):
+        evec = np.loadtxt(os.path.join(shape_data_dir, eig_vect_files[k]))*domain[0][k]
+        
+        mag = np.sqrt(np.sum(evec*evec, axis=1))
+        
+        print(mag.shape)
+        magns.append(mag)
+        
+    magnitude = np.vstack(magns)
+    print(magnitude.shape)
+    
+    var =np.sum(magnitude*magnitude,axis = 0)
+    
+    print(var.shape)
+    file = os.path.join(output_dir, "surface_variance.mat")
+    print(file)
+    scipy.io.savemat(file, dict(var = var))
+    
+    return True
+    
+    
+def correct_samples(samples,pce,filenames):
+    print(samples.shape)
+#    print(filenames)
+    
+    ind = []
+    
+    for f in filenames:
+        ind.append(int(re.search(r'\d+', f).group()))
+        
+#    print(ind)
+    print(len(ind))
+    length_index = len(pce.index_set.get_indices())
+    if len(ind)<=(length_index):
+        print("number of actual samples less than number of indices.  a list of new parameters to run:")
+        pce.generate_samples()
+        new_samples = pce.samples
+        print(type(new_samples))
+        print(len(new_samples))
+        r_ind = random.sample(range(len(new_samples)),length_index-len(ind)+10)
+        print(new_samples[r_ind,:])
+        print("Append to samples file? [y/N]")
+        str_input = str(input())
+        if str_input.lower()=='y' or str_input.lower()=='yes':
+            print("saving to "+samples_file)
+            scipy.io.savemat(samples_file, dict(samples=np.vstack([samples,new_samples[r_ind,:]])))
+            print("exiting")
+            return []
+        else:
+            print("exiting")
+            return []
+
+    
+    return samples[ind,:]
+    
+def sample_workaround(samples, domain):
+    print('executing workaround')
+    samples_new = samples/np.dot(np.ones((np.shape(samples)[0],1)),domain[0,:].reshape((1,5)))
+    return samples_new
+    
 #def cleanup_run(script_file_tmp,SR_output_file
 #    #    os.remove(script_file_tmp)
 #    #    os.remove(SR_output_file)
 #    return True
 
-def findMinDVDT(signals, samp, window=20, deg=3, ingnore_first = 100 ):
+def findMinDVDT(signals, samp, window=20, deg=3, ingnore_first = 100, fids = {}):
     [M,T] = signals.shape
     tau = np.zeros((M))
     dy = np.zeros(signals.shape)
+    
+    ig_factor = 0.5
+    if fids:
+        qoff = int(fids["qoff"]*fids["sf"][0,0]/1000 - ignore_first*ig_factor)
+#        print(fids["qoff"], qoff)
+    else:
+        qoff = int(ignore_first*ig_factor)
     for k in range(M):
         cent = math.ceil(window/2)
         X = np.zeros((window,deg+1))
@@ -245,11 +522,11 @@ def find_LAT(pots, sample_rate=1):
         dys.append(dy)
     return np.array(lats), np.array(dys)*sample_rate
     
-def model_RMS(model_output, pot_size):
-    RMS = np.zeros((len(model_output),pot_size[1]))
+def model_RMS(model_output, pot_size, axis = 0):
+    RMS = np.zeros((len(model_output),pot_size[axis-1]))
     for k in range(len(model_output)):
         m = np.resize(model_output[k], pot_size)
-        RMS[k,:] = np.sqrt(np.sum(m*m,axis=0))
+        RMS[k,:] = np.sqrt(np.sum(m*m/pot_size[axis],axis=axis))
     return RMS
         
     
@@ -262,26 +539,58 @@ def plot_test(model_data, lat, dys, channel):
 #    plt.show()
     return
     
-def plot_all_channels(model_output, lat, dys, mat_size, sample_num):
-    signals = np.resize(model_output[sample_num],(mat_size[0],mat_size[1]))
-    dy = dys[sample_num,:,:]
-    n_row = 10
-    n_col = 5
-    num_plots = n_row*n_col
-    fig_size = (18, 10)
-    for k in range(0,mat_size[0],num_plots):
-        fig, ax = plt.subplots(n_row,n_col,figsize = fig_size)
-        for l in range(num_plots):
-            if k+l>=mat_size[0]:
-                break
-            c = int(np.floor(l/n_row))
-            r = int(l-c*(n_row))
-            ax[r,c].plot(np.arange(0,mat_size[1]/2,0.5),signals[k+l,:])
-            ax[r,c].plot([lat[sample_num,k+l]*1000,lat[sample_num,k+l]*1000],[np.min(signals[k+l,:]), np.max(signals[k+l,:])])
-            ax[r,c].plot(np.arange(0,mat_size[1]/2,0.5),dy[k+l,:])
-            ax[r,c].set(ylabel="lead "+str(k+l))
-        fig.suptitle("sample "+str(sample_num)+", leads "+str(k)+" - "+str(np.min(np.min([k+num_plots, mat_size[0]]))))
-#        plt.show()
+def plot_ecg_uq(time, median, quantiles, ecgs, ecg_size, num_samples= 10, title = ""):
+
+    if len(time)==0:
+        time = list(range(ecg_size[1]))
+    rand_ind = random.sample(range(len(ecgs)),num_samples)
+    print(rand_ind)
+    signals = []
+    for r in rand_ind:
+        signals.append(np.resize(ecgs[r],ecg_size))
+    
+    lead_nums  = [21, 35, 43, 50, 64, 67]
+
+#    band_mass = 1/(2*(Q+1))
+#    for ind in range(Q):
+#        alpha = (Q-ind) * 1/Q - (1/(2*Q))
+#        if ind == 0:
+#            plt.fill_between(time,quantiles_RMS[ind,:], quantiles_RMS[Q+ind, :],
+#                             interpolate=True, facecolor='red', alpha=alpha,
+#                             label='{0:1.2f} probability mass (each band)'.format(band_mass))
+#        else:
+#            plt.fill_between(time,quantiles_RMS[ind, :], quantiles_RMS[Q+ind, :], interpolate=True, facecolor='red', alpha=alpha)
+            
+    print(quantiles.shape)
+    Q=4
+    band_mass = 1/(2*(Q+1))
+    
+    time = list(range(ecg_size[1]))
+   
+    fig, ax = plt.subplots(6,1)
+    
+    for l in range(len(lead_nums)):
+        ax[l].plot(time, median[lead_nums[l],:], '-k',label='median')
+        ax[l].set(ylabel='v'+str(l)+'(mV)')
+        for ind in range(Q):
+            alpha = (Q-ind) * 1/Q - (1/(2*Q))
+            if ind == 0:
+#                print(quantiles[ind,lead_nums[l],:]-quantiles[Q+ind,lead_nums[l],:])
+                ax[l].fill_between(time,quantiles[ind,lead_nums[l],:],quantiles[Q+ind,lead_nums[l],:],interpolate=True, facecolor='red', alpha=alpha, label='{0:1.2f} probability mass (each band)'.format(band_mass))
+            else:
+                ax[l].fill_between(time, quantiles[ind,lead_nums[l],:],quantiles[Q+ind,lead_nums[l],:],interpolate=True, facecolor='red', alpha=alpha)
+        for s in range(num_samples):
+            tmp = signals[s]
+            ax[l].plot(time,tmp[lead_nums[l],:], ':b', linewidth=0.5)
+    ax[l].set(xlabel = "time (ms)")
+    fig.suptitle(title)
+
+#        ax[l].plot(np.arange(0,mat_size[1]/2,0.5),signals[k+l,:])
+#            ax[].plot([lat[sample_num,k+l]*1000,lat[sample_num,k+l]*1000],[np.min(signals[k+l,:]), np.max(signals[k+l,:])])
+#            ax[r,c].plot(np.arange(0,mat_size[1]/2,0.5),dy[k+l,:])
+#            ax[r,c].set(ylabel="lead "+str(k+l))
+#        fig.suptitle("sample "+str(sample_num)+", leads "+str(k)+" - "+str(np.min(np.min([k+num_plots, mat_size[0]]))))
+##        plt.show()
     return
     
 def plot_all_solutions(model_output, lat, dys, mat_size, channel_nums):
@@ -309,10 +618,30 @@ def plot_all_solutions_one(signals, lat, dys, channel, ax):
     ax.plot(np.arange(0,sig_size[1]/2,0.5),dys.T, 'r')
     ax.plot(np.arange(0,sig_size[1]/2,0.5),signals.T, 'b')
     ax.vlines(lat*1000,np.min(signals), np.max(signals))
-    ax.set(ylabel="lead "+str(channel))
+    ax.set(ylabel="lead "+str(channel)+" (mV)")
+    ax.set(xlabel="time (ms)")
     return
     
+def choose_FIDS(model_output,model_size):
+
+    RMS = model_RMS(model_output, model_size)
+    
+    sol_num = 1
+    lead_num = 5
+    
+    fg, ax = plt.subplots(2,1)
+    print(model_size)
+    print(type(model_output))
+    print(len(model_output))
+    print(model_output[0].shape)
+    print(RMS.shape)
+    print(np.vstack(model_output).shape)
+    ax[0].plot(np.arange(0,model_size[1]/2,0.5),RMS[sol_num,:], 'r')
+    model_output = np.vstack(model_output).reshape((len(model_output),model_size[0],model_size[1]))
+    ax[1].plot(np.arange(0,model_size[1]/2,0.5),model_output[sol_num,:,:].T)
         
+    return
+    
         
     
     
@@ -354,202 +683,220 @@ def plot_all_solutions_one(signals, lat, dys, channel, ax):
 
 #plt.hist(epi_coeffs[:,0], bins = 3), plt.show()
 
+def run_pipeline(resultset, pacing, sample_params, options):
 
-def main():
-
-    parser = build_parser()
-    options = parser.parse_args()
-    
-    pce = set_distribution(sample_params)
+    set_dirs(options.data_dir, resultset, pacing)
     
     if options.compute_samples:
+        if os.path.exists(samples_file):
+            print('checking file')
+            recognized = False
+            while not recognized:
+                print("Sample file exists.  Overwrite? [y/N]")
+                str_input = str(input())
+                if len(str_input)==0 or str_input.lower()=='n' or str_input.lower()=='no':
+                    print('exiting')
+                    return False
+                elif str_input.lower()=='y' or str_input.lower()=='yes':
+                    recognized=True
+        
+        print("running samples")
+                
         make_samples(samples_file, pce)
         print("Samples compute.  Make sure to run the model")
 #        return
         samples = pce.samples
+        options.run_model = True
     else:
         tmp = scipy.io.loadmat(samples_file)
         samples = tmp["samples"]
-        
-        
-        
-        
         
     if options.run_model:
         files = make_shape_points(samples)
         ind_func_files = make_indicator_functions(files)
         print("make cleaver meshes")
         
+        return
         
-#        prep_run=make_runscript()
-#        input("press enter when SCIRun net is finished.")
-#        model_output = load_SR_data(SR_output_file)
-#        scipy.io.savemat(SR_output_file[:-4]+".mat",{"model_solutions" : model_output, "mat_size": pot_size})
-#        options.run_pce = True
-#        options.run_model_values = True
+        
+        
+    pce = set_distribution(sample_params)
+    
+    fid = fid_map[options.pacing]
+    
+    if not fid and options.hardchecks:
+        raise ValueError(" FID missing and cannot be run with hardchecks on or in batch mode ")
+    
+    if not fid and not "LAT" in options.resultset:
+        options.make_FIDs=True
+    
+    
+    sol_input = load_solutions(resultset, pacing, options)
+    
+    if sol_input:
+        model_output = sol_input[0]
+        model_size = sol_input[1]
+        ofiles = sol_input[2]
     else:
-        tmp = scipy.io.loadmat(SR_output_file[:-4]+".mat")
-        model_output  = tmp["model_solutions"]
-        del tmp
-        
-#    model_output = load_SR_data(SR_output_file)
-#    scipy.io.savemat(SR_output_file[:-4]+".mat",{"model_solutions" : model_output, "mat_size": pot_size})
+        return
+    
+    if options.make_FIDs:
+        choose_FIDS(model_output, model_size)
+        return
 
-    return
-    
-    print("SCIRun solutions loaded")
-    
-    tmp_samp = scipy.io.loadmat(samples_file)
-    #    print(tmp_samp )
-    samples = tmp_samp['samples']
-    del tmp_samp
+
     print("loaded samples")
-
+    print(len(model_output), model_output[0].shape)
+    print(samples.shape)
     
+    if np.shape(samples)[0]>len(model_output) and not options.hardchecks:
+        print("Paring down samples to match solutions")
+        samples = correct_samples(samples, pce, ofiles)
+        if len(samples)==0:
+            return
+        print(samples)
+        print("new sample size",samples.shape)
+    elif np.shape(samples)[0]<len(model_output) and not options.hardchecks:
+        raise ValueError("more solutions than samples. TODO: implement pare down for this case")
+#    elif  (not np.shape(samples)[0]==len(model_output)) and options.hardchecks:
+#        raise ValueError("sample and model mismatch that cannot be resolved in batch mode or with hardchecks")
 
-    LAT_file = os.path.join(tmp_dir, torso_pots_fname[:-4]+"_UQ_heart_LAT_solutions.mat")
+#    samples = sample_workaround(samples, domain)
 
-    if options.run_model_values:
-        LATs, dys = find_LAT(model_output,2000)
-        scipy.io.savemat(LAT_file, dict(LATs = LATs, dys = dys, sample_rate = 2000))
-        options.run_pce = True
-        print("LATs computed")
-        
-    else:
-        tmp = scipy.io.loadmat(LAT_file)
-        LATs = tmp["LATs"]
-        dys = tmp["dys"]
-        del tmp
-        print("LATs loaded")
-    
-
-
-
-    UQ_file = os.path.join(output_dir, torso_pots_fname[:-4]+"_heart_shape_UQ_values.mat")
-    LAT_UQ_file = os.path.join(output_dir, torso_pots_fname[:-4]+"_heart_shape_LAT_UQ_values.mat")
-    RMS_UQ_file = os.path.join(output_dir, torso_pots_fname[:-4]+"_heart_shape_RMS_UQ_values.mat")
+    print(output_dir)
+    UQ_file = os.path.join(output_dir, resultset+"_"+pacing+"_UQ_values.mat")
+    print(UQ_file)
+    RMS_UQ_file = os.path.join(output_dir, resultset+"_"+pacing+"_RMS_UQ_values.mat")
     
     Q = 4  # Number of quantile bands to plot
 
+    # only two dimensions currently
+    N = np.prod(model_size)
+    print(N)
+    print(model_size)
+    do_RMS=not np.any(N==model_size)
     
-    
-    if options.run_pce:
-        RMS = model_RMS(model_output, pot_size)
-        pce.build(model_output=np.hstack((model_output,RMS,LATs)), samples = samples)
-        print("PCE model built")
-
-
-        mean = pce.mean()[:N]
-        stdev = pce.stdev()[:N]
-        mean_RMS = pce.mean()[N:N+pot_size[1]]
-        stdev_RMS = pce.stdev()[N:N+pot_size[1]]
-        mean_LAT = pce.mean()[N+pot_size[1]:]
-        stdev_LAT = pce.stdev()[N+pot_size[1]:]
-
-
-
-    # Power set of [0, 1, ..., dimension-1]
-        variable_interactions = list(chain.from_iterable(combinations(range(sample_params['dimension']), r) for r in range(1, sample_params['dimension']+1)))
-
-    # "Total sensitivity" is a non-partitive relative sensitivity measure per parameter.
-        total_sensitivity = pce.total_sensitivity()[:,:N]
-        total_sensitivity_RMS = pce.total_sensitivity()[:,N:N+pot_size[1]]
-        total_sensitivity_LAT = pce.total_sensitivity()[:,N+pot_size[1]:]
-
-        # "Global sensitivity" is a partitive relative sensitivity measure per set of parameters.
-        global_sensitivity = pce.global_sensitivity(variable_interactions)[:,:N]
-        global_sensitivity_RMS = pce.global_sensitivity(variable_interactions)[:,N:N+pot_size[1]]
-        global_sensitivity_LAT = pce.global_sensitivity(variable_interactions)[:,N+pot_size[1]:]
-
-        dq = 0.5/(Q+1)
-        q_lower = np.arange(dq, 0.5-1e-7, dq)[::-1]
-        q_upper = np.arange(0.5 + dq, 1.0-1e-7, dq)
-        quantile_levels = np.append(np.concatenate((q_lower, q_upper)), 0.5)
-
-        quantiles = pce.quantile(quantile_levels, M=int(2e3))
-        quantiles_LAT = quantiles[:,N+pot_size[1]:]
-        quantiles_RMS = quantiles[:,N:N+pot_size[1]]
-        quantiles = quantiles[:,:N]
-
-        median = pce.quantile(0.5, M=int(1e3))[0, :]
-        median_LAT = median[N+pot_size[1]:]
-        median_RMS = median[N:N+pot_size[1]]
-        median = median[:N]
-
-        print("metrics computed")
+    if not os.path.exists(UQ_file):
+        if options.hardchecks:
+            raise ValueError(" cannot run pce implicitly with hardchecks on, or in batch mode ")
+        options.run_pce = True
         
-        print(LATs.shape)
-        print(np.max(LATs,axis=0)-np.min(LATs,axis=0))
+    
+    if options.run_pce or not os.path.exists(UQ_file):
 
-        scipy.io.savemat(UQ_file, dict(mean = mean.T, stdev = stdev.T, tot_sensitivity = total_sensitivity.T, glob_sensitivity = global_sensitivity.T, quantiles = quantiles.T, median = median.T, pot_size = np.array(pot_size)))
+        
+        pce.set_samples(samples)
+        
+        print(np.vstack(model_output).shape)
+        
+        run_pce_data(pce, np.vstack(model_output),model_size, UQ_file, Q)
+        print("PCE model built")
+        
+    if do_RMS:
+        print("running RMS")
+        RMS = model_RMS(model_output, model_size)
+        
+        
+        print(RMS.shape)
+    #        print(RMS)
+        if not os.path.exists(RMS_UQ_file):
+            if options.hardchecks:
+                raise ValueError(" cannot run pce implicitly with hardchecks on, or in batch mode ")
+            options.run_pce = True
+            
+            
+        if options.run_pce:
+            print("running RMS PCE")
+            pce_rms = set_distribution(sample_params)
+            pce_rms.set_samples(samples)
+            run_pce_data(pce_rms, RMS, (1,model_size[0]), RMS_UQ_file, Q)
+        
+        
+    pot_UQ = load_pce_data(UQ_file)
+    
+    print(" pce stats loaded from disk")
 
-        scipy.io.savemat(LAT_UQ_file, dict(mean = mean_LAT.T, stdev = stdev_LAT.T, tot_sensitivity = total_sensitivity_LAT.T, glob_sensitivity = global_sensitivity_LAT.T, quantiles = quantiles_LAT.T, median = median_LAT.T, LAT_min = np.min(LATs,axis=0), LAT_max = np.max(LATs,axis=0)))
+    summary_stats = make_summary_stats(pot_UQ, len(model_output))
+    print("pot stats")
+    print(tabulate(summary_stats, headers = "firstrow"))
+        
+    if do_RMS:
+        rms_UQ = load_pce_data(RMS_UQ_file)
+        
+        dt = 0.5
 
-        scipy.io.savemat(RMS_UQ_file, dict(mean = mean_RMS.T, stdev = stdev_RMS.T, tot_sensitivity = total_sensitivity_RMS.T, glob_sensitivity = global_sensitivity_RMS.T, quantiles = quantiles_RMS.T, median = median_RMS.T))
+        lead_num = 404
+
+        print(model_size)
+        quantiles = np.reshape(pot_UQ["quantiles"], (pot_UQ["quantiles"].shape[0], model_size[0], model_size[1]))
+
+        time = np.linspace(0,model_size[1]*dt,model_size[1])
+        RMS_med = calc_rms(pot_UQ["median"],axis=0)
+        RMS_quant = calc_rms(quantiles,axis=1)
+        
+        print("median time")
+        print(pot_UQ["median"].shape)
+        print(time.shape)
+        plot_ecg_uq(time, pot_UQ["median"], quantiles, model_output, model_size,0, title =  pacing)
+
+    #    if options.plot_channels>=0:
+    #        plot_all_channels(model_output, LATs, dys, pot_size, options.plot_channels)
+         
+    #    if options.plot_solutions:
+    #        channels = (stdev_LAT>3*np.mean(stdev_LAT)).nonzero()[0]
+    #        plot_all_solutions(model_output, LATs, dys*50, pot_size, channels)
+            
+        print("rms_UQ")
+        print(RMS.shape)
+        print(rms_UQ["median"].shape)
+        plot_quantile_bands(time, rms_UQ["median"], rms_UQ["quantiles"], Q, title =  pacing, ylabel = "RMS (mV)", xlabel = "time (ms)")
+        
+        
+    return
+    
+
+
+def main():
+    
+    parser = build_parser()
+    options = parser.parse_args()
+
+#    global resultset, pacing
+        
+    pacing = options.pacing
+    resultset = options.resultset
+    
+    set_dirs(options.data_dir, resultset, pacing)
+    
+    domain = get_ranges_from_scores(sample_params)
+    
+    # TODO: make optional rerun
+    compute_surface_variance(domain)
+    
+    print("domain")
+    print(domain)
+    
+    
+    
+    if len(domain) == 0:
+        domain = default_domain
+        
+    sample_params["domain"] = domain
+    
+
+    
+    if pacing == "all" or pacing == "new" or pacing == "old":
+        options.compute_samples=False
+        options.run_model=False
+        options.make_FIDs=False
+        options.hardchecks=True
+        
+        for p in pacing_lists[pacing]:
+            options.pacing = p
+            run_pipeline(resultset, p, sample_params, options)
         
     else:
-        print("loading pce stats from disk")
-        tmp = scipy.io.loadmat(UQ_file)
-        mean = tmp["mean"].T
-        stdev = tmp["stdev"].T
-        median =tmp["median"].T
-        total_sensitivity =tmp["tot_sensitivity"].T
-        glob_sensitivity = tmp["glob_sensitivity"].T
-        quantiles = tmp["quantiles"].T
-        
-        tmp = scipy.io.loadmat(LAT_UQ_file)
-        mean_LAT = tmp["mean"].T
-        stdev_LAT = tmp["stdev"].T
-        median_LAT =tmp["median"].T
-        total_sensitivity_LAT =tmp["tot_sensitivity"].T
-        glob_sensitivity_LAT = tmp["glob_sensitivity"].T
-        quantiles_LAT = tmp["quantiles"].T
-        
-        
-        tmp = scipy.io.loadmat(RMS_UQ_file)
-        mean_RMS = tmp["mean"].T
-        stdev_RMS = tmp["stdev"].T
-        median_RMS =tmp["median"].T
-        total_sensitivity_RMS =tmp["tot_sensitivity"].T
-        glob_sensitivity_RMS = tmp["glob_sensitivity"].T
-        quantiles_RMS = tmp["quantiles"].T
-        print("loaded")
-        
-
-
-    dt = 0.5
-
-    lead_num = 404
-
-    median = median.reshape(pot_size)
-    quantiles = quantiles.reshape((quantiles.shape[0],pot_size[0],pot_size[1]))
-
-    time = np.arange(0,pot_size[1]*dt,dt)
-    RMS_med = np.sqrt(np.sum(median*median,axis=0))
-    RMS_quant = np.sqrt(np.sum(quantiles*quantiles,axis=1))
-
-    if options.plot_channels>=0:
-        plot_all_channels(model_output, LATs, dys, pot_size, options.plot_channels)
-     
-    if options.plot_solutions:
-        channels = (stdev_LAT>3*np.mean(stdev_LAT)).nonzero()[0]
-        plot_all_solutions(model_output, LATs, dys*50, pot_size, channels)
-        
-
-
-    plt.figure()
-    plt.plot(time, median_RMS, 'b', label='RMS median')
-
-    band_mass = 1/(2*(Q+1))
-    for ind in range(Q):
-        alpha = (Q-ind) * 1/Q - (1/(2*Q))
-        if ind == 0:
-            plt.fill_between(time,quantiles_RMS[ind,:], quantiles_RMS[Q+ind, :],
-                             interpolate=True, facecolor='red', alpha=alpha,
-                             label='{0:1.2f} probability mass (each band)'.format(band_mass))
-        else:
-            plt.fill_between(time,quantiles_RMS[ind, :], quantiles_RMS[Q+ind, :], interpolate=True, facecolor='red', alpha=alpha)
-
+        run_pipeline(resultset, pacing, sample_params, options)
 
     plt.show()
     

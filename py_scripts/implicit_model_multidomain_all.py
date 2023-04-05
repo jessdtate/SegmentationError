@@ -1,5 +1,6 @@
 import os
 import fnmatch
+import sys
 
 # exec(open("/Users/jess/CIBC/FP/segmentation_error/seg_error/py_scripts/implicit_model_multidomain_all.py").read())
 
@@ -18,13 +19,13 @@ sys.path.append("/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4
 
 vol_path = "/Users/jess/software/ShapeWorks/Examples/Python/Test_vent_multidomain/PrepOutput/groom_and_meshes"
 vol_fname = os.path.join(vol_path, "BO_d3.isores.center.pad.cropped.ISO.nrrd")
-point_path = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/shape_modle"
-outputpath = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/9samples/shape_model/"
+point_path = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/shape_data/vent_MD_cheat/11samples/"
+outputpath = point_path + "SR_surfaces/"
 
 
 exec(open("/Users/jess/CIBC/FP/segmentation_error/seg_error/py_scripts/implicit_function_From_points_multidomain.py").read())
 
-files = fnmatch.filter(os.listdir(point_path), 'model_param*.pts')
+files = fnmatch.filter(os.listdir(point_path), 'mode*.pts')
 
 for name in files:
     

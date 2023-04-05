@@ -19,9 +19,9 @@ output_dir = "/Users/jess/CIBC/FP/segmentation_error/Dalhousie_seg/UQ_data"
 torso_pots_dir = "/Users/jess/CIBC/Edgar/database/Unmodified/Human_Cardiac_Mapping/Dalhousie-2006-01-05/Interventions/BSPM_pf/"
 torso_pots_fname = "6105d439_43.120avg-pf.mat"
 #torso_pots_fname = "6105829a_01.120avg-pf.mat" # sinus
-torso_pots_fname = "61058472_03.120avg-pf.mat" # paced
+torso_pots_fname = "61058472_03.120avg-pf.mat" # LV paced
 #torso_pots_fname = "6105b06d_10.120avg-pf.mat" # pace (phrenic)
-torso_pots_fname = "6105b134_16.120avg-pf.mat" # RV paced
+#torso_pots_fname = "6105b134_16.120avg-pf.mat" # RV paced
 
 torso_pots = os.path.join(torso_pots_dir,torso_pots_fname)
 
@@ -227,7 +227,7 @@ def plot_all_solutions(model_output, lat, dys, mat_size, channel_nums):
     else:
         fg,ax = plt.subplots(1)
         plot_all_solutions_one(model_output[:,channel_nums,:], lat[:,channel_nums], dys[:,channel_nums,:], channel_nums, ax)
-    fg.suptitle("all solutions")
+#    fg.suptitle("all solutions")
     return
      
 def plot_all_solutions_one(signals, lat, dys, channel, ax):
@@ -236,6 +236,7 @@ def plot_all_solutions_one(signals, lat, dys, channel, ax):
     ax.plot(np.arange(0,sig_size[1]/2,0.5),signals.T, 'b')
     ax.vlines(lat*1000,np.min(signals), np.max(signals))
     ax.set(ylabel="lead "+str(channel))
+    ax.set(xlabel="time (ms)")
     return
     
         

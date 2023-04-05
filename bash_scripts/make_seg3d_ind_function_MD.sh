@@ -18,8 +18,7 @@ seg3d_call='/Applications/Seg3D2.app/Contents/MacOS/Seg3D2'
 script_file='/Users/jess/CIBC/FP/segmentation_error/seg_error/py_scripts/implicit_function_From_points_multidomain.py'
 
 vol_path="/Users/jess/software/ShapeWorks/Examples/Python/Test_epi_centered/PrepOutput/groom_and_meshes/"
-vol_name='BO_epi_centered.isores.center.pad.cropped.ISO.nrrd'
-
+vol_name='BO_epi.isores.center.pad.cropped.DT.nrrd'
 vol_fname=$vol_path$vol_name
 out_fname=$froot"_surface"
 
