@@ -11,10 +11,15 @@ fi
 
 
 tag=_tet2points_mapping.mat
+tag=_hiresSurf_2_points_mapping.mat
 
-sr_call=/Users/jess/software/SCIRun/bin/SCIRun/SCIRun_test
-sr_net=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/clean_cleavermeshes.srn5
-sr_net=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/clean_cleavermeshes_modes.srn5
+#sr_call=/Users/jess/software/SCIRun/bin/SCIRun/SCIRun_test
+sr_call=/Users/jess/software/SCIRun_testing2/bin_headless/SCIRun/SCIRun_test
+
+
+#sr_net=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/clean_cleavermeshes.srn5
+#sr_net=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/clean_cleavermeshes_modes.srn5
+sr_net=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/surface_mapping.srn5
 
 
 s_files=($(ls -1 $1/model_param*.pts))
@@ -44,7 +49,7 @@ echo $fcheck not found.  rerunning
 echo $ex_path$filename
 export FILENAME=$ex_path$filename
 echo $sr_call -E -x -0 $sr_net
-$sr_call -E -0 $sr_net
+$sr_call -E -x -0 $sr_net
 fi
 done
 

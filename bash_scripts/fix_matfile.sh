@@ -13,7 +13,7 @@ echo $1
 
 files=($(ls -1 $1))
 
-scirun_call=/Users/jess/software/SCIRun/bin/SCIRun/SCIRun_test
+scirun_call=/Users/jess/software/SCIRun_testing2/bin_headless/SCIRun/SCIRun_test
 
 network=/Users/jess/CIBC/FP/segmentation_error/seg_error/nets/fix_matfile.srn5
 
