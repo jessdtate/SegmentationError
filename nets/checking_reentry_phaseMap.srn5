@@ -959,7 +959,7 @@
 									<name>SliceIndex</name>
 									<value object_id="_61">
 										<which>0</which>
-										<value>810</value>
+										<value>998</value>
 									</value>
 								</second>
 							</item>
@@ -1059,7 +1059,7 @@
 									<name>SliceIndex</name>
 									<value object_id="_68">
 										<which>0</which>
-										<value>810</value>
+										<value>998</value>
 									</value>
 								</second>
 							</item>
@@ -1159,7 +1159,7 @@
 									<name>SliceIndex</name>
 									<value object_id="_75">
 										<which>0</which>
-										<value>810</value>
+										<value>998</value>
 									</value>
 								</second>
 							</item>
@@ -1994,7 +1994,7 @@
 									<name>FixedMax</name>
 									<value object_id="_134">
 										<which>1</which>
-										<value>7.48991796216617445e+00</value>
+										<value>9.81211810234502479e+00</value>
 									</value>
 								</second>
 							</item>
@@ -2006,7 +2006,7 @@
 									<name>FixedMin</name>
 									<value object_id="_135">
 										<which>1</which>
-										<value>-8.35828579239070848e+01</value>
+										<value>-8.09800818906596902e+01</value>
 									</value>
 								</second>
 							</item>
@@ -5573,28 +5573,28 @@
 												<name>listElement</name>
 												<value object_id="_411">
 													<which>1</which>
-													<value>-3.11732530593872070e-01</value>
+													<value>4.64394509792327881e-01</value>
 												</value>
 											</item>
 											<item>
 												<name>listElement</name>
 												<value object_id="_412">
 													<which>1</which>
-													<value>8.23426544666290283e-01</value>
+													<value>-4.90086734294891357e-01</value>
 												</value>
 											</item>
 											<item>
 												<name>listElement</name>
 												<value object_id="_413">
 													<which>1</which>
-													<value>4.46215927600860596e-01</value>
+													<value>6.14848732948303223e-01</value>
 												</value>
 											</item>
 											<item>
 												<name>listElement</name>
 												<value object_id="_414">
 													<which>1</which>
-													<value>1.60257965326309204e-01</value>
+													<value>4.07568752765655518e-01</value>
 												</value>
 											</item>
 										</value>
@@ -6617,7 +6617,7 @@
 															<name>Faces</name>
 															<value object_id="_519">
 																<which>3</which>
-																<value>0</value>
+																<value>1</value>
 															</value>
 														</item>
 														<item>
@@ -6641,21 +6641,21 @@
 															<name>ShowField:4</name>
 															<value object_id="_522">
 																<which>3</which>
-																<value>0</value>
+																<value>1</value>
 															</value>
 														</item>
 														<item>
 															<name>Edges</name>
 															<value object_id="_523">
 																<which>3</which>
-																<value>0</value>
+																<value>1</value>
 															</value>
 														</item>
 														<item>
 															<name>Faces</name>
 															<value object_id="_524">
 																<which>3</which>
-																<value>0</value>
+																<value>1</value>
 															</value>
 														</item>
 														<item>
@@ -6679,7 +6679,7 @@
 															<name>TMV (from ShowColorMap:2)</name>
 															<value object_id="_527">
 																<which>3</which>
-																<value>0</value>
+																<value>1</value>
 															</value>
 														</item>
 													</value>
@@ -6735,7 +6735,7 @@
 									<name>WindowPositionX</name>
 									<value object_id="_533">
 										<which>0</which>
-										<value>967</value>
+										<value>1180</value>
 									</value>
 								</second>
 							</item>
@@ -6759,7 +6759,7 @@
 									<name>WindowSizeX</name>
 									<value object_id="_535">
 										<which>0</which>
-										<value>713</value>
+										<value>500</value>
 									</value>
 								</second>
 							</item>
@@ -6771,7 +6771,7 @@
 									<name>WindowSizeY</name>
 									<value object_id="_536">
 										<which>0</which>
-										<value>843</value>
+										<value>840</value>
 									</value>
 								</second>
 							</item>
@@ -7668,8 +7668,8 @@
 		<item>
 			<first>PrintStringIntoString:1</first>
 			<second>
-				<first>-1.34000000000000000e+02</first>
-				<second>3.30000000000000000e+01</second>
+				<first>-1.95000000000000000e+02</first>
+				<second>7.00000000000000000e+00</second>
 			</second>
 		</item>
 		<item>
